@@ -38,7 +38,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '0.8.0 beta'; 
+		return '0.8.0'; 
 	}
 
 	public function getPluginDescription() { 
