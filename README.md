@@ -19,8 +19,13 @@ Calendar / Gantt / Group_assign ...
 <img src="Screenshots/config.png" width="50%"><img src="Screenshots/css.png" width="50%">
 
 ## Installation
-1. Make sure the `Asset` folder is ***writable and executable***.
-2. Upload a `logo.png` file into `your_kanboard_root/assets/img` to customize the logo.
+1. `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
+2. Upload a file `logo.png` into `your_kanboard_root/assets/img` to change the logo.
+
+## Customization
+1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
+2. Rename the file `config-default.php` to `config.php`.
+3. Enable "development mode" in the configuration file.
 
 ## Author
 - greyaz
