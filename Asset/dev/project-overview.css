@@ -1,0 +1,21 @@
+.project-overview-columns {
+	margin: 0 0 1rem;
+	background-color: var(--color-G8);
+	border-radius: var(--size-R0);
+	border-bottom: var(--style-border);
+	max-width: var(--size-W0);
+	width: calc(100% - 0.5rem);
+	padding: 1rem 0;
+}
+.project-overview-column {
+	margin: 0 1.5% .5rem 0;
+	padding: 1rem 2rem 0.5rem 2rem;
+	background: var(--color-G8);
+	border: 0;
+	border-radius: var(--size-R0);
+	font-size: 2rem;
+	line-height: 2rem;
+}
+.project-overview-column strong {
+	font-size: 3rem;
+}

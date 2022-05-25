@@ -1,0 +1,96 @@
+.project-header .dropdown-component,
+.project-header .views-switcher-component,
+.project-header .filter-box-component {
+	margin: 0 0.5rem 1rem 0;
+}
+
+.page-header ul, .menu-inline ul, .views-switcher-component .views, .project-header > .dropdown-component, .filter-box .input-addon, .fc-state-default, .fc button{
+	background: var(--color-G8);
+    border-bottom: var(--style-border);
+	border-top: 1px solid var(--color-G8);
+}
+.page-header ul, .menu-inline ul, .fc-state-default, .fc button {
+	margin: 0;
+	border-radius: var(--size-R0);
+	display: inline-block;
+	/*box-shadow: var(--style-shadow0);*/
+}
+.sidebar-content .page-header > ul, #modal-content .page-header > ul, .menu-inline ul, .fc-state-default, .fc button {
+	border-left: var(--style-border);
+    border-right: var(--style-border);
+	border-top: 1px solid var(--color-G6);
+	box-shadow: var(--style-shadow2);
+}
+.sidebar-content .page-header > ul, #modal-content .page-header > ul {
+	margin: 1rem 0;
+}
+.views-switcher-component .views{
+	margin: 0 1rem 0 0;
+}
+.project-header > .dropdown-component {
+    padding: 0 0 0 1rem;
+    margin-right: 0;
+}
+
+.views-switcher-component .views li, .page-header li, .menu-inline li, .filter-box .input-addon .input-addon-item, .filter-box .input-addon input[type=text] {
+	line-height: 1rem;
+    margin: 0;
+}
+.page-header li, .menu-inline li {
+	padding: 0;
+}
+.views-switcher-component .views li, .filter-box .input-addon .input-addon-item, .filter-box .input-addon input[type=text] {
+	padding: .75rem;
+	background: var(--color-G8);
+	border: 0;
+}
+.views-switcher-component .views li {
+    display: inline-block;
+	min-width: 4rem;
+    text-align: center;
+}
+.filter-box .input-addon input[type=text] {
+    font-size: 1rem;
+    height: 1rem;
+	box-shadow: none;
+	border-radius: var(--size-R0), 0, 0, var(--size-R0);
+}
+.views-switcher-component .views li:first-child {
+	border-top-left-radius: var(--size-R0);
+	border-bottom-left-radius: var(--size-R0);
+	border-left: 1px solid var(--color-G8);
+}
+.views-switcher-component .views li:last-child {
+	border-top-right-radius: var(--size-R0);
+	border-bottom-right-radius: var(--size-R0);
+	border-color: var(--color-G8);
+	border-bottom-color: var(--color-G5);
+}
+.views-switcher-component .views li.active {
+	background: var(--color-G6);
+}
+
+
+.page-header ul a, .menu-inline ul a{
+	padding: .75rem;
+	display: inline-block;
+	min-width: 6rem;
+    text-align: center;
+}
+.views-switcher-component .views li a, .views-switcher-component .views li.active a {
+	height: 1rem;
+    display: block;
+}
+.filter-box .input-addon .input-addon-item:last-child {
+	border-radius: 0 var(--size-R0) var(--size-R0) 0;
+}
+.dropdown .action-menu{
+	display: block;
+	padding: .75rem 0;
+	font-size: 0;
+}
+.filter-box .input-addon .input-addon-item .dropdown-menu,
+.filter-box .input-addon .input-addon-item .active-dropdown-menu{
+	line-height: 1rem;
+    display: block;
+}

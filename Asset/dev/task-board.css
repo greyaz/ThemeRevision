@@ -1,0 +1,101 @@
+/* avatar */
+.task-board-avatars {
+	text-align: right;
+    float: right;
+	margin-bottom: 1rem;
+}
+.task-list-avatars{
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+.task-board-avatars .avatar.avatar-inline,
+.task-list-avatars .avatar.avatar-inline {
+	margin-right: 0;
+}
+.task-board-header > .task-board-assignee, .task-avatar-assignee{
+	display: none;
+}
+/* title */
+.task-board-title, .table-list-title {
+	line-height: 1rem !important;
+	margin: 0 0 1rem;
+	clear: both;
+	display: block;
+}
+.task-board-title a, .table-list-title a {
+    font-weight: bold !important;
+	line-height: 1.5rem !important;
+	font-size: 1rem;
+	color: var(--color-G0);
+}
+/* category & tags */
+.task-board-category, .task-tags li, .table-list-category, .task-list-tag {
+    border: none;
+    border-radius: var(--size-R0);
+    line-height: 1.667rem;
+    padding: 0 4px;
+    margin: 0 .5rem 1rem 0 !important;
+    font-weight: normal;
+    font-size: 1rem;
+	color: var(--color-G0);
+    background: var(--color-G5);
+	float: left;
+    mix-blend-mode: multiply;
+    opacity: .6;
+}
+.table-list-category, .task-list-tag {
+	float: none;
+	display: inline-block;
+	margin-bottom: 0 !important;
+}
+/* icons */
+.task-board-icons, .task-list-icons {
+	clear: both;
+	font-size: 1rem;
+	text-align: left;
+    line-height: 2rem;
+    margin-top: 0;
+    opacity: .15;
+    mix-blend-mode: multiply;
+}
+.task-board-icons .task-board-icons-row {
+	line-height: 2rem;
+}
+.task-board-icons:hover, .task-list-icons:hover {
+    opacity: 1;
+}
+.task-board-icons .task-board-icons-row *, .task-list-icons *{
+	margin: 0 .1rem 0 0 !important;
+	font-size: 1rem;
+	font-weight: normal;
+	color: var(--color-G0) !important;
+}
+.task-board-icons .task-board-icons-row > *, .task-list-icons > *{
+	margin: 0 .5rem 0 0 !important;
+	opacity: 1;
+}
+.task-board-icons .task-board-icons-row .task-date-overdue, .task-list-icons .task-date-overdue,
+.task-board-icons .task-board-icons-row .task-date-overdue i.fa, .task-list-icons .task-date-overdue i.fa {
+	color: var(--color-E0) !important;
+}
+.task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-total,
+.task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-column,
+.task-list-icons .task-icon-age .task-icon-age-total,
+.task-list-icons .task-icon-age .task-icon-age-column{
+	border: none;
+	background: var(--color-G5);
+}
+.task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-total,
+.task-list-icons .task-icon-age .task-icon-age-total {
+	border-top-left-radius: var(--size-R0);
+	border-bottom-left-radius: var(--size-R0);
+	margin: 0 -0.2rem 0 0 !important;
+    border-right: 1px solid var(--color-G2);
+}
+.task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-column,
+.task-list-icons .task-icon-age .task-icon-age-column {
+	border-top-right-radius: var(--size-R0);
+	border-bottom-right-radius: var(--size-R0);
+	margin: 0;
+}

@@ -1,0 +1,46 @@
+header .title-container {
+	flex: 14;
+}
+header .title-container span.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+header h1 {
+	height: 3rem;
+	display: flex;
+	align-items: flex-end;
+}
+header h1 .logo {
+	line-height: 0;
+	width: 4rem;
+}
+header h1 .logo a {
+	font-size: 0 !important;
+	line-height: 0 !important;
+}
+header h1 .logo a img {
+	height: 3rem;
+	border-radius: var(--size-R0);
+	border-bottom: var(--style-border);
+    box-shadow: var(--style-shadow0);
+}
+header h1 .tooltip {
+	font-size: 1rem;
+	line-height: 2rem;
+	padding-left: 0.5rem;
+}
+header .board-selector-container {
+	display: contents;
+	width: 100%;
+	padding-top: 1rem;
+}
+header .menus-container {
+	align-items: flex-end;
+    padding: 1rem 0 0.25rem;
+    flex: 1;
+    min-width: 10rem;
+}
+.notification {
+	line-height: 2rem;
+}

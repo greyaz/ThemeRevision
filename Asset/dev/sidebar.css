@@ -1,0 +1,52 @@
+.sidebar {
+    max-width: 25%;
+    min-width: var(--size-W1);
+    padding: 0;
+    margin-right: 4rem;
+	display: block;
+}
+.sidebar .sidebar-title{
+	padding: 1rem;
+	border-radius: var(--size-R0) var(--size-R0) 0 0;
+	border-bottom: var(--style-border);
+}
+.sidebar .sidebar-title h2{
+	margin-bottom: 0;
+}
+.sidebar > ul{
+	background: none;
+	border-bottom: var(--color-G5);
+	border-radius: 0 0 var(--size-R0) var(--size-R0);
+}
+.sidebar-content div[class*=js-chart-]{
+	padding: 1rem;
+	background: var(--color-G7);
+    margin-bottom: 1rem;
+    border-bottom: var(--style-border);
+}
+.sidebar>ul li{
+	margin: 0;
+	line-height: 3rem;
+    border-bottom: var(--style-border);
+	padding-left: 1.25rem;
+}
+.sidebar>ul li.active, .sidebar>ul li:hover {
+    border-left: 2px solid var(--color-G0);
+    padding-left: .75rem;
+	background: var(--color-G8);
+    border-radius: var(--size-R0);
+}
+.sidebar>ul li a{
+	display: inline-block;
+    line-height: 3rem;
+}
+.sidebar>ul li.active a{
+	font-weight: bold;
+}
+.sidebar>ul li.active a:focus, .sidebar>ul li.active a:hover{
+	color: var(--color-G0);
+}
+
+.themeRevisionMenuBtn{
+	display: none;
+}

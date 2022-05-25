@@ -1,0 +1,96 @@
+.fc-toolbar.fc-header-toolbar, .page > #main > .menu-inline {
+	background: var(--color-G8);
+    border: none;
+    border-radius: var(--size-R0);
+    border-bottom: var(--style-border);
+    padding: 1rem;
+    margin: 0;
+}
+.page > #main > .menu-inline {
+	max-width: calc(1550px - 2rem);
+}
+
+.js-calendar{
+	padding: 1rem;
+    background: var(--color-G8);
+    border-radius: var(--size-R0);
+    border-bottom: var(--style-border);
+	min-width: 680px;
+}
+#modal-content .js-calendar{
+	padding: 0;
+}
+.fc-state-default, .fc button{
+	text-shadow: none;
+	background-image: none;
+	color: var(--color-G0);
+	font-size: 1rem;
+	line-height: 1rem;
+	padding: .5rem 1rem;
+	height: auto;
+}
+.fc-state-default.fc-corner-right {
+    border-top-right-radius: var(--size-R0);
+    border-bottom-right-radius: var(--size-R0);
+}
+.fc-state-default.fc-corner-left {
+    border-top-left-radius: var(--size-R0);
+    border-bottom-left-radius: var(--size-R0);
+}
+.fc-state-disabled {
+	opacity: .5;
+	cursor: default !important;
+}
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead{
+	border-color: var(--color-G5);
+	border-right: 0;
+}
+.fc-unthemed th {
+	line-height: 2rem;
+	border-top: 0;
+	background: var(--color-G8);
+}
+.fc-row table {
+    margin: 0;
+}
+.fc-toolbar h2 {
+    line-height: 2rem;
+}
+.fc-head-container, .fc-widget-header{
+	border-top: 0 !important;
+}
+.fc-event{
+	border-radius: var(--size-R0);
+}
+.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
+    padding: 0.5rem;
+}
+
+.page > #main > #gantt-chart{
+	margin: 0 0 1rem;
+}
+div.ganttview{
+	background: var(--color-G8);
+	border: none;
+	max-width: 1550px;
+	border-bottom: var(--style-border);
+}
+div.ganttview-vtheader{
+	background: var(--color-G7);
+}
+div.ganttview-slide-container{
+	border-color: var(--color-G5);
+}
+div.ganttview-vtheader-item{
+	color: var(--color-G0);
+}
+div.ganttview-vtheader-series-name{
+	padding-left: 1rem;
+	border-top: var(--style-border);
+}
+div.ganttview-block{
+	border-radius: var(--size-R0);
+}
+div.ganttview-block-text{
+	width: auto !important;
+}

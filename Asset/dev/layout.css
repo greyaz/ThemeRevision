@@ -1,0 +1,100 @@
+header {
+	background: none;
+	border-bottom: none;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	align-items: flex-end;
+}
+.page {
+	margin: 0;
+}
+#main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.page > #main > p, .page > #main > .alert, .page > .filter-box, .page > .margin-bottom {
+	margin: 0 0 1rem;
+	max-width: var(--size-W0);
+}
+.page > .activity-event{
+	margin: 0;
+	max-width: calc(var(--size-W0) - 2rem);
+}
+
+.project-header {
+	padding: 0;
+	margin: 0 0 3rem;
+	background: none;
+	max-width: 100%;
+	height: 2.5rem;
+}
+#board-container {
+	background: var(--color-G6);
+	overflow-x:inherit
+}
+.sidebar-container{
+	/*max-width: calc(var(--size-W0) + var(--size-W1) + 4rem);*/
+	max-width: calc(var(--size-W0) + var(--size-W1) - 4rem);
+}
+.sidebar-content, .accordion-section{
+	padding-left: 0;
+	max-width: var(--size-W0);
+	/*width: 60vw;*/
+	background: var(--color-G8);
+    padding: 1rem;
+	border-radius: var(--size-R0);
+	border-bottom: var(--style-border);
+	margin-bottom: 1rem;
+	box-sizing: border-box;
+	/*background-image: linear-gradient(0deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(90deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(180deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(270deg, var(--color-G8) 1rem, transparent 1rem);*/
+}
+#task-view .sidebar-content{
+	background: none;
+	padding: 0;
+	border: 0;
+}
+.page-header, .sidebar-content > h2, .sidebar-content > h3, .accordion-title{
+	background: var(--color-G8);
+    border: none;
+    border-radius: var(--size-R0) var(--size-R0) 0 0;
+    border-bottom: var(--style-border);
+    padding: 1rem;
+    margin: 0;
+}
+.page > #main > .page-header, .page > .page-header{
+	background: none;
+	border: none;
+	padding: 0;
+	margin-bottom: 3rem;
+	box-shadow: none;
+}
+.panel, .table-list, form, .accordion-content, .sidebar-content > .markdown {
+	border: none;
+    border-bottom: var(--style-border);
+	border-radius: var(--size-R0);
+	line-height: 1.5rem;
+	margin: 0;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	color: var(--color-G0);
+	height: auto;
+    padding: 1rem;
+    width: auto;
+    max-width: var(--size-W0);
+    background: var(--color-G6);
+	box-sizing: border-box;
+}
+.panel > * , .table-list > * , form > * , .accordion-content > * {
+    border-bottom: none;
+    margin: 0 0 1rem;
+    padding: 0;
+}
+.panel > *:last-child , .table-list > *:last-child , form > *:last-child , .accordion-content > *:last-child {
+    margin-bottom: 0;
+	margin-right: 0;
+}
+

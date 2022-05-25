@@ -1,0 +1,100 @@
+.table-list-header {
+	background: var(--color-G8);
+	border: none;
+	border-bottom: var(--style-border);
+	border-radius: var(--size-R0) var(--size-R0) 0 0;
+	line-height: 2rem;
+	padding: .5rem 1rem;
+}
+.table-list-row {
+	padding: 1rem;
+	border: none;
+	border-bottom: var(--style-border);
+	border-radius: var(--size-R0);
+	position: relative;
+	margin: 0 1rem 1rem 0;
+	box-shadow: var(--style-shadow0);
+	min-width: 21.17%;
+	max-width: 97.5%;
+	display: inline-grid;
+}
+.table-list-row:nth-child(odd), .table-list-row:nth-child(even){
+	background: var(--color-G8);
+}
+.table-list-row:hover, .table-list-row:nth-child(odd):hover {
+	border-right: 0;
+	border-bottom: var(--style-border);
+}
+.table-list-row:last-child{
+	border-radius: inherit;
+}
+
+/* color fix for .page > .table-list, .page > .panel */
+.page > .table-list, .page > .panel {
+	background-color: 	var(--color-G6);
+	background-image: 	linear-gradient(0deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(90deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(180deg, var(--color-G8) 1rem, transparent 1rem),
+						linear-gradient(270deg, var(--color-G8) 1rem, transparent 1rem);
+	padding: 2rem;
+}
+
+/* left border hide */
+div[class^="table-list-row color-"], .table-list-row.table-border-left{
+	border-left: none !important;
+}
+
+/* header */
+.table-list-header * {
+	color: var(--color-G0) !important;
+}
+.table-list-header .list-item-links, .table-list-header .list-item-actions, .table-list-header .table-list-header-menu a {
+	margin: 0 0 0 1rem;
+}
+
+/* row */
+.table-list-row[class*=color-] > * {
+    text-align: left;
+    padding: 0;
+}
+/* 1 */
+.table-list-row > div:first-child *{
+	color: var(--color-G0);
+}
+
+/* 2 */
+.table-list-row .table-list-details {
+	font-weight: normal;
+	color: var(--color-G0);
+	mix-blend-mode: multiply;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+}
+.table-list-row .table-list-details li{
+	margin-left: 0;
+}
+.table-list-row .table-list-details i{
+	margin-right: .5rem;
+}
+.table-list-row .table-list-details strong {
+	font-weight: normal;
+}
+.table-list-row .table-list-details small {
+	padding-right: 1rem;
+}
+/* 3 */
+/* go to task-board.css */
+
+/* 4 */
+/* go to task-board.css */
+
+/* 5 */
+.table-list-row .task-list-subtasks{
+	margin-top: 1rem !important;
+}
+.subtask-cell{
+    border-top: 1px solid var(--color-G5);
+    border-left: 1px solid var(--color-G7);
+    padding: 1rem .5rem;
+    mix-blend-mode: multiply;
+}
