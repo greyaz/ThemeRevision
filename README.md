@@ -19,7 +19,7 @@ Calendar / Gantt / Group_assign ...
 <img src="Screenshots/config.png" width="50%"><img src="Screenshots/css.png" width="50%">
 
 ## Installation
-1. `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
+1. Install from the Kanboard plugin manager directly, or `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
 2. Upload a file `logo.png` into `your_kanboard_root/assets/img` to change the logo.
 
 ## Customization
