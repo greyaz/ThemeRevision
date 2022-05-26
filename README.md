@@ -1,22 +1,22 @@
 # ThemeRevision for Kanboard
 ThemeRevision is a clean and high-quality theme for Kanboard. It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
-<img src="Screenshots/board.png" width="50%"><img src="Screenshots/detail.png" width="50%">
+<img src="Screenshots/board.png" width="45%"> <img src="Screenshots/detail.png" width="45%">
 
 ## Better mobile experiences
-<img src="Screenshots/new.gif" width="50%"><img src="Screenshots/settings.gif" width="50%">
+<img src="Screenshots/new.gif" width="45%"> <img src="Screenshots/settings.gif" width="45%">
 
 ## Common plugin compatibilities
 Calendar / Gantt / Group_assign ...
 
-<img src="Screenshots/calendar.png" width="50%"><img src="Screenshots/gantt.png" width="50%">
+<img src="Screenshots/calendar.png" width="45%"> <img src="Screenshots/gantt.png" width="45%">
 
 ## Customization friendly
 1. Switching between production and development mode conveniently.  
 2. Structured CSS files, easy to locate elements.  
 3. Rich CSS variables preset. Use "rem" as the global measuring unit.
 
-<img src="Screenshots/config.png" width="50%"><img src="Screenshots/css.png" width="50%">
+<img src="Screenshots/config.png" width="45%"> <img src="Screenshots/css.png" width="45%">
 
 ## Installation
 1. Install from the Kanboard plugin manager directly, or `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
