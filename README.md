@@ -4,7 +4,7 @@ ThemeRevision is a clean and high-quality theme for Kanboard. It's aimed at bett
 <img src="Screenshots/board.png" width="45%"> <img src="Screenshots/detail.png" width="45%">
 
 ## Better mobile experiences
-<img src="Screenshots/new.gif" width="45%"> <img src="Screenshots/settings.gif" width="45%">
+<img src="Screenshots/new.gif" width="40%"> <img src="Screenshots/settings.gif" width="40%">
 
 ## Common plugin compatibilities
 Calendar / Gantt / Group_assign ...
