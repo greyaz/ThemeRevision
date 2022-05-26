@@ -1,12 +1,12 @@
 # ThemeRevision for Kanboard
 ThemeRevision is a clean and high-quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
-<img src="Screenshots/board.png" width="38%"> <img src="Screenshots/detail.png" width="38%"> <img src="Screenshots/mobile.jpg" width="18%">
+<img src="Screenshots/board.png" width="46%"> <img src="Screenshots/detail.png" width="46%"> 
 
 ## Features
 ### Better mobile experiences
 
-<img src="Screenshots/new.gif" width="46%"> <img src="Screenshots/settings.gif" width="46%">
+<img src="Screenshots/mobile.jpg">
 
 ### Common plugin compatibilities
 Calendar / Gantt / Group_assign ...
