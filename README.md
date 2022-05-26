@@ -1,5 +1,5 @@
 # ThemeRevision for Kanboard
-ThemeRevision is a clean and high-quality theme for Kanboard. It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
+ThemeRevision is a clean and high-quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
 <img src="Screenshots/board.png" width="46%"> <img src="Screenshots/detail.png" width="46%">
 
