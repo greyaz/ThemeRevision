@@ -2,7 +2,7 @@
     // Replace Logo
     document.getElementsByTagName("header")[0].
     getElementsByClassName("logo")[0].
-    getElementsByTagName("a")[0].innerHTML = '<img src="/assets/img/logo.png" />';
+    getElementsByTagName("a")[0].innerHTML = '<img src="/assets/img/favicon.png" />';
 
     // Page Menu
     initMenu("section.sidebar-container > .sidebar");
