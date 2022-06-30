@@ -31,6 +31,11 @@
     var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
 
     mediaQueryListDark.addEventListener('change', event => {
+        syncColor(event);
+    });
+    syncColor(mediaQueryListDark);
+    
+    function syncColor(event){
         document.cookie = "prefers_color_scheme=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
         if (event.matches) {
             document.cookie="prefers_color_scheme=dark;path=/;";
@@ -38,9 +43,7 @@
         else{
             document.cookie="prefers_color_scheme=light;path=/;"
         }
-    });
-    mediaQueryListDark.dispatchEvent('change');
-    
+    }
 
     // Menu Init Function
     function initMenu(menuQS){
