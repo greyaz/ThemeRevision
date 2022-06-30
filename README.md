@@ -8,7 +8,7 @@ ThemeRevision is a clean and high-quality theme for [Kanboard](https://github.co
 
 ## Features
 #### 1. Better mobile experiences
-Modern mobile application interactive behaviour.
+Modern mobile application's interactive behaviour.
 
 #### 2. Common plugins compatibilities
 Calendar / Gantt / Group_assign / MetaMagic ...
