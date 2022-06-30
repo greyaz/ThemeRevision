@@ -1,33 +1,37 @@
 # ThemeRevision for Kanboard
 ThemeRevision is a clean and high-quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
-<img src="Screenshots/board.png" width="46%"> <img src="Screenshots/detail.png" width="46%"> 
+## Screenshots
+<img src="Screenshots/1.png" width="20%"> <img src="Screenshots/2.png" width="20%"> <img src="Screenshots/4.png" width="20%"> <img src="Screenshots/3.png" width="20%"> <img src="Screenshots/6.png" width="20%"> <img src="Screenshots/8.png" width="20%"> <img src="Screenshots/9.png" width="20%"> <img src="Screenshots/7.png" width="20%">
+
+<img src="Screenshots/10.png" width="10%"> <img src="Screenshots/11.png" width="10%">
 
 ## Features
-### Better mobile experiences
+#### 1. Better mobile experiences
+Modern mobile application interactive behaviour.
 
-<img src="Screenshots/mobile.jpg" width="50%">
+#### 2. Common plugins compatibilities
+Calendar / Gantt / Group_assign / MetaMagic ...
 
-### Common plugin compatibilities
-Calendar / Gantt / Group_assign ...
+#### 3. Dark mode
 
-<img src="Screenshots/calendar.png" width="46%"> <img src="Screenshots/gantt.png" width="46%">
+* Users can change the color scheme by themselves (User Profile -> Actions -> Theme Settings)
+* Three modes provided: Light / Dark / Auto
 
-### Customization friendly
-1. Switching between production and development mode conveniently.  
-2. Structured CSS files, easy to locate elements.  
-3. Rich CSS variables preset. Use "rem" as the global measuring unit.
+#### 4. Customization friendly
 
-<img src="Screenshots/config.png" width="46%"> <img src="Screenshots/css.png" width="46%">
+* Structured CSS files, easy to locate elements.  
+* Utilize "rem" as the global measuring unit.
 
 ## Installation
 1. Install from the Kanboard plugin manager directly, or `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
-2. ThemeRevision use the file `favicon.png` in `your_kanboard_root/assets/img` as a logo, replace it if needed.
+2. ThemeRevision use the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
 
 ## Customization
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
 2. Rename the file `config-default.php` to `config.php`.
 3. Enable "development mode" in the configuration file.
+4. Edit raw CSS files in the folder `Asset/dev`.
 
 ## Author
 - greyaz

@@ -1,6 +1,5 @@
 .sidebar {
     max-width: 25%;
-    min-width: var(--size-W1);
     padding: 0;
     margin-right: 4rem;
 	display: block;

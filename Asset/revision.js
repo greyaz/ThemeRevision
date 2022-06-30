@@ -6,6 +6,7 @@
 
     // Page Menu
     initMenu("section.sidebar-container > .sidebar");
+
     // Modal Menu
     var observer = new MutationObserver(function(mutationsList, observer){
         for(let mutation of mutationsList) {
@@ -26,6 +27,21 @@
     });
     observer.observe(document.body, {attributes: true, childList: true, subtree: true});
 
+    // Sycn System Color Schema
+    var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    mediaQueryListDark.addEventListener('change', event => {
+        document.cookie = "prefers_color_scheme=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+        if (event.matches) {
+            document.cookie="prefers_color_scheme=dark;path=/;";
+        }
+        else{
+            document.cookie="prefers_color_scheme=light;path=/;"
+        }
+    });
+    mediaQueryListDark.dispatchEvent('change');
+    
+
     // Menu Init Function
     function initMenu(menuQS){
         var menu = document.querySelector(menuQS);
@@ -38,7 +54,7 @@
                 menuBtn.innerHTML = '<div class="themeRevisionMenuBtn">≡</div>';
                 menuBtnCon.insertBefore(menuBtn, menu);
                 
-                menuBtn.querySelector(".themeRevisionMenuBtn").onclick = function(){
+                menuBtn.querySelector(".themeRevisionMenuBtn").onclick = function(event){
                     event.stopPropagation();
                     if (menu.style.display != "block"){
                         menu.style.display = "block";
@@ -54,6 +70,6 @@
                 }
             }
         }
-    }
+    }    
     
 })(document);

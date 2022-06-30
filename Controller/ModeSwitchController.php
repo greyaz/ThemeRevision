@@ -8,12 +8,11 @@ class ModeSwitchController extends Base
     private $prdFile = 'plugins/ThemeRevision/Asset/revision.css';
     private $dveFiles = array(
         'plugins/ThemeRevision/Asset/dev/basics.css',
-		'plugins/ThemeRevision/Asset/dev/colors.css',
 		'plugins/ThemeRevision/Asset/dev/form-components.css',
 		'plugins/ThemeRevision/Asset/dev/table.css',
 		'plugins/ThemeRevision/Asset/dev/layout.css',
 		'plugins/ThemeRevision/Asset/dev/header.css',
-		'plugins/ThemeRevision/Asset/dev/calendar-and-gantt.css',
+		'plugins/ThemeRevision/Asset/dev/plugins.css',
 		'plugins/ThemeRevision/Asset/dev/switcher-action-filter.css',
 		'plugins/ThemeRevision/Asset/dev/board.css',
 		'plugins/ThemeRevision/Asset/dev/task-detail.css',
@@ -21,7 +20,6 @@ class ModeSwitchController extends Base
 		'plugins/ThemeRevision/Asset/dev/sidebar.css',
 		'plugins/ThemeRevision/Asset/dev/table-list.css',
 		'plugins/ThemeRevision/Asset/dev/board-task-list.css',
-		'plugins/ThemeRevision/Asset/dev/task-board.css',
 		'plugins/ThemeRevision/Asset/dev/activity-and-comment.css',
 		'plugins/ThemeRevision/Asset/dev/modal.css',
 		'plugins/ThemeRevision/Asset/dev/break-points.css'

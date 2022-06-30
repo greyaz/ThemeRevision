@@ -1,8 +1,11 @@
 <?php
-
 namespace Kanboard\Plugin\ThemeRevision;
+
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
+use Kanboard\Plugin\ThemeRevision\Controller\ColorSwitchController;
 use Kanboard\Plugin\ThemeRevision\Controller\ModeSwitchController;
+
 
 class Plugin extends Base
 {
@@ -10,15 +13,16 @@ class Plugin extends Base
 	{
 		global $themeRevisionConfig;
 
-		$modeSwitchController = new ModeSwitchController($this->container);
-
+		// load configuration file
 		if (file_exists('plugins/ThemeRevision/config.php')) {
 			require_once('plugins/ThemeRevision/config.php');
 		}
 		else {
 			require_once('plugins/ThemeRevision/config-default.php');
 		}
-		
+
+		// mode settings
+		$modeSwitchController = new ModeSwitchController($this->container);
 		if (isset($themeRevisionConfig['mode']) && $themeRevisionConfig['mode'] == "development") {
 			$modeSwitchController->developmentMode($this);
 		}
@@ -26,7 +30,42 @@ class Plugin extends Base
 			$modeSwitchController->productionMode($this);
 		}
 		
+		// load JS file
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/revision.js'));
+	}
+
+	public function onStartup(){
+		// load translations
+		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+
+		// theme settings
+		$themeSwitchController = new ColorSwitchController($this->container);
+		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
+			$themeSwitchController->setColor2Light($this);
+		}
+		elseif (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "dark"){
+			$themeSwitchController->setColor2Dark($this);
+		}
+		else {
+			// user configure UI
+			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
+
+			// set color
+			$scheme = $this->userMetadataModel->get($this->userSession->getId(), "ThemeRevisionColor", "");
+			
+			if ($scheme == "light"){
+				$themeSwitchController->setColor2Light($this);
+			}
+			elseif ($scheme == "dark"){
+				$themeSwitchController->setColor2Dark($this);
+			}
+			elseif ($scheme == "auto") {
+				$themeSwitchController->setColorBySys($this);
+			}
+			else{
+				$themeSwitchController->setColor2Light($this);
+			}
+		}
 	}
 	
 	public function getPluginName()	{ 	 
@@ -38,7 +77,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '0.8.0'; 
+		return '1.0.0'; 
 	}
 
 	public function getPluginDescription() { 

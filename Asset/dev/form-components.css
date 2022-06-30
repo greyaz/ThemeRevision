@@ -14,12 +14,16 @@ input[type=date], input[type=email], input[type=number], input[type=password], i
 	box-shadow: var(--style-shadow0);
 	font-family: var(--style-fontfamily);
 	letter-spacing: var(--style-letterspacing);
+	box-sizing: border-box;
 }
 textarea{
 	min-height: 10rem;
 }
 input[type="text"][name*="url"], input[type="text"][name*="mail"], input[type="email"], input[type="text"][value*="http"], textarea[name="application_stylesheet"], textarea[name*="mail"] {
 	min-width: var(--size-W1);
+}
+input[type="date"][name*="metamagikkey"]{
+	max-width: calc(var(--size-W1) - 1.5rem);
 }
 select, form > select {
 	min-width: 150px;
@@ -29,6 +33,9 @@ select, form > select {
 	background-size: 4px 4px, 4px 4px;
 	background-repeat: no-repeat;
 	padding-right: calc(1.5rem + 8px);
+}
+input[required]:not(:hover), select[required]:not(:hover), textarea[required]:not(:hover) {
+    border-bottom-color: var(--color-E2) !important;
 }
 input[type=checkbox], input[type=radio] {
 	margin: 0 0.25rem 1rem 0;
@@ -66,6 +73,7 @@ input::placeholder, textarea::placeholder{
 }
 .text-editor .text-editor-toolbar{
 	border-color: var(--color-G7);
+	box-sizing: border-box;
 }
 .js-text-editor-rendered {
     width: unset;
@@ -98,6 +106,10 @@ input::placeholder, textarea::placeholder{
 .select2-selection--multiple {
 	min-height: calc(2rem + 2px) !important;
 }
+.select2-container--default .select2-selection--single, .select2-container--default .select2-selection--multiple{
+	background: none;
+}
+
 .select2-selection__arrow{
 	height: 1rem !important;
 	top: .75rem !important;
@@ -152,7 +164,7 @@ input::placeholder, textarea::placeholder{
 }
 .select2-results__option[aria-selected=true] {
     background-color: var(--color-G5) !important;
-	color: var(--color-G3);
+	color: var(--color-G0);
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background: var(--color-M0);
@@ -243,8 +255,9 @@ ul.dropdown-submenu-open a {
 input[type=date]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=text]:focus, input[type=checkbox]:focus, input[type=radio]:focus, input[type=file]:focus, textarea:focus, .text-editor textarea:focus, select:focus, .select2-container--focus,
 input[type=date]:hover, input[type=email]:hover, input[type=number]:hover, input[type=password]:hover, input[type=text]:hover, input[type=checkbox]:hover, input[type=radio]:hover, input[type=file]:hover, textarea:hover, .text-editor textarea:hover, select:hover, .select2-container:hover,
 .select-dropdown-input-container:hover {
-	box-shadow: 0 2px 3px 1px var(--color-M1);
-    border-color: var(--color-M2);
+	box-shadow: var(--style-shadow1);
+    border-color: var(--color-M0);
+	color: var(--color-G0);
 }
 .dropdown-submenu-open li:hover:not(.no-hover), .textarea-dropdown .active, .textarea-dropdown li:hover, .select-dropdown-menu-item.active{
 	background: var(--color-M0);
@@ -271,10 +284,13 @@ label {
 	padding: 0;
 }
 .form-required{
+	/*
 	color: var(--color-E0);
 	padding: 0;
 	margin: 0 1rem 0 .5rem;
 	font-weight: normal;
+	*/
+	display: none;
 }
 .form-help {
 	margin: -.5rem 0 1rem;
@@ -316,5 +332,9 @@ legend {
 	font-size: 1rem;
 	font-weight: bold;
     line-height: 1rem;
-	padding: .75rem 0;
+	padding: .75rem 0 !important;
+}
+.ui-timepicker-select {
+	width: 100%;
+    min-width: unset;
 }

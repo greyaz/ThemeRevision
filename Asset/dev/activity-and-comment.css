@@ -13,6 +13,7 @@
     margin-bottom: 0;
 	border-bottom: var(--style-border);
 	background: var(--color-G6);
+    border-radius: var(--size-R0);
 }
 .comments .comment:nth-child(even):not(.comment-highlighted), .activity-event:nth-child(even){
 	background: var(--color-G7);
@@ -33,6 +34,9 @@
 	font-weight: bold;
 	margin-bottom: 1rem;
 	border: none;
+}
+.comment-title .comment-date{
+    font-weight: normal;
 }
 .comment-content, .activity-content{
     margin: 0 0 0 5rem;
@@ -62,5 +66,11 @@
     margin-top: 1rem;
 }
 .comments>form .js-text-editor-rendered{
-    max-width: calc(100% - 1.5rem);
+    max-width: 100%;
+}
+.comments>form .text-editor textarea {
+    box-sizing: border-box;
+}
+.comments>form .text-editor .text-editor-preview-area {
+    box-sizing: border-box;
 }

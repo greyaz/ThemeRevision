@@ -3,15 +3,18 @@
 }
 #modal-box{
 	border-radius: var(--size-R0);
-	padding: 1rem;
+	padding: 2rem;
 	background: var(--color-G8);
-	max-width: var(--size-W0);
+	max-width: 1024px !important;
 }
 #modal-header{
 	padding: 0;
 	margin: 0 0 .5rem;
-	font-size: .875rem;
-    line-height: .875rem;
+	font-size: var(--size-font-min);
+    line-height: var(--size-font-min);
+}
+#modal-close-button i.fa {
+	margin: 0;
 }
 #modal-content{
 	padding: 0;
@@ -21,11 +24,17 @@
 	background: var(--color-G6);
     max-width: unset;
 }
+#modal-content .page-header{
+    padding-top: 0;
+	margin-top: -1.5rem;
+	background-image: none;
+}
 #modal-content .sidebar-container {
 	margin-top: 1rem;
 }
 #modal-content .sidebar-content{
 	border: none;
+	padding: 0;
 }
 
 .task-form-main-column{
@@ -51,4 +60,7 @@
 	border-bottom: var(--style-border);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+}
+#modal-content .task-form-container > *:nth-child(3){
+	border-right: 0;
 }

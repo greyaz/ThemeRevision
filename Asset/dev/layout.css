@@ -1,7 +1,7 @@
 header {
 	background: none;
 	border-bottom: none;
-	margin: 0 0 1.5rem;
+	margin: 0 0 3rem;
 	padding: 0;
 	align-items: flex-end;
 }
@@ -24,7 +24,7 @@ header {
 
 .project-header {
 	padding: 0;
-	margin: 0 0 3rem;
+	margin: -1.5rem 0 3rem;
 	background: none;
 	max-width: 100%;
 	height: 2.5rem;
@@ -42,7 +42,7 @@ header {
 	max-width: var(--size-W0);
 	/*width: 60vw;*/
 	background: var(--color-G8);
-    padding: 1rem;
+    padding: 1rem 2rem;
 	border-radius: var(--size-R0);
 	border-bottom: var(--style-border);
 	margin-bottom: 1rem;
@@ -52,18 +52,25 @@ header {
 						linear-gradient(180deg, var(--color-G8) 1rem, transparent 1rem),
 						linear-gradient(270deg, var(--color-G8) 1rem, transparent 1rem);*/
 }
-#task-view .sidebar-content{
-	background: none;
-	padding: 0;
-	border: 0;
+#main .sidebar-content, #main > .accordion-section, .page > .table-list{
+	box-shadow: var(--style-shadow1);
+}
+#main .sidebar-content{
+	padding: 2rem;
 }
 .page-header, .sidebar-content > h2, .sidebar-content > h3, .accordion-title{
-	background: var(--color-G8);
+	/*background: var(--color-G8);*/
     border: none;
     border-radius: var(--size-R0) var(--size-R0) 0 0;
-    border-bottom: var(--style-border);
-    padding: 1rem;
-    margin: 0;
+    /*border-bottom: var(--style-border);*/
+    padding: 1rem 0;
+    margin: 0 0 0.5rem;
+	background-image: radial-gradient(var(--color-G4) 0.8px, var(--color-G8) 0.8px);
+    background-size: 16px 16px;
+	text-shadow: 0 0 1em var(--color-G8);
+}
+.sidebar-content > h3 {
+	background-image: none;
 }
 .page > #main > .page-header, .page > .page-header{
 	background: none;
@@ -71,10 +78,14 @@ header {
 	padding: 0;
 	margin-bottom: 3rem;
 	box-shadow: none;
+	margin-top: -1.5rem;
+}
+.page-header ul {
+    width: 100%;
 }
 .panel, .table-list, form, .accordion-content, .sidebar-content > .markdown {
 	border: none;
-    border-bottom: var(--style-border);
+    /*border-bottom: var(--style-border);*/
 	border-radius: var(--size-R0);
 	line-height: 1.5rem;
 	margin: 0;
@@ -82,19 +93,28 @@ header {
 	font-size: 1rem;
 	color: var(--color-G0);
 	height: auto;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     width: auto;
     max-width: var(--size-W0);
     background: var(--color-G6);
 	box-sizing: border-box;
+}
+.table-list{
+	background: var(--color-G8);
 }
 .panel > * , .table-list > * , form > * , .accordion-content > * {
     border-bottom: none;
     margin: 0 0 1rem;
     padding: 0;
 }
-.panel > *:last-child , .table-list > *:last-child , form > *:last-child , .accordion-content > *:last-child {
+.panel > *:last-child:not(.alert) , .table-list > *:last-child:not(.alert) , form > *:last-child:not(.alert) , .accordion-content > *:last-child:not(.alert) {
     margin-bottom: 0;
 	margin-right: 0;
+}
+.panel > ul:last-child > li:last-child{
+	margin-bottom: 0;
+}
+.accordion-content > table{
+	table-layout: fixed;
 }
 

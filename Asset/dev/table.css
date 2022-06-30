@@ -5,12 +5,16 @@ table {
 	border-right: none;
 	margin-bottom: 1rem;
 }
+table.table-small{
+	font-size: var(--size-font-min);
+}
 table th, table td {
 	border-bottom: 1px solid var(--color-G6);
 	border-left: 1px solid var(--color-G6);
 	line-height: 2rem;
 	padding: .5rem 1rem;
 	vertical-align: baseline;
+	border-color: var(--color-G6);
 }
 table th{
 	background: var(--color-G6);
@@ -19,11 +23,14 @@ table th{
 table tr:last-child td{
 	border-bottom: var(--style-border);
 }
+table.table-striped tr:nth-child(odd){
+	background: none;
+}
 table tbody tr:nth-child(even) td {
 	background: var(--color-G7);
 }
 table tbody tr:nth-child(odd) td {
-	background: var(--color-G6);
+	background: var(--color-G8);
 }
 table tr th:first-child, table tr td:first-child{
 	border-left: none;

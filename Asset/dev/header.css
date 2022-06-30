@@ -10,17 +10,18 @@ header h1 {
 	height: 3rem;
 	display: flex;
 	align-items: flex-end;
+	font-size: 1.5rem !important;
 }
 header h1 .logo {
 	line-height: 0;
-	width: 4rem;
+	width: 3rem;
 }
 header h1 .logo a {
 	font-size: 0 !important;
 	line-height: 0 !important;
 }
 header h1 .logo a img {
-	height: 3rem;
+	height: 2rem;
 	border-radius: var(--size-R0);
 	border-bottom: var(--style-border);
     box-shadow: var(--style-shadow0);

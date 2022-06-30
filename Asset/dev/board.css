@@ -4,9 +4,9 @@
 #board td,
 #board th {
 	border: none;
-	border-left: 1px solid var(--color-G6);
+	/*border-left: 1px solid var(--color-G6);*/
 	background: var(--color-G6);
-	padding: .5rem 1rem;
+	padding: .5rem .75rem;
 }
 #board td:first-child,
 #board th:first-child {
@@ -21,6 +21,12 @@
 	font-size: 1.5rem;
     line-height: 4rem;
 	padding: 0;
+}
+#board th.board-column-header-collapsed .board-add-icon{
+    display: none;
+}
+#board th.board-column-header-collapsed .board-column-title{
+    display: none;
 }
 #board td {
 	border-color: var(--color-G5)

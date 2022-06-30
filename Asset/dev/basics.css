@@ -1,15 +1,77 @@
 :root {
 	--size-R0: 2px;
-	--size-F0: 12px;
-	--size-W0: 1024px;
+	--size-F0: 13px;
+	--size-W0: unset;
 	--size-W1: 220px;
+	--size-font-min: max(12px, 0.875rem);
 
 	--style-border: 1px solid var(--color-G5);
-	--style-shadow0: 0 0 2px 0 rgba(0, 0, 0, .12);
+	--style-shadow0: 0 1px 2px 0 rgba(0, 0, 0, .04);
 	--style-shadow1: 0 3px 8px 0 rgba(0, 0, 0, .08);
 	--style-shadow2: 0 2px 4px 0px rgb(0, 0, 0, .07);
 	--style-fontfamily: "SF Pro Display", Calibri, Helvetica, Verdana, Arial, sans-serif;
 	--style-letterspacing: .02rem;
+	
+	/*default css override*/
+	--color-dark: var(--color-G0);
+	--color-primary: var(--color-G0);
+	--color-medium: var(--color-G0);
+	--color-light: var(--color-G0);
+	--color-lighter: var(--color-G0);
+	--color-error: var(--color-E0);
+
+	--link-color-primary: var(--color-G0);
+	--link-color-focus: var(--color-M0);
+    --link-color-hover: var(--color-M0);
+
+	--avatar-color-letter: var(--color-G8);
+
+	--alert-color-info: var(--color-M0);
+	--alert-background-color-info: var(--color-M1);
+	--alert-border-color-info: var(--color-M2);
+
+	--alert-color-default: var(--color-A0);
+	--alert-background-color-default: var(--color-A1);
+	--alert-border-color-default: var(--color-A2);
+
+	--alert-color-normal: var(--color-G0);
+	--alert-background-color-normal: var(--color-G7);
+	--alert-border-color-normal: var(--color-G5);
+
+	--alert-color-error: var(--color-E0);
+	--alert-background-color-error: var(--color-E1);
+	--alert-border-color-error: var(--color-E2);
+
+	--alert-color-success: var(--color-S0);
+	--alert-background-color-success: var(--color-S1);
+	--alert-border-color-success: var(--color-S2);
+
+	--activity-title-color: var(--color-G0);
+
+	--button-default-color: var(--color-G0);
+    --button-default-background-color: var(--color-G8);
+    --button-default-border-color: var(--color-G8);
+    --button-default-color-focus: var(--color-G1);
+    --button-default-background-color-focus: var(--color-G8);
+    --button-default-border-color-focus: var(--color-G8);
+
+	--button-primary-color: var(--color-G8);
+	--button-primary-background-color: var(--color-M0);
+    --button-primary-border-color: var(--color-M0);
+	--button-primary-color-focus: var(--color-M2);
+	--button-primary-background-color-focus: var(--color-M0);
+    --button-primary-border-color-focus: var(--color-M0);
+	
+	--button-danger-color: var(--color-G8);
+	--button-danger-border-color: var(--color-E0);
+	--button-danger-background-color: var(--color-E0);
+	--button-danger-color-focus: var(--color-E2);
+	--button-danger-background-color-focus: var(--color-E0);
+    --button-danger-border-color-focus: var(--color-E0);
+	
+	--button-disabled-color: var(--color-G3);
+    --button-disabled-background-color: var(--color-G5);
+    --button-disabled-border-color: var(--color-G5);
 }
 html,
 body {
@@ -17,7 +79,7 @@ body {
 }
 body {
 	background-color: var(--color-G6);
-	padding: 2rem;
+	padding: .5rem 2rem;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: var(--style-fontfamily);
@@ -50,11 +112,11 @@ p {
 }
 hr{
 	margin: 0;
-	border-top: var(--style-border);
+	border-top: 1px solid var(--color-G6);
 	border-bottom: 0;
 }
 small {
-	font-size: .857rem;
+	font-size: var(--size-font-min);
 }
 button, .btn {
 	line-height: 1rem;
@@ -109,6 +171,7 @@ i.fa{
 	padding: 0;
 	margin: 0;
 	margin-right: .5rem;
+	color: var(--color-G0) !important;
 }
 .avatar.avatar-left {
 	margin-right: .5rem;
@@ -127,6 +190,9 @@ i.fa{
 #user-section .sidebar-content > .avatar-48 {
 	padding: 1rem;
 }
+.avatar img {
+    vertical-align: middle;
+}
 .avatar-13 img, .avatar-13 div,
 .avatar-20 img, .avatar-20 div,
 .avatar-48 img, .avatar-48 div {
@@ -143,9 +209,7 @@ i.fa{
 	border-radius: var(--size-R0);
 	padding: 0.5rem 1rem;
 	max-width: calc(var(--size-W0) - 2rem);
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
+	border: 0;
 }
 #tooltip-container {
 	width: unset;

@@ -1,43 +1,150 @@
-#task-summary{
-	margin-bottom: 2rem;
+#task-view .sidebar-content > * {
+    max-width: 900px;
+    margin: auto;
+}
+#task-view .sidebar-content .accordion-section{
+    padding: 0;
+    margin: 2.5rem auto;
+    border-bottom: 0;
+    background: none;
+}
+#task-view .sidebar-content .accordion-title{
+    border-bottom: var(--style-border) !important;
+    background: none;
+    border-bottom-style: dotted !important;
+}
+#task-view .sidebar-content .accordion-content{
+    background: none;
+    border-bottom: 0;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+#task-view .sidebar-content .accordion-content article.markdown *{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+#task-view .sidebar-content .file-thumbnails{
+    padding: 1rem;
+    background: var(--color-G6);
+    border-radius: var(--style-border);
+}
+#task-view #comments .comment-sorting{
+    margin-bottom: 0;
+}
+#task-view .sidebar-content #comments > form{
+    padding: 1rem;
+    box-sizing: border-box;
+}
+#task-view .sidebar-content #comments > form .form-actions button{
+    margin: 0;
+}
+#task-view .sidebar-content .page-header{
+    margin-top: 2.5rem;
+}
+#task-view .sidebar-content .activity-event{
+    box-sizing: border-box;
+}
+#task-view .sidebar-content div[class*=js-chart-]{
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+#task-view .sidebar-content .table-striped{
+    margin-bottom: 1rem;
+}
+#task-view .sidebar-content .alert{
+    box-sizing: border-box;
+}
+
+#task-view .sidebar-content #task-summary{
+	margin-bottom: 1rem;
+    max-width: unset;
+    background-image: radial-gradient(var(--color-G4) .8px, transparent .8px);
+    background-size: 16px 16px;
 }
 #task-summary > br {
     display: none;
 }
 #task-summary h2{
-	padding: 2rem 2rem 0;
+	padding: 2.5rem 0 1rem;
     background: var(--color-G8);
-    border-radius: var(--size-R0) var(--size-R0) 0 0;
+    border-radius: var(--size-R0);
+    margin: 0 auto 1rem;
+    border-bottom: 2px solid var(--color-G0) !important;
+    font-size: 2rem !important;
+    background: none;
+    line-height: 3rem !important;
+    text-shadow: 0 0 1em var(--color-G8);
+    max-width: 900px;
 }
-.task-summary-container{
-	border-radius: 0 0 var(--size-R0) ar(--size-R0);
-    border: none;
-    padding: 2.5rem 2rem 1rem;
-    border-bottom: 1px solid;
-    box-shadow: inset 0 0 0 1rem var(--color-G8);
+#task-summary .accordion-section {
+    display: none;
+}
+#task-summary .task-summary-container{
+	margin: 1rem -2rem 0;
+    padding: .5rem 2rem 1.5rem;
+    border-bottom-width: 1px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-radius: 0;
+    box-shadow: 0 -1rem 0 0 var(--color-G8);
+    text-align: center;
 }
 .task-summary-container .task-tags{
     display: inline-block;
-    margin-top: .5rem;
+    margin: 0 0 -1rem;
+    border: inherit;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    border-top: 0;
+    border-width: 0;
+    padding: 0;
 }
-.task-summary-columns {
+#task-summary .task-tags ul{
+    margin: 0 auto;
+}
+#task-summary .task-summary-columns {
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;
     flex-direction: row-reverse;
 	flex-wrap: wrap;
+    padding-top: 1rem;
+    border: inherit;
+    border-width: 0;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+    max-width: 900px;
+    margin: auto;
 }
-.task-summary-column {
+#task-summary .task-summary-column {
     color: var(--color-G0);
-    border-left: 1px solid rgba(0,0,0,0.06);
-    padding-left: 1.5rem;
-	min-width: 160px;
 	margin-bottom: 1rem;
+    border: inherit;
+    border-width: 0;
+    padding-left: 0;
+    margin: 1rem 0 0;
+    min-width: 20%
 }
-.task-summary-column li {
-    line-height: inherit;
+#task-summary .task-summary-column ul{
+    border: inherit;
 }
-.task-summary-column span{
+#task-summary .task-summary-column li {
+    font-size: var(--size-font-min);
+    border: inherit;
+    border-bottom-width: 1px;
+    padding-bottom: .5rem;
+    border-style: dotted;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1rem;
+    margin-bottom: 1.25rem
+}
+#task-summary .task-summary-column li a{
+    font-size: var(--size-font-min) !important;
+    color: var(--color-M0);
+}
+#task-summary .task-summary-column span{
 	color: var(--color-G0);
 }
 
