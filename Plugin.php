@@ -9,6 +9,8 @@ use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
 
 class Plugin extends Base
 {
+	private $adminScheme;
+
 	public function initialize()
 	{
 		global $themeRevisionConfig;
@@ -29,6 +31,22 @@ class Plugin extends Base
 		}
 		// color switch
 		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
+		// theme settings
+		$this->adminScheme = $themeRevisionConfig['color scheme'];
+		// light and dark mode
+		if (isset($this->adminScheme) && $this->adminScheme == "light") {
+			$this->helper->colorSwitchHelper->setColor2Light();
+		}
+		elseif (isset($this->adminScheme) && $this->adminScheme == "dark"){
+			$this->helper->colorSwitchHelper->setColor2Dark();
+		}
+		else {
+			// user configure UI
+			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
+			// sync system prefer
+        	$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
+        	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync-color.js'));
+		}
 		// load JS file
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/revision.js'));
 	}
@@ -36,37 +54,11 @@ class Plugin extends Base
 	public function onStartup(){
 		// load translations
 		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
-		// theme settings
-		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
-			$this->helper->colorSwitchHelper->setColor2Light();
-		}
-		elseif (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "dark"){
-			$this->helper->colorSwitchHelper->setColor2Dark();
-		}
-		// Auto Mode
-		else {
-			// user configure UI
-			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
-			// get setting
-			$scheme = $this->userMetadataModel->get($this->userSession->getId(), "ThemeRevisionColor", "");
+
+		// user Mode
+		if(!isset($this->adminScheme) || $this->adminScheme != "light" || $this->adminScheme != "dark") {
 			// set color
-			if ($scheme == "light"){
-				$this->helper->colorSwitchHelper->setColor2Light();
-			}
-			elseif ($scheme == "dark"){
-				$this->helper->colorSwitchHelper->setColor2Dark();
-			}
-			elseif ($scheme == "auto") {
-				// get system prefer
-				$sysPrefer = $this->userMetadataModel->get($this->userSession->getId(), "ThemeRevisionSysPrefer", "");
-				// set color
-				$this->helper->colorSwitchHelper->setColorBySys($sysPrefer);
-				// sync system prefer
-				$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
-			}
-			else{
-				$this->helper->colorSwitchHelper->setColor2Light();
-			}
+			$this->helper->colorSwitchHelper->setUserColor();
 		}
 	}
 	
@@ -79,7 +71,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.0.0'; 
+		return '1.0.2'; 
 	}
 
 	public function getPluginDescription() { 

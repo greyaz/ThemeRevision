@@ -27,31 +27,6 @@
     });
     observer.observe(document.body, {attributes: true, childList: true, subtree: true});
 
-    // Sycn System Color Schema
-    var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    mediaQueryListDark.addEventListener('change', event => {
-        syncColor(event);
-    });
-    syncColor(mediaQueryListDark);
-
-    function syncColor(event){
-        var url;
-        if (event.matches) {
-            url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer=dark";
-        }
-        else{
-            url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer=light";
-        }
-        fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data.reload){
-                window.location.reload();
-            }
-        });
-    }
-
     // Menu Init Function
     function initMenu(menuQS){
         var menu = document.querySelector(menuQS);
