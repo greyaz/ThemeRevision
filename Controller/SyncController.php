@@ -13,10 +13,10 @@ class SyncController extends BaseController
         $this->userMetadataModel->save($user['id'], ["ThemeRevisionSysPrefer" => $prefer]);
 
         if ($prefer != $lastPrefer){
-            $this->response->json(array("reload" => true));
+            $this->response->json(array("reload" => true, "id" => $user['id']));
         }
         else{
-            $this->response->json(array("reload" => false));
+            $this->response->json(array("reload" => false, "id" => $user['id']));
         }
     }
 }
