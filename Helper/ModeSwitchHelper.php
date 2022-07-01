@@ -1,9 +1,9 @@
 <?php
 
-namespace Kanboard\Plugin\ThemeRevision\Controller;
+namespace Kanboard\Plugin\ThemeRevision\Helper;
 use Kanboard\Core\Base;
 
-class ModeSwitchController extends Base
+class ModeSwitchHelper extends Base
 {
     private $prdFile = 'plugins/ThemeRevision/Asset/revision.css';
     private $dveFiles = array(

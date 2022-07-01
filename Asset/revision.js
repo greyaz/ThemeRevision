@@ -29,20 +29,27 @@
 
     // Sycn System Color Schema
     var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
-
+    
     mediaQueryListDark.addEventListener('change', event => {
         syncColor(event);
     });
     syncColor(mediaQueryListDark);
-    
+
     function syncColor(event){
-        document.cookie = "prefers_color_scheme=; expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+        var url;
         if (event.matches) {
-            document.cookie="prefers_color_scheme=dark;path=/;";
+            url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer=dark";
         }
         else{
-            document.cookie="prefers_color_scheme=light;path=/;"
+            url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer=light";
         }
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.reload){
+                window.location.reload();
+            }
+        });
     }
 
     // Menu Init Function

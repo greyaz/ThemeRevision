@@ -3,8 +3,8 @@ namespace Kanboard\Plugin\ThemeRevision;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\ThemeRevision\Controller\ColorSwitchController;
-use Kanboard\Plugin\ThemeRevision\Controller\ModeSwitchController;
+use Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper;
+use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
 
 
 class Plugin extends Base
@@ -12,7 +12,6 @@ class Plugin extends Base
 	public function initialize()
 	{
 		global $themeRevisionConfig;
-
 		// load configuration file
 		if (file_exists('plugins/ThemeRevision/config.php')) {
 			require_once('plugins/ThemeRevision/config.php');
@@ -20,16 +19,16 @@ class Plugin extends Base
 		else {
 			require_once('plugins/ThemeRevision/config-default.php');
 		}
-
-		// mode settings
-		$modeSwitchController = new ModeSwitchController($this->container);
+		// mode switch
+		$modeSwitchHelper = new ModeSwitchHelper($this->container);
 		if (isset($themeRevisionConfig['mode']) && $themeRevisionConfig['mode'] == "development") {
-			$modeSwitchController->developmentMode($this);
+			$modeSwitchHelper->developmentMode($this);
 		}
 		else {
-			$modeSwitchController->productionMode($this);
+			$modeSwitchHelper->productionMode($this);
 		}
-		
+		// color switch
+		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
 		// load JS file
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/revision.js'));
 	}
@@ -37,33 +36,36 @@ class Plugin extends Base
 	public function onStartup(){
 		// load translations
 		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
-
 		// theme settings
-		$themeSwitchController = new ColorSwitchController($this->container);
 		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
-			$themeSwitchController->setColor2Light($this);
+			$this->helper->colorSwitchHelper->setColor2Light();
 		}
 		elseif (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "dark"){
-			$themeSwitchController->setColor2Dark($this);
+			$this->helper->colorSwitchHelper->setColor2Dark();
 		}
+		// Auto Mode
 		else {
 			// user configure UI
 			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
-
-			// set color
+			// get setting
 			$scheme = $this->userMetadataModel->get($this->userSession->getId(), "ThemeRevisionColor", "");
-			
+			// set color
 			if ($scheme == "light"){
-				$themeSwitchController->setColor2Light($this);
+				$this->helper->colorSwitchHelper->setColor2Light();
 			}
 			elseif ($scheme == "dark"){
-				$themeSwitchController->setColor2Dark($this);
+				$this->helper->colorSwitchHelper->setColor2Dark();
 			}
 			elseif ($scheme == "auto") {
-				$themeSwitchController->setColorBySys($this);
+				// get system prefer
+				$sysPrefer = $this->userMetadataModel->get($this->userSession->getId(), "ThemeRevisionSysPrefer", "");
+				// set color
+				$this->helper->colorSwitchHelper->setColorBySys($sysPrefer);
+				// sync system prefer
+				$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
 			}
 			else{
-				$themeSwitchController->setColor2Light($this);
+				$this->helper->colorSwitchHelper->setColor2Light();
 			}
 		}
 	}
