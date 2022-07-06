@@ -12,7 +12,7 @@ class ColorSwitchHelper extends Base
     private $darkFile = 'plugins/ThemeRevision/Asset/dark.css';
 
     public function setColor2Dark(){
-        $this->container[colorModel] = $this->container->factory(function ($c) {
+        $this->container['colorModel'] = $this->container->factory(function ($c) {
             return new DarkColorModel($c);
         });
         $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->darkFile));
@@ -20,7 +20,7 @@ class ColorSwitchHelper extends Base
     }
 
     public function setColor2Light(){
-        $this->container[colorModel] = $this->container->factory(function ($c) {
+        $this->container['colorModel'] = $this->container->factory(function ($c) {
             return new LightColorModel($c);
         });
         $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->lightFile));
