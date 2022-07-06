@@ -11,6 +11,7 @@ class ModeSwitchHelper extends Base
 		'plugins/ThemeRevision/Asset/dev/form-components.css',
 		'plugins/ThemeRevision/Asset/dev/table.css',
 		'plugins/ThemeRevision/Asset/dev/layout.css',
+        'plugins/ThemeRevision/Asset/dev/login.css',
 		'plugins/ThemeRevision/Asset/dev/header.css',
 		'plugins/ThemeRevision/Asset/dev/plugins.css',
 		'plugins/ThemeRevision/Asset/dev/switcher-action-filter.css',

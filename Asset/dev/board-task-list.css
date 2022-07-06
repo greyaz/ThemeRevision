@@ -46,7 +46,7 @@
 	font-style: italic;
 }
 .task-board.task-board-recent .task-board-title:before {
-	content: "●";
+	content: "\25CF";
     position: relative;
     top: -0.5rem;
     color: var(--color-M0);

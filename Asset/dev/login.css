@@ -1,0 +1,10 @@
+.form-login > form {
+    padding: 2rem;
+    box-shadow: var(--style-shadow0);
+    background-image: radial-gradient(var(--color-G4) 0.8px,var(--color-G8) 0.8px);
+    background-size: 16px 16px;
+    border: 2rem solid var(--color-G8);
+}
+.form-login input#form-username, .form-login input#form-password {
+    width: 100%;
+}
