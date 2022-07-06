@@ -27,6 +27,7 @@
 #modal-content .page-header{
     padding-top: 0;
 	margin-top: -1.5rem;
+	margin-right: 1.5rem;
 	background-image: none;
 }
 #modal-content .sidebar-container {
