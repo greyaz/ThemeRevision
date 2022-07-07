@@ -13,7 +13,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 
 ## Features
 #### 1. Task-first
-* ThemeRivision has been trying to create a high quality but minimalist UI, help you focus on your tasks.
+* ThemeRivision has been trying to create a high quality but minimalist UI, helps you focus on your tasks.
 
 #### 2. Better mobile experiences
 * Modern mobile application's interactive behaviour.
