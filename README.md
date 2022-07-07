@@ -1,5 +1,5 @@
 # ThemeRevision for Kanboard
-ThemeRevision is a task-first and high-quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's also aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
+ThemeRevision is a task-first and high quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's also aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
 ## Screenshots
 <img src="Screenshots/1.png" width="20%"> <img src="Screenshots/2.png" width="20%"> <img src="Screenshots/4.png" width="20%"> <img src="Screenshots/3.png" width="20%"> <img src="Screenshots/6.png" width="20%"> <img src="Screenshots/8.png" width="20%"> <img src="Screenshots/9.png" width="20%"> <img src="Screenshots/7.png" width="20%">
