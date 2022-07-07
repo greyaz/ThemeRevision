@@ -1,7 +1,8 @@
 # ThemeRevision for Kanboard
-![Release](https://img.shields.io/github/v/release/greyaz/ThemeRevision?color=%23f7c400&style=flat-square)
+![Release](https://img.shields.io/github/v/release/greyaz/ThemeRevision?color=%2332ab3d&style=flat-square)
 ![License](https://img.shields.io/github/license/greyaz/ThemeRevision?color=%233860f4&style=flat-square)
-![Kanboard Support](https://img.shields.io/static/v1?label=Kanboard&message=%3E%3D1.2.22&color=green&style=flat-square)
+![Kanboard Support Good](https://img.shields.io/static/v1?label=Kanboard&message=%3E%3D1.2.22%20Good&color=green&style=flat-square)
+![Kanboard Support OK](https://img.shields.io/static/v1?label=Kanboard&message=%3E%3D1.2.8%20OK&color=%23f7c400&style=flat-square)
 
 ThemeRevision is a task-first and high quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's also aimed at better mobile experiences, common plugin compatibilities, and customization friendly.
 
