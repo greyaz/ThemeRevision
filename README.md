@@ -34,6 +34,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 ## Installation
 1. Install from the Kanboard plugin manager directly, or `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
 2. ThemeRevision use the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
+3. **Optional:** Set the default task color to **grey** for better visual consistency. (Settings -> Project Setting)
 
 ## Customization
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
