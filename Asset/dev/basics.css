@@ -238,5 +238,17 @@ i.fa{
 	background: none;
 	border: none;
 }
+.pagination {
+    font-size: var(--size-font-min);
+	margin-bottom: 1rem;
+}
+.pagination-showing {
+    margin-right: .5em;
+    padding-right: .5em;
+    border-right: var(--style-border);
+}
+.pagination-previous, .pagination-next {
+    margin-right: .5em;
+}
 
 

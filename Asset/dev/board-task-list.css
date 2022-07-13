@@ -7,6 +7,9 @@
     border-left: var(--style-border);
 	box-shadow: inset -4rem 0 0 0 var(--color-G6);
 }
+.board-task-list-compact {
+    max-height: calc(100vh - 16.5rem);
+}
 .task-board {
 	border-radius: var(--size-R0);
 	padding: 1rem;
@@ -70,7 +73,7 @@
     bottom: 1rem;
     right: 1rem;
 }
-.task-board a, .task-board-category a, .table-list-category a {
+.task-board-category a, .table-list-category a {
 	color: var(--color-G8);
 }
 

@@ -70,10 +70,13 @@ input::placeholder, textarea::placeholder{
 	border-bottom: var(--style-border);
 	line-height: 1.5rem;
 	overflow-wrap: anywhere;
+	box-sizing: border-box;
 }
 .text-editor .text-editor-toolbar{
 	border-color: var(--color-G7);
-	box-sizing: border-box;
+}
+.text-editor-write-mode{
+	line-height: 0;
 }
 .js-text-editor-rendered {
     width: unset;
