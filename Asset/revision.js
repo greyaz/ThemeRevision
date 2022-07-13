@@ -36,7 +36,7 @@
 
             if (menuBtnCon && (! menuBtnCon.querySelector(".themeRevisionMenuBtn"))){
                 var menuBtn = document.createElement("span");
-                menuBtn.innerHTML = '<div class="themeRevisionMenuBtn">≡</div>';
+                menuBtn.innerHTML = '<div class="themeRevisionMenuBtn">&equiv;</div>';
                 menuBtnCon.insertBefore(menuBtn, menu);
                 
                 menuBtn.querySelector(".themeRevisionMenuBtn").onclick = function(event){
