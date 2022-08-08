@@ -28,7 +28,7 @@
                 "localScheme": localScheme,
                 "realScheme": realScheme
             }
-            console.table(status);
+            // console.table(status);
             
             if (status.remoteScheme == "auto" && (status.reload || status.localScheme != status.realScheme)){
                 window.location.reload();
