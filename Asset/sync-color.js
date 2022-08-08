@@ -1,31 +1,42 @@
-(function(document){
-    // Sycn System Color Schema
-    var currentThemeColor = getCurrentColorCookie();
+// Sycn Local System's Color Scheme
+
+(function(window, document, KB){
+    var realScheme = getRealScheme();
     var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var isAuthPage = (document.location.search.indexOf("AuthController") >= 0);
     
-    mediaQueryListDark.addEventListener('change', event => {
-        syncColor(event);
-    });
-    window.addEventListener("load", event => {
-        syncColor(mediaQueryListDark);
-    })
+    if (!isAuthPage){
+        mediaQueryListDark.addEventListener('change', event => {
+            syncColor(event);
+        });
+        window.addEventListener("load", event => {
+            syncColor(mediaQueryListDark);
+        })
+    }
     
-    function syncColor(event){
+    function syncColor(isSysColorDark){
         var url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer="
-        var color;
-        event.matches ? color = "dark" : color = "light";
+        var localScheme;
+        isSysColorDark.matches ? localScheme = "dark" : localScheme =  "light";
         
-        fetch(url + color)
+        fetch(url+localScheme)
         .then(response => response.json())
         .then(data => {
-            //console.log(data.reload, data.setting, color, currentThemeColor);
-            if (data.setting == "auto" && (data.reload || color != currentThemeColor)){
+            var status = {
+                "reload": data.reload,
+                "remoteScheme": data.remoteScheme,
+                "localScheme": localScheme,
+                "realScheme": realScheme
+            }
+            console.table(status);
+            
+            if (status.remoteScheme == "auto" && (status.reload || status.localScheme != status.realScheme)){
                 window.location.reload();
             }
         });
     }
 
-    function getCurrentColorCookie(){
-        return document.cookie.replace(/(?:(?:^|.*;\s*)CurrentColorScheme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    function getRealScheme(){
+        return document.cookie.replace(/(?:(?:^|.*;\s*)TR\.color\.scheme\.real\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     }
-})(document);
+})(window, document, KB);

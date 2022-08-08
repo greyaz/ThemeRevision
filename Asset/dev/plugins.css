@@ -60,10 +60,13 @@
 	background: var(--color-G8);
 }
 .fc-unthemed td.fc-today {
-    background: var(--color-G6);
+    background: var(--color-G6) !important;
 }
 .fc-row table {
     margin: 0;
+}
+.fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+    background: transparent !important;
 }
 .fc-toolbar h2 {
     line-height: 2rem;
@@ -75,10 +78,15 @@
 	border-radius: var(--size-R0);
 	color: var(--color-G0) !important;
     font-size: var(--size-font-min) !important;
-    border-top: 0;
+	border-top: 1px solid var(--color-G7) !important;
 }
 .fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
     padding: 0.5rem;
+}
+a.fc-more {
+    font-size: var(--size-font-min) !important;
+    display: block;
+	color: var(--color-G2);
 }
 
 .page > #main > #gantt-chart{

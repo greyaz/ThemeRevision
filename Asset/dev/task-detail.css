@@ -147,6 +147,21 @@
 #task-summary .task-summary-column span{
 	color: var(--color-G0);
 }
+#task-summary .task-summary-column .avatar.avatar-inline{
+	margin: -.5rem 0 0 .5rem;
+    float: right;
+    line-height: 1rem;
+}
+#task-summary .task-summary-column .avatar.avatar-inline .avatar-letter{
+	font-size: var(--size-font-min);
+    width: 1rem;
+    line-height: 1rem;
+    padding: 1px;
+}
+#task-summary .task-summary-column .avatar.avatar-inline img{
+	width: calc(1rem + 2px);
+    height: auto;
+}
 
 .file-thumbnail {
     box-shadow: var(--style-shadow0);

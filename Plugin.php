@@ -9,11 +9,12 @@ use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
 
 class Plugin extends Base
 {
-	private $adminScheme;
+	//private $globalColorScheme;
 
 	public function initialize()
 	{
 		global $themeRevisionConfig;
+		
 		// load configuration file
 		if (file_exists('plugins/ThemeRevision/config.php')) {
 			require_once('plugins/ThemeRevision/config.php');
@@ -21,32 +22,32 @@ class Plugin extends Base
 		else {
 			require_once('plugins/ThemeRevision/config-default.php');
 		}
+
 		// mode switch
-		$modeSwitchHelper = new ModeSwitchHelper($this->container);
+		$this->helper->register('modeSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper');
 		if (isset($themeRevisionConfig['mode']) && $themeRevisionConfig['mode'] == "development") {
-			$modeSwitchHelper->developmentMode($this);
+			$this->helper->modeSwitchHelper->developmentMode();
 		}
 		else {
-			$modeSwitchHelper->productionMode($this);
+			$this->helper->modeSwitchHelper->productionMode();
 		}
+
 		// color switch
 		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
-		// theme settings
-		$this->adminScheme = $themeRevisionConfig['color scheme'];
-		// light and dark mode
-		if (isset($this->adminScheme) && $this->adminScheme == "light") {
+		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
 			$this->helper->colorSwitchHelper->setColor2Light();
 		}
-		elseif (isset($this->adminScheme) && $this->adminScheme == "dark"){
+		elseif (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "dark"){
 			$this->helper->colorSwitchHelper->setColor2Dark();
 		}
 		else {
-			// user configure UI
+			// user config UI
 			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
-			// sync system prefer
+			// sync local system prefer
         	$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
         	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync-color.js'));
 		}
+
 		// load JS file
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/revision.js'));
 	}
@@ -55,8 +56,8 @@ class Plugin extends Base
 		// load translations
 		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
 
-		// user Mode
-		if(!isset($this->adminScheme) || $this->adminScheme != "light" || $this->adminScheme != "dark") {
+		// the value of $themeRevisionConfig['color scheme'] is unset or "auto"
+		if(!isset($themeRevisionConfig['color scheme']) || $themeRevisionConfig['color scheme'] != "light" || $themeRevisionConfig['color scheme'] != "dark") {
 			// set color
 			$this->helper->colorSwitchHelper->setUserColor();
 		}
@@ -71,11 +72,11 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.0.4'; 
+		return '1.0.5'; 
 	}
 
 	public function getPluginDescription() { 
-		return "A clean and high-quality theme for Kanboard. It's aimed at better mobile experiences, common plugin compatibilities, and customization friendly."; 
+		return "A task-first and high quality theme for Kanboard. It's aimed at better mobile experiences, common plugins' compatibilities, and customization friendly."; 
 	}
 	
 	public function getPluginHomepage() { 	 

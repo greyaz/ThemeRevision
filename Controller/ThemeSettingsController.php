@@ -10,12 +10,12 @@ class ThemeSettingsController extends BaseController
 
         $this->response->html($this->helper->layout->user('ThemeRevision:config/theme-settings', array(
             'user' => $user,
-            'color' => $this->userMetadataModel->get($user['id'], "ThemeRevisionColor", "")
+            'colorScheme' => $this->userMetadataModel->get($user['id'], "TR.color.scheme.remote", "")
         )));
     }
 
     public function save(){
-        $this->userMetadataModel->save($_GET["user_id"], ["ThemeRevisionColor" => $_POST["color"]]);
+        $this->userMetadataModel->save($_GET["user_id"], ["TR.color.scheme.remote" => $_POST["color"]]);
         $this->response->redirect($this->helper->url->to('ThemeSettingsController', 'show', array('plugin' => 'ThemeRevision')));
     }
 }

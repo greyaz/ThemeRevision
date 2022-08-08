@@ -26,10 +26,10 @@ table tr:last-child td{
 table.table-striped tr:nth-child(odd){
 	background: none;
 }
-table tbody tr:nth-child(even) td {
+table tbody tr:nth-child(even) td:not([class*="color-"]) {
 	background: var(--color-G7);
 }
-table tbody tr:nth-child(odd) td {
+table tbody tr:nth-child(odd) td:not([class*="color-"]) {
 	background: var(--color-G8);
 }
 table tr th:first-child, table tr td:first-child{

@@ -31,14 +31,14 @@ class ColorSwitchHelper extends Base
         // get user id
         $userId = $this->userSession->getId();
         // get setting
-		$userScheme= $this->userMetadataModel->get($userId, "ThemeRevisionColor", "");
+		$remoteScheme = $this->userMetadataModel->get($userId, "TR.color.scheme.remote", "");
         // set color
-        if ($userScheme == "auto"){
+        if ($remoteScheme== "auto"){
             // set color according to user prefer
-            $sysPrefer = $this->userMetadataModel->get($userId, "ThemeRevisionSysPrefer", "");
-            $this->setColorBySys($sysPrefer);
+            $localScheme = $this->userMetadataModel->get($userId, "TR.color.scheme.local", "");
+            $this->setColorBySys($localScheme);
         }
-        elseif ($userScheme == "dark"){
+        elseif ($remoteScheme== "dark"){
             $this->setColor2Dark();
         }
         else{
@@ -51,7 +51,7 @@ class ColorSwitchHelper extends Base
     }
 
     private function setColorCookie($color){
-        setcookie("CurrentColorScheme", $color);
+        setcookie("TR.color.scheme.real", $color);
     }
 
     private function setColorBySys($prefer){

@@ -4,19 +4,19 @@
 <form method="post" action="<?= $this->url->href('ThemeSettingsController', 'save', array('plugin' => 'ThemeRevision', 'user_id' => $user['id'])) ?>">
         <legend><?= t('Theme color') ?></legend>
         <select name="color">
-            <?php if ($color == 'light'): ?>
+            <?php if ($colorScheme == 'light'): ?>
                 <option value="light" selected="selected"><?= t('Light') ?></option>
             <?php else: ?>
                  <option value="light"><?= t('Light') ?></option>
             <?php endif ?>
 
-            <?php if ($color == 'dark'): ?>
+            <?php if ($colorScheme == 'dark'): ?>
                 <option value="dark" selected="selected"><?= t('Dark') ?></option>
             <?php else: ?>
                  <option value="dark"><?= t('Dark') ?></option>
             <?php endif; ?>
 
-            <?php if ($color == 'auto'): ?>
+            <?php if ($colorScheme == 'auto'): ?>
                 <option value="auto" selected="selected"><?= t('Auto') ?></option>
             <?php else: ?>
                  <option value="auto"><?= t('Auto') ?></option>

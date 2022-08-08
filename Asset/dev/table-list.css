@@ -101,10 +101,12 @@ div[class^="table-list-row color-"] {
 	margin-right: .5rem;
 }
 .table-list-row .table-list-details strong {
-	font-weight: normal;
+	font-weight: bold;
+	color: var(--color-G0);
 }
 .table-list-row .table-list-details small {
 	padding-right: 1rem;
+	color: var(--color-G1);
 }
 .table-list-row .table-list-details span:first-child{
 	margin-left: .5rem !important;

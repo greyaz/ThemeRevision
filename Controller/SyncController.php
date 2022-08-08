@@ -7,17 +7,13 @@ class SyncController extends BaseController
 {
     public function sync(){
         $user = $this->getUser();
-        $prefer = $this->request->getStringParam("prefer");
-        $lastPrefer = $this->userMetadataModel->get($user['id'], "ThemeRevisionSysPrefer", "");
-        $userScheme= $this->userMetadataModel->get($user['id'], "ThemeRevisionColor", "");
+        $newLocalScheme = $this->request->getStringParam("prefer");
+        
+        $lastLocalScheme = $this->userMetadataModel->get($user['id'], "TR.color.scheme.local", "");
+        $remoteScheme= $this->userMetadataModel->get($user['id'], "TR.color.scheme.remote", "");
 
-        $this->userMetadataModel->save($user['id'], ["ThemeRevisionSysPrefer" => $prefer]);
+        $this->userMetadataModel->save($user['id'], ["TR.color.scheme.local" => $newLocalScheme]);
 
-        if (($prefer != $lastPrefer)){
-            $this->response->json(array("reload" => true, "setting" => $userScheme));
-        }
-        else{
-            $this->response->json(array("reload" => false, "setting" => $userScheme));
-        }
+        $this->response->json(array("reload" => ($newLocalScheme != $lastLocalScheme), "remoteScheme" => $remoteScheme));
     }
 }

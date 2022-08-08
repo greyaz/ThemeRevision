@@ -159,15 +159,15 @@ input::placeholder, textarea::placeholder{
 .select2-results__option {
     -webkit-user-select: none;
     list-style: none;
-    margin: 0 0 0.5rem;
+    margin: 0;
     line-height: 2em;
-    padding: 0 0.5em;
+    padding: .25rem .75em;
     background: var(--color-G8);
 	border-bottom: 1px solid var(--color-G7);
 }
 .select2-results__option[aria-selected=true] {
     background-color: var(--color-G5) !important;
-	color: var(--color-G0);
+	color: var(--color-G0) !important;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background: var(--color-M0);
@@ -227,7 +227,17 @@ input::placeholder, textarea::placeholder{
 	top: .5em;
 	right: .5em;
 }
-
+.select2-container .select2-search--dropdown .select2-search__field {
+	border: 0;
+    border-bottom: var(--style-border);
+    margin: .25rem .25rem .75rem !important;
+    width: calc(100% - .5rem);
+    padding: .5rem;
+}
+.select2-container .select2-search--dropdown .select2-search__field:focus-visible {
+    border-bottom-color: var(--color-M0);
+	outline: 0;
+}
 /*dropdown*/
 .dropdown {
 	line-height: 2rem;

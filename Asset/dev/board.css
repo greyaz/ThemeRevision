@@ -8,6 +8,9 @@
 	background: var(--color-G6);
 	padding: .5rem .75rem;
 }
+#board th.board-column-header{
+	line-height: 0;
+}
 #board td:first-child,
 #board th:first-child {
 	border: none;
@@ -80,8 +83,11 @@ table th .board-add-icon:hover .fa-plus:before {
 	border-radius: var(--size-R0);
 }
 table th:first-child .board-add-icon .fa-plus:before {
-	background: var(--color-G8);
-    color: var(--color-G0);
+	background: var(--color-M0);
+    color: var(--color-G8);
     border-bottom: var(--style-border);
 	box-shadow: var(--style-shadow0);
+}
+table th:first-child .board-add-icon:hover .fa-plus:before {
+    color: var(--color-M2);
 }

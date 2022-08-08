@@ -229,6 +229,9 @@ i.fa{
 	max-width: 350px;
 	width: unset;
 }
+#tooltip-container .tooltip-large{
+	overflow: auto;
+}
 .margin-bottom {
 	margin-bottom: 1rem;
 }

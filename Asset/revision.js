@@ -1,8 +1,15 @@
-(function(document){
+(function(window, document, KB){
     // Replace Logo
-    document.getElementsByTagName("header")[0].
-    getElementsByClassName("logo")[0].
-    getElementsByTagName("a")[0].innerHTML = '<img src="/assets/img/favicon.png" />';
+    if (document.querySelector("header .logo > a")){
+        document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';
+    }
+
+    //assignee select
+    KB.on('modal.afterRender',function(){
+        if (document.querySelector("#form-owner_id")){
+            document.querySelector("#form-owner_id").select2();
+        }
+    });
 
     // Page Menu
     initMenu("section.sidebar-container > .sidebar");
@@ -57,4 +64,4 @@
         }
     }    
     
-})(document);
+})(window, document, KB);

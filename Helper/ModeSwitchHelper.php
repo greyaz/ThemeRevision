@@ -2,6 +2,7 @@
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
 use Kanboard\Core\Base;
+use Kanboard\Plugin\ThemeRevision\Plugin;
 
 class ModeSwitchHelper extends Base
 {
@@ -26,22 +27,22 @@ class ModeSwitchHelper extends Base
 		'plugins/ThemeRevision/Asset/dev/break-points.css'
     );
 
-    public function productionMode($plugin){
+    public function productionMode(){
         if(!file_exists($this->prdFile)){
             $file = fopen($this->prdFile, "w");
             fwrite($file, $this->minifyCSS());
             fclose($file);
         }
-        $plugin->hook->on('template:layout:css', array('template' => $this->prdFile));
+        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->prdFile));
     }
 
-    public function developmentMode($plugin){
+    public function developmentMode(){
         if(file_exists($this->prdFile)){
             unlink($this->prdFile);
         }
         foreach ($this->dveFiles as $value)
         {
-            $plugin->hook->on('template:layout:css', array('template' => $value));
+            $this->getPlugin()->hook->on('template:layout:css', array('template' => $value));
         }
     }
 
@@ -52,6 +53,10 @@ class ModeSwitchHelper extends Base
             $str = $str.file_get_contents($value);
         }
         return $str;
+    }
+
+    private function getPlugin(){
+        return Plugin::getInstance($this->container);
     }
 
     private function minifyCSS(){
