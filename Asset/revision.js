@@ -1,4 +1,4 @@
-(function(window, document, KB){
+(function(window, document, KB, $){
     // Replace Logo
     if (document.querySelector("header .logo > a")){
         document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';
@@ -6,9 +6,7 @@
 
     //assignee select
     KB.on('modal.afterRender',function(){
-        if (document.querySelector("#form-owner_id")){
-            document.querySelector("#form-owner_id").select2();
-        }
+        $("#form-owner_id").select2();
     });
 
     // Page Menu
@@ -64,4 +62,4 @@
         }
     }    
     
-})(window, document, KB);
+})(window, document, KB, jQuery);
