@@ -2,9 +2,9 @@
 	background: rgba(0, 0, 0, .8);
 }
 #modal-box{
-	border-radius: var(--size-R0);
+	border-radius: var(--size-radius-def);
 	padding: 2rem;
-	background: var(--color-G8);
+	background: var(--color-greyscale-8);
 	max-width: 1024px !important;
 }
 #modal-header{
@@ -21,7 +21,7 @@
 }
 #modal-content > form {
 	padding: 1rem;
-	background: var(--color-G6);
+	background: var(--color-greyscale-6);
     max-width: unset;
 }
 #modal-content .page-header{

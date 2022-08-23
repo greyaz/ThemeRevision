@@ -9,8 +9,6 @@ use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
 
 class Plugin extends Base
 {
-	//private $globalColorScheme;
-
 	public function initialize()
 	{
 		global $themeRevisionConfig;
@@ -45,11 +43,11 @@ class Plugin extends Base
 			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
 			// sync local system prefer
         	$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
-        	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync-color.js'));
+        	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync.min.js'));
 		}
 
-		// load JS file
-		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/revision.js'));
+		// main js
+		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/main.min.js'));
 	}
 
 	public function onStartup(){
@@ -62,6 +60,7 @@ class Plugin extends Base
 			$this->helper->colorSwitchHelper->setUserColor();
 		}
 	}
+
 	
 	public function getPluginName()	{ 	 
 		return 'ThemeRevision for Kanboard'; 
@@ -72,7 +71,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.0.5'; 
+		return '1.0.6'; 
 	}
 
 	public function getPluginDescription() { 

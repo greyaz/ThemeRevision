@@ -6,7 +6,7 @@
 }
 .sidebar .sidebar-title{
 	padding: 1rem;
-	border-radius: var(--size-R0) var(--size-R0) 0 0;
+	border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
 	border-bottom: var(--style-border);
 }
 .sidebar .sidebar-title h2{
@@ -14,12 +14,12 @@
 }
 .sidebar > ul{
 	background: none;
-	border-bottom: var(--color-G5);
-	border-radius: 0 0 var(--size-R0) var(--size-R0);
+	border-bottom: var(--color-greyscale-5);
+	border-radius: 0 0 var(--size-radius-def) var(--size-radius-def);
 }
 .sidebar-content div[class*=js-chart-]{
 	padding: 1rem;
-	background: var(--color-G7);
+	background: var(--color-greyscale-7);
     margin-bottom: 1rem;
     border-bottom: var(--style-border);
 }
@@ -30,10 +30,10 @@
 	padding-left: 1.25rem;
 }
 .sidebar>ul li.active, .sidebar>ul li:hover {
-    border-left: 2px solid var(--color-G0);
+    border-left: 2px solid var(--color-greyscale-0);
     padding-left: .75rem;
-	background: var(--color-G8);
-    border-radius: var(--size-R0);
+	background: var(--color-greyscale-8);
+    border-radius: var(--size-radius-def);
 }
 .sidebar>ul li a{
 	display: inline-block;
@@ -43,7 +43,7 @@
 	font-weight: bold;
 }
 .sidebar>ul li.active a:focus, .sidebar>ul li.active a:hover{
-	color: var(--color-G0);
+	color: var(--color-greyscale-0);
 }
 
 .themeRevisionMenuBtn{

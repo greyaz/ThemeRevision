@@ -22,9 +22,9 @@ header h1 .logo a {
 }
 header h1 .logo a img {
 	height: 2rem;
-	border-radius: var(--size-R0);
+	border-radius: var(--size-radius-def);
 	border-bottom: var(--style-border);
-    box-shadow: var(--style-shadow0);
+    box-shadow: var(--style-shadow-light);
 }
 header h1 .tooltip {
 	font-size: 1rem;

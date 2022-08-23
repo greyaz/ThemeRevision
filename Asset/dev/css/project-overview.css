@@ -1,19 +1,19 @@
 .project-overview-columns {
 	margin: 0 auto 1rem;
-	background-color: var(--color-G8);
-	border-radius: var(--size-R0);
+	background-color: var(--color-greyscale-8);
+	border-radius: var(--size-radius-def);
 	border-bottom: var(--style-border);
 	width: 100%;
 	padding: 1.5rem 0 1rem;
-	box-shadow: var(--style-shadow1);
+	box-shadow: var(--style-shadow-heavy);
 }
 .project-overview-column {
 	margin: 1rem 0;
 	padding: 0 3rem;
-	background: var(--color-G8);
+	background: var(--color-greyscale-8);
 	border: 0;
 	border-right: var(--style-border);
-	border-radius: var(--size-R0);
+	border-radius: var(--size-radius-def);
 	font-size: 2rem;
 	line-height: 2rem;
 }

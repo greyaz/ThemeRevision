@@ -1,0 +1,10 @@
+.form-login > form {
+    padding: 2rem;
+    box-shadow: var(--style-shadow-light);
+    background-image: var(--pattern-dots-def);
+    background-size: var(--pattern-dots-size);
+    border: 2rem solid var(--color-greyscale-8);
+}
+.form-login input#form-username, .form-login input#form-password {
+    width: 100%;
+}

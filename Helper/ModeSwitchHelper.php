@@ -6,49 +6,51 @@ use Kanboard\Plugin\ThemeRevision\Plugin;
 
 class ModeSwitchHelper extends Base
 {
-    private $prdFile = 'plugins/ThemeRevision/Asset/revision.css';
-    private $dveFiles = array(
-        'plugins/ThemeRevision/Asset/dev/basics.css',
-		'plugins/ThemeRevision/Asset/dev/form-components.css',
-		'plugins/ThemeRevision/Asset/dev/table.css',
-		'plugins/ThemeRevision/Asset/dev/layout.css',
-        'plugins/ThemeRevision/Asset/dev/login.css',
-		'plugins/ThemeRevision/Asset/dev/header.css',
-		'plugins/ThemeRevision/Asset/dev/plugins.css',
-		'plugins/ThemeRevision/Asset/dev/switcher-action-filter.css',
-		'plugins/ThemeRevision/Asset/dev/board.css',
-		'plugins/ThemeRevision/Asset/dev/task-detail.css',
-		'plugins/ThemeRevision/Asset/dev/project-overview.css',
-		'plugins/ThemeRevision/Asset/dev/sidebar.css',
-		'plugins/ThemeRevision/Asset/dev/table-list.css',
-		'plugins/ThemeRevision/Asset/dev/board-task-list.css',
-		'plugins/ThemeRevision/Asset/dev/activity-and-comment.css',
-		'plugins/ThemeRevision/Asset/dev/modal.css',
-		'plugins/ThemeRevision/Asset/dev/break-points.css'
+    private $prdCSSFile = 'plugins/ThemeRevision/Asset/main.min.css';
+    private $devCSSFiles = array(
+        'plugins/ThemeRevision/Asset/dev/css/basics.css',
+		'plugins/ThemeRevision/Asset/dev/css/form-components.css',
+		'plugins/ThemeRevision/Asset/dev/css/table.css',
+		'plugins/ThemeRevision/Asset/dev/css/layout.css',
+        'plugins/ThemeRevision/Asset/dev/css/login.css',
+		'plugins/ThemeRevision/Asset/dev/css/header.css',
+		'plugins/ThemeRevision/Asset/dev/css/plugins.css',
+		'plugins/ThemeRevision/Asset/dev/css/switcher-action-filter.css',
+		'plugins/ThemeRevision/Asset/dev/css/board.css',
+		'plugins/ThemeRevision/Asset/dev/css/task-detail.css',
+		'plugins/ThemeRevision/Asset/dev/css/project-overview.css',
+		'plugins/ThemeRevision/Asset/dev/css/sidebar.css',
+		'plugins/ThemeRevision/Asset/dev/css/table-list.css',
+		'plugins/ThemeRevision/Asset/dev/css/board-task-list.css',
+		'plugins/ThemeRevision/Asset/dev/css/activity-and-comment.css',
+		'plugins/ThemeRevision/Asset/dev/css/modal.css',
+		'plugins/ThemeRevision/Asset/dev/css/break-points.css'
     );
 
     public function productionMode(){
-        if(!file_exists($this->prdFile)){
-            $file = fopen($this->prdFile, "w");
+        //CSS
+        if(!file_exists($this->prdCSSFile)){
+            $file = fopen($this->prdCSSFile, "w");
             fwrite($file, $this->minifyCSS());
             fclose($file);
         }
-        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->prdFile));
+        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->prdCSSFile));
     }
 
     public function developmentMode(){
-        if(file_exists($this->prdFile)){
-            unlink($this->prdFile);
+        //CSS
+        if(file_exists($this->prdCSSFile)){
+            unlink($this->prdCSSFile);
         }
-        foreach ($this->dveFiles as $value)
+        foreach ($this->devCSSFiles as $value)
         {
             $this->getPlugin()->hook->on('template:layout:css', array('template' => $value));
         }
     }
 
-    private function getAllContents(){
+    private function getAllCSSContents(){
         $str = '';
-        foreach ($this->dveFiles as $value)
+        foreach ($this->devCSSFiles as $value)
         {
             $str = $str.file_get_contents($value);
         }
@@ -60,7 +62,7 @@ class ModeSwitchHelper extends Base
     }
 
     private function minifyCSS(){
-        $input = $this->getAllContents();
+        $input = $this->getAllCSSContents();
         // Code comes from Rodrigo54. https://gist.github.com/Rodrigo54/93169db48194d470188f
         if(trim($input) === "") return $input;
             

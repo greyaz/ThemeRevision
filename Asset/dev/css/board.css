@@ -4,8 +4,8 @@
 #board td,
 #board th {
 	border: none;
-	/*border-left: 1px solid var(--color-G6);*/
-	background: var(--color-G6);
+	/*border-left: 1px solid var(--color-greyscale-6);*/
+	background: var(--color-greyscale-6);
 	padding: .5rem .75rem;
 }
 #board th.board-column-header{
@@ -32,19 +32,19 @@
     display: none;
 }
 #board td {
-	border-color: var(--color-G5)
+	border-color: var(--color-greyscale-5)
 }
 #board .board-swimlane {
-	border-bottom: 2rem solid var(--color-G6);
+	border-bottom: 2rem solid var(--color-greyscale-6);
 }
 .board-swimlane-header .board-swimlane-toggle i.fa{
 	font-size: 1rem;
-	color: var(--color-G3);
+	color: var(--color-greyscale-3);
 	line-height: 4rem;
     vertical-align: bottom;
 }
 .board-swimlane-header .board-swimlane-toggle i.fa:hover{
-	color: var(--color-G0) !important;
+	color: var(--color-greyscale-0) !important;
 }
 #board th.board-column-header.board-column-compact {
 	padding-top: 0;
@@ -68,26 +68,26 @@
 	text-decoration: none;
 }
 table th .board-add-icon:hover .fa-plus:before {
-	color: var(--color-G8);
-	background: var(--color-M0);
+	color: var(--color-brand-secd);
+	background: var(--color-brand-prim);
 }
 .board-add-icon .fa-plus:before {
-	background: var(--color-G6);
-	color: var(--color-G4);
+	background: var(--color-greyscale-6);
+	color: var(--color-greyscale-4);
 	padding: 2px;
 	display: block;
 	width: 1.5rem;
 	height: 1.5rem;
 	font-size: 0.5em;
 	line-height: 1.5rem;
-	border-radius: var(--size-R0);
+	border-radius: var(--size-radius-def);
 }
 table th:first-child .board-add-icon .fa-plus:before {
-	background: var(--color-M0);
-    color: var(--color-G8);
-    border-bottom: var(--style-border);
-	box-shadow: var(--style-shadow0);
+	background: var(--color-brand-prim);
+    color: var(--color-brand-cont);
+    /*border-bottom: var(--style-border);*/
+	box-shadow: var(--style-shadow-light);
 }
 table th:first-child .board-add-icon:hover .fa-plus:before {
-    color: var(--color-M2);
+    color: var(--color-brand-secd);
 }

@@ -1,6 +1,6 @@
 .comment-sorting {
     font-size: 1rem;
-    background: var(--color-G6);
+    background: var(--color-greyscale-6);
     line-height: 1rem;
     padding: 1rem;
     border-bottom: var(--style-border);
@@ -12,20 +12,20 @@
     padding: 1rem;
     margin-bottom: 0;
 	border-bottom: var(--style-border);
-	background: var(--color-G6);
-    border-radius: var(--size-R0);
+	background: var(--color-greyscale-6);
+    border-radius: var(--size-radius-def);
 }
 .comments .comment:nth-child(even):not(.comment-highlighted), .activity-event:nth-child(even){
-	background: var(--color-G7);
+	background: var(--color-greyscale-7);
 }
 .comments .comment-highlighted{
-	background-color: var(--color-M1);
-    border: 1px solid var(--color-M0);
+	background-color: var(--color-brand-secd);
+    border: 1px solid var(--color-brand-prim);
 }
 .comments .comment:hover, .activity-event:hover,
 .comments .comment:nth-child(even):not(.comment-highlighted):hover,
 .comments .comment:nth-child(odd):not(.comment-highlighted):hover{
-	background: var(--color-G8);
+	background: var(--color-greyscale-8);
 }
 .comment .avatar-left, .activity-event .avatar-left{
 	margin-right: 1rem;

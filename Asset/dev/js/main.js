@@ -52,7 +52,7 @@
                     else {
                         menu.style.display = "";
                     }
-                }
+                };
                 document.body.onclick = function(){
                     if (menu.style.display == "block"){
                         menu.style.display = "";

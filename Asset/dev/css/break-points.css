@@ -32,12 +32,12 @@
 	}
 	.themeRevisionMenuBtn {
 		font-size: 1.3rem;
-		background: var(--color-G8);
+		background: var(--color-greyscale-8);
 		width: 2rem;
 		height: 2rem;
 		line-height: 2rem;
 		text-align: center;
-		border-radius: var(--size-R0);
+		border-radius: var(--size-radius-def);
 		border-bottom: var(--style-border);
 		font-weight: bold;
 		margin-bottom: 1rem;
@@ -47,15 +47,15 @@
 		order: unset;
 		margin: 2.5rem 0 0;
 		display: none;
-		background: var(--color-G8);
-		border-radius: var(--size-R0);
+		background: var(--color-greyscale-8);
+		border-radius: var(--size-radius-def);
 		border: var(--style-border);
 		max-width: calc(100vw - 2rem);
     	width: 100%;
 		max-height: 40vh;
 		overflow: scroll;
 		position: fixed;
-		box-shadow: var(--style-shadow1);
+		box-shadow: var(--style-shadow-heavy);
 		z-index: 2;
 	}
 	.sidebar-container > .sidebar-content {
@@ -89,7 +89,7 @@
 		white-space: inherit;
 	}
 	#modal-overlay{
-		background: var(--color-G6);
+		background: var(--color-greyscale-6);
 	}
 	#modal-box{
 		position: absolute;
@@ -98,7 +98,7 @@
 		left: 0;
 		top: 0;
 		max-height: unset;
-		background: var(--color-G6);
+		background: var(--color-greyscale-6);
 	}
 	#modal-header{
 		text-align: left;
@@ -109,7 +109,7 @@
 	}
 	#modal-content {
 		padding: 4rem .5rem 0;
-    	background: var(--color-G6);
+    	background: var(--color-greyscale-6);
 	}
 	#modal-content > .page-header,
 	#modal-content > #main > .page-header {
@@ -124,13 +124,13 @@
 		white-space: nowrap;
 		line-height: 1.5rem;
 		position: fixed;
-		background: var(--color-G8);
+		background: var(--color-greyscale-8);
 		left: 0;
 		top: 0;
 		width: calc(100vw - 4rem);
 		padding: 1rem 1rem 1rem 3rem;
 		z-index: 1;
-		box-shadow: var(--style-shadow1);
+		box-shadow: var(--style-shadow-heavy);
 	}
 	#modal-content > form, 
 	#modal-content > #main > form {
@@ -201,7 +201,7 @@
 	table.table-scrolling{
 		display: inline-block;
 		white-space: nowrap;
-		background: var(--color-G8);
+		background: var(--color-greyscale-8);
 	}
 	.task-form-main-column{
 		min-width: 320px;
@@ -239,8 +239,8 @@
 		left: 0;
 		bottom: 0;
 		margin: 0;
-		box-shadow: 0 -4px 4px -4px var(--color-G5);
-		background: var(--color-G8);
+		box-shadow: 0 -4px 4px -4px var(--color-greyscale-5);
+		background: var(--color-greyscale-8);
 	}
 	.project-header > .views-switcher-component,
 	.page > .page-header, .page > #main > .page-header {
@@ -248,7 +248,7 @@
 		overflow-x: scroll;
 	}
 	.project-header > .dropdown-component {
-		box-shadow: 4px -4px 4px -4px var(--color-G5);
+		box-shadow: 4px -4px 4px -4px var(--color-greyscale-5);
 	}
 	.project-header > .views-switcher-component{
 		left: 4.5rem;

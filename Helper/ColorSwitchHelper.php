@@ -2,9 +2,7 @@
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
 use Kanboard\Core\Base;
-use Kanboard\Plugin\ThemeRevision\Plugin;
-use Kanboard\Plugin\ThemeRevision\Model\LightColorModel;
-use Kanboard\Plugin\ThemeRevision\Model\DarkColorModel;
+use Kanboard\Plugin\ThemeRevision\Model\CustomColorModel;
 
 class ColorSwitchHelper extends Base
 {
@@ -13,18 +11,25 @@ class ColorSwitchHelper extends Base
 
     public function setColor2Dark(){
         $this->container['colorModel'] = $this->container->factory(function ($c) {
-            return new DarkColorModel($c);
+            return new CustomColorModel($c, "dark");
         });
-        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->darkFile));
-        $this->setColorCookie("dark");
+        $this->saveRealColor("dark");
     }
 
     public function setColor2Light(){
         $this->container['colorModel'] = $this->container->factory(function ($c) {
-            return new LightColorModel($c);
+            return new CustomColorModel($c, "light");
         });
-        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->lightFile));
-        $this->setColorCookie("light");
+        $this->saveRealColor("light");
+    }
+
+    public function setColorBySys($prefer){
+        if ($prefer == "dark"){
+            $this->setColor2Dark();
+        }
+        else {
+            $this->setColor2Light();
+        }
     }
 
     public function setUserColor(){
@@ -33,34 +38,21 @@ class ColorSwitchHelper extends Base
         // get setting
 		$remoteScheme = $this->userMetadataModel->get($userId, "TR.color.scheme.remote", "");
         // set color
-        if ($remoteScheme== "auto"){
-            // set color according to user prefer
-            $localScheme = $this->userMetadataModel->get($userId, "TR.color.scheme.local", "");
-            $this->setColorBySys($localScheme);
+        if ($remoteScheme== "light"){
+            $this->setColor2Light();
         }
         elseif ($remoteScheme== "dark"){
             $this->setColor2Dark();
         }
         else{
-            $this->setColor2Light();
+            // set color according to user local prefer
+            $this->setColorBySys($this->userMetadataModel->get($userId, "TR.color.scheme.local", ""));
         }
     }
 
-    private function getPlugin(){
-        return Plugin::getInstance($this->container);
-    }
-
-    private function setColorCookie($color){
+    private function saveRealColor($color){
+        //$this->userMetadataModel->save($this->userSession->getId(), ["TR.color.scheme.real" => $color]);
         setcookie("TR.color.scheme.real", $color);
-    }
-
-    private function setColorBySys($prefer){
-        if ($prefer == "dark"){
-            $this->setColor2Dark();
-        }
-        else {
-            $this->setColor2Light();
-        }
     }
 }
 
