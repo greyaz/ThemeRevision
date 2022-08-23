@@ -3,13 +3,16 @@
 (function(window, document, KB){
     var realScheme = getRealScheme();
     var mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var isAuthPage = (document.location.search.indexOf("AuthController") >= 0);
 
-    mediaQueryListDark.addEventListener('change', event => {
-        syncColor(event);
-    });
-    window.addEventListener("load", event => {
-        syncColor(mediaQueryListDark);
-    })
+    if (!isAuthPage){
+        mediaQueryListDark.addEventListener('change', event => {
+            syncColor(event);
+        });
+        window.addEventListener("load", event => {
+            syncColor(mediaQueryListDark);
+        })
+    }
     
     function syncColor(isSysColorDark){
         var url = "?controller=SyncController&action=sync&plugin=ThemeRevision&prefer="
