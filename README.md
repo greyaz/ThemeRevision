@@ -28,6 +28,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 
 #### 5. Customization friendly
 
+* All colors are configurable in the config file.
 * Structured CSS files, easy to locate elements.  
 * Utilize "rem" as the global measuring unit.
 
@@ -37,6 +38,11 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 3. ***Optional:*** Set the default task color to ***grey*** for better visual consistency. (Settings -> Project Setting)
 
 ## Customization
+#### Colors
+1. Rename the file `config-default.php` to `config.php`.
+2. Edit the color values according to the instructions in the file`config.php`.
+
+#### Other Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
 2. Rename the file `config-default.php` to `config.php`.
 3. Enable "development mode" in the configuration file.
