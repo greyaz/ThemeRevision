@@ -10,12 +10,16 @@
 		min-width: 45%;
 	}
 }
-
-@media (max-width: 768px) {
+@media (max-width: 920px) {
 	.project-header{
 		height: 6.5rem;
 		margin: 0 0 2rem;
 	}
+	.project-header .filter-box-component .input-addon {
+		width: 100%;
+	}
+}
+@media (max-width: 768px) {
 	.project-header > .dropdown-component{
 		display: inline-block;
 	}
@@ -219,7 +223,7 @@
 	}
 }
 
-@media (max-width: 560px){
+@media (max-width: 600px){
 	body > .page{
 		margin-bottom: 3rem;
 	}
