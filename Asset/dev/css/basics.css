@@ -184,32 +184,36 @@ i.fa{
 	margin-right: .5rem;
 	color: var(--color-greyscale-0) !important;
 }
-.avatar.avatar-left {
+.TR .avatar.avatar-left, .avatar.avatar-left {
 	margin-right: .5rem;
 }
-.avatar.avatar-inline {
+.TR .avatar.avatar-inline, .avatar.avatar-inline {
 	margin: 0 .5rem 0 0;
 }
-.avatar .avatar-letter {
+.TR .avatar .avatar-letter, .avatar .avatar-letter {
 	white-space: nowrap;
 }
-.avatar.avatar-20 .avatar-letter, .avatar.avatar-13 .avatar-letter{
+.TR .avatar.avatar-20 .avatar-letter, .TR .avatar.avatar-13 .avatar-letter,
+.avatar.avatar-20 .avatar-letter, .TR .avatar.avatar-13 .avatar-letter {
 	font-size: 1rem;
 	line-height: 1.667rem;
 	width: 1.667rem;
 }
-#user-section .sidebar-content > .avatar-48 {
+.TR #user-section .sidebar-content > .avatar-48, #user-section .sidebar-content > .avatar-48{
 	padding: 1rem;
 }
-.avatar img {
+.TR .avatar img, .avatar img{
     vertical-align: middle;
 }
+.TR .avatar-13 img, .avatar-13 div,
+.TR .avatar-20 img, .avatar-20 div,
+.TR .avatar-48 img, .avatar-48 div,
 .avatar-13 img, .avatar-13 div,
 .avatar-20 img, .avatar-20 div,
 .avatar-48 img, .avatar-48 div {
 	border-radius: var(--size-radius-def) !important;
 }
-.avatar.avatar-48 .avatar-letter {
+.TR .avatar.avatar-48 .avatar-letter, .avatar.avatar-48 .avatar-letter {
     font-size: 1.5rem; 
 	line-height: 4rem;
 	width: 4rem;

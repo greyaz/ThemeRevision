@@ -45,6 +45,9 @@
 .sidebar>ul li.active a:focus, .sidebar>ul li.active a:hover{
 	color: var(--color-greyscale-0);
 }
+.sidebar.sidebar-icons li i.fa{
+	margin-right: 1.5rem;
+}
 
 .themeRevisionMenuBtn{
 	display: none;

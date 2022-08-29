@@ -1,4 +1,7 @@
 (function(window, document, KB, $){
+    // Add Class
+    $("body").addClass("TR");
+
     // Replace Logo
     if (document.querySelector("header .logo > a")){
         document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';

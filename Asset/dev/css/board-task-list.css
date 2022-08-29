@@ -121,52 +121,6 @@
 	display: none;
 }
 
-/* group and other assignees */
-.task-board-expanded > span {
-	float: left;
-}
-.assigned-group-label {
-	display: none;
-}
-.assigned-group {
-	padding: 1px;
-	font-weight: normal;
-	border-radius: var(--size-radius-def);
-	line-height: 1rem;
-	margin: 0 .5em 1em 0;
-	/*opacity: .1;
-	background-color: var(--color-greyscale-0) !important;*/
-	color: var(--color-greyscale-8) !important;
-	font-size: var(--size-font-min);
-	vertical-align: middle;
-	max-width: 1.6rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.assigned-group:hover{
-	max-width: unset;
-}
-.task-board .task-board-expanded .assigned-other-label {
-	display: none;
-}
-.task-board .task-board-expanded > .avatar {
-	margin-bottom: 1rem;
-	margin-right: .5rem;
-	vertical-align: middle;
-	line-height: 1rem;
-}
-.task-board .task-board-expanded > .avatar .avatar-letter {
-	font-size: var(--size-font-min);
-	width: 1rem;
-	line-height: 1rem;
-	padding: 1px;
-}
-.task-board .task-board-expanded > .avatar img {
-	width: calc(1rem + 2px);
-	height: auto;
-}
-
 /* title */
 .task-board-title, .table-list-title {
 	line-height: 1rem !important;

@@ -6,9 +6,6 @@ use Kanboard\Plugin\ThemeRevision\Model\CustomColorModel;
 
 class ColorSwitchHelper extends Base
 {
-    private $lightFile = 'plugins/ThemeRevision/Asset/light.css';
-    private $darkFile = 'plugins/ThemeRevision/Asset/dark.css';
-
     public function setColor2Dark(){
         $this->container['colorModel'] = $this->container->factory(function ($c) {
             return new CustomColorModel($c, "dark");

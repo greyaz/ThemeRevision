@@ -54,7 +54,7 @@
 		background: var(--color-greyscale-8);
 		border-radius: var(--size-radius-def);
 		border: var(--style-border);
-		max-width: calc(100vw - 2rem);
+		max-width: calc(100vw - 4rem);
     	width: 100%;
 		max-height: 40vh;
 		overflow: scroll;

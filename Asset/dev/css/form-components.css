@@ -254,6 +254,8 @@ ul.dropdown-submenu-open, #select-dropdown-menu {
 	background-color: var(--color-greyscale-8);
 	border: var(--style-border);
 	box-shadow: var(--style-shadow-heavy);
+	max-height: calc(100vh - 16.5rem);
+    overflow: scroll;
 }
 ul.dropdown-submenu-open li, #select-dropdown-menu li {
 	font-size: 1rem;
