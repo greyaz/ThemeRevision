@@ -1,5 +1,5 @@
 /* Calendar */
-.TR .fc-toolbar.fc-header-toolbar, .page > #main > .menu-inline {
+.TR .fc-toolbar.fc-header-toolbar, .TR .page > #main > .menu-inline {
 	background: var(--color-greyscale-8);
     border: none;
     border-radius: var(--size-radius-def);
@@ -51,7 +51,7 @@
 	opacity: .5;
 	cursor: default !important;
 }
-.TR .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead{
+.TR .fc-unthemed .fc-content, .TR .fc-unthemed .fc-divider, .TR .fc-unthemed .fc-list-heading td, .TR .fc-unthemed .fc-list-view, .TR .fc-unthemed .fc-popover, .TR .fc-unthemed .fc-row, .TR .fc-unthemed tbody, .TR .fc-unthemed td, .TR .fc-unthemed th, .TR .fc-unthemed thead{
 	border-color: var(--color-greyscale-5);
 	border-right: 0;
 }
@@ -66,13 +66,13 @@
 .TR .fc-row table {
     margin: 0;
 }
-.TR .fc-row .fc-content-skeleton td, .fc-row .fc-helper-skeleton td {
+.TR .fc-row .fc-content-skeleton td, .TR .fc-row .fc-helper-skeleton td {
     background: transparent !important;
 }
 .TR .fc-toolbar h2 {
     line-height: 2rem;
 }
-.TR .fc-head-container, .fc-widget-header{
+.TR .fc-head-container, .TR .fc-widget-header{
 	border-top: 0 !important;
 }
 .TR .fc-event{
@@ -81,7 +81,7 @@
     font-size: var(--size-font-min) !important;
 	border-top: 1px solid var(--color-greyscale-7) !important;
 }
-.TR .fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
+.TR .fc-basic-view .fc-day-number, .TR .fc-basic-view .fc-week-number {
     padding: 0.5rem;
 }
 .TR a.fc-more {
