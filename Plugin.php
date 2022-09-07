@@ -44,6 +44,7 @@ class Plugin extends Base
 			// sync local system prefer
         	$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
         	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync.min.js'));
+			//$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/dev/js/sync.js'));
 		}
 
 		// main js
@@ -71,7 +72,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.0.7'; 
+		return '1.0.8'; 
 	}
 
 	public function getPluginDescription() { 

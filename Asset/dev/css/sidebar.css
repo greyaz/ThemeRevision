@@ -37,7 +37,9 @@
 }
 .sidebar>ul li a{
 	display: inline-block;
-    line-height: 3rem;
+	vertical-align: middle;
+	width: 100%;
+	line-height: 3rem !important;
 }
 .sidebar>ul li.active a{
 	font-weight: bold;
@@ -45,8 +47,18 @@
 .sidebar>ul li.active a:focus, .sidebar>ul li.active a:hover{
 	color: var(--color-greyscale-0);
 }
+.sidebar.sidebar-icons>ul ul li {
+	font-size: 0;
+}
+.sidebar-icons>ul ul li a {
+    width: calc(100% - 2.6rem);
+}
 .sidebar.sidebar-icons li i.fa{
 	margin-right: 1.5rem;
+	font-size: 1rem;
+}
+.sidebar-icons>ul ul li i.fa {
+	vertical-align: middle;
 }
 
 .themeRevisionMenuBtn{

@@ -49,7 +49,7 @@ class ColorSwitchHelper extends Base
 
     private function saveRealColor($color){
         //$this->userMetadataModel->save($this->userSession->getId(), ["TR.color.scheme.real" => $color]);
-        setcookie("TR.color.scheme.real", $color);
+        setcookie("TR.color.scheme.real", $color, 0, "/", "wuec.ucloudadmin.com");
     }
 }
 

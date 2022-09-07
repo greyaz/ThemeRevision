@@ -39,6 +39,11 @@
     }
 
     function getRealScheme(){
-        return document.cookie.replace(/(?:(?:^|.*;\s*)TR\.color\.scheme\.real\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        var pattern = /TR\.color\.scheme\.real\s*\=\s*(light|dark)/g;
+        var data = document.cookie.match(pattern);
+        if (data == null){
+            return "";
+        }
+        return data[data.length - 1].replace(pattern, "$1");
     }
 })(window, document, KB);
