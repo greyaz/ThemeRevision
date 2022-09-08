@@ -39,10 +39,15 @@
     }
 
     function getRealScheme(){
+        var delStr = "TR.color.scheme.real=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
         var pattern = /TR\.color\.scheme\.real\s*\=\s*(light|dark)/g;
         var data = document.cookie.match(pattern);
         if (data == null){
             return "";
+        }
+        else {
+            document.cookie = delStr;
+            document.cookie = delStr + window.location.pathname.split("/")[1];
         }
         return data[data.length - 1].replace(pattern, "$1");
     }
