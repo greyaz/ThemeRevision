@@ -11,18 +11,15 @@ class Plugin extends Base
 {
 	public function initialize()
 	{
-		global $themeRevisionConfig;
-		
 		// load configuration file
-		if (file_exists('plugins/ThemeRevision/config.php')) {
-			require_once('plugins/ThemeRevision/config.php');
-		}
-		else {
-			require_once('plugins/ThemeRevision/config-default.php');
-		}
+		global $themeRevisionConfig;
+		file_exists('plugins/ThemeRevision/config.php') ? require_once('plugins/ThemeRevision/config.php') : require_once('plugins/ThemeRevision/config-default.php');
+
+		// regist helper
+		$this->helper->register('modeSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper');
+		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
 
 		// mode switch
-		$this->helper->register('modeSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper');
 		if (isset($themeRevisionConfig['mode']) && $themeRevisionConfig['mode'] == "development") {
 			$this->helper->modeSwitchHelper->developmentMode();
 		}
@@ -31,7 +28,6 @@ class Plugin extends Base
 		}
 
 		// color switch
-		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
 		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
 			$this->helper->colorSwitchHelper->setColor2Light();
 		}
@@ -41,10 +37,7 @@ class Plugin extends Base
 		else {
 			// user config UI
 			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
-			// sync local system prefer
-        	$this->route->addRoute('ThemeRevision/Sync:prefer', 'SyncController', 'sync', 'ThemeRevision');
-        	$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/sync.min.js'));
-			//$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/dev/js/sync.js'));
+			$this->helper->colorSwitchHelper->setColorByUser();
 		}
 
 		// main js
@@ -54,15 +47,8 @@ class Plugin extends Base
 	public function onStartup(){
 		// load translations
 		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
-
-		// the value of $themeRevisionConfig['color scheme'] is unset or "auto"
-		if(!isset($themeRevisionConfig['color scheme']) || $themeRevisionConfig['color scheme'] != "light" || $themeRevisionConfig['color scheme'] != "dark") {
-			// set color
-			$this->helper->colorSwitchHelper->setUserColor();
-		}
 	}
 
-	
 	public function getPluginName()	{ 	 
 		return 'ThemeRevision for Kanboard'; 
 	}
@@ -72,7 +58,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.0.8'; 
+		return '1.0.9'; 
 	}
 
 	public function getPluginDescription() { 

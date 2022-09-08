@@ -1,10 +1,9 @@
 <?php
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
-use Kanboard\Core\Base;
-use Kanboard\Plugin\ThemeRevision\Plugin;
+use Kanboard\Plugin\ThemeRevision\Helper\BaseSwitchHelper;
 
-class ModeSwitchHelper extends Base
+class ModeSwitchHelper extends BaseSwitchHelper
 {
     private $prdCSSFile = 'plugins/ThemeRevision/Asset/main.min.css';
     private $devCSSFiles = array(
@@ -28,7 +27,6 @@ class ModeSwitchHelper extends Base
     );
 
     public function productionMode(){
-        //CSS
         if(!file_exists($this->prdCSSFile)){
             $file = fopen($this->prdCSSFile, "w");
             fwrite($file, $this->minifyCSS());
@@ -38,7 +36,6 @@ class ModeSwitchHelper extends Base
     }
 
     public function developmentMode(){
-        //CSS
         if(file_exists($this->prdCSSFile)){
             unlink($this->prdCSSFile);
         }
@@ -57,15 +54,11 @@ class ModeSwitchHelper extends Base
         return $str;
     }
 
-    private function getPlugin(){
-        return Plugin::getInstance($this->container);
-    }
-
+    // Code comes from Rodrigo54. https://gist.github.com/Rodrigo54/93169db48194d470188f
     private function minifyCSS(){
         $input = $this->getAllCSSContents();
-        // Code comes from Rodrigo54. https://gist.github.com/Rodrigo54/93169db48194d470188f
         if(trim($input) === "") return $input;
-            
+
         return preg_replace(
             array(
                 // Remove comment(s)

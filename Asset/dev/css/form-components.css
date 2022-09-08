@@ -262,8 +262,17 @@ ul.dropdown-submenu-open li, #select-dropdown-menu li {
 	padding: 0.5rem 1rem;
 	border-bottom: 1px solid var(--color-greyscale-7);
 }
+ul.dropdown-submenu-open li:not(.no-hover) {
+	font-size: 0;
+}
+ul.dropdown-submenu-open li i.fa {
+	font-size: 1rem;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
 ul.dropdown-submenu-open a {
 	color: var(--color-greyscale-0);
+	vertical-align: middle;
 }
 
 /*hover and focus*/

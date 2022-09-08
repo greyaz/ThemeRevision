@@ -4,14 +4,18 @@
 /* Make sure the "Asset" folder is writable and executable !!!     */
 /*******************************************************************/
 
-// 'production':    Load a minified CSS file.
+// 'production':    Load a minified CSS file. (default)
 // 'development':   Load all CSS files in the "Asset/dev" folder.
 $themeRevisionConfig['mode'] = 'production';
 
-// 'user':  Switch the color scheme by the users' choices.
+// 'user':  Switch the color scheme by the users' choices. (default)
 // 'dark':  Always show the dark scheme.
 // 'light': Always show the light scheme.
 $themeRevisionConfig['color scheme'] = 'user';
+
+// 'true': Overwrite to grey.  (default)
+// 'false': Keep system settings.
+$themeRevisionConfig['overwrite default task color'] = true;
 
 // Light Colors
 // *-prim (primary):      button background, link, high-lighted border, selected item's background, alert text ...

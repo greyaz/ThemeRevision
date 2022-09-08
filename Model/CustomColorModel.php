@@ -97,7 +97,10 @@ class CustomColorModel extends ColorModel
 
     public function getDefaultColor()
     {
-        return $this->configModel->get('default_color', 'grey');
+        if (isset($GLOBALS['themeRevisionConfig']) && $GLOBALS['themeRevisionConfig']['overwrite default task color'] == false){
+            return $this->configModel->get('default_color', 'yellow');
+        }
+        return 'grey';
     }
 
     public function getCss()
@@ -105,13 +108,27 @@ class CustomColorModel extends ColorModel
         $buffer = '';
         if (isset($GLOBALS['themeRevisionConfig'])){
             $buffer .= ':root{';
-            foreach ($GLOBALS['themeRevisionConfig'][$this->paletteColor.' palette'] as $cssName => $cssValue) {
-                $buffer .= "--color-".$cssName.":".$cssValue.";";
+            if($this->paletteColor == "auto"){
+                $buffer .= $this->getCssString("light");
+                $buffer .= "}@media(prefers-color-scheme:dark){:root{";
+                $buffer .= $this->getCssString("dark");
+                $buffer .= "}";
+            }
+            else {
+                $buffer .= $this->getCssString($this->paletteColor);
             }
             $buffer .= "}";
         }
         $buffer .= parent::getCss();
         
+        return $buffer;
+    }
+
+    private function getCssString($color){
+        $buffer = '';
+        foreach ($GLOBALS['themeRevisionConfig'][$color.' palette'] as $cssName => $cssValue) {
+            $buffer .= "--color-".$cssName.":".$cssValue.";";
+        }
         return $buffer;
     }
 }
