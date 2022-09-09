@@ -97,7 +97,7 @@ class CustomColorModel extends ColorModel
 
     public function getDefaultColor()
     {
-        if (isset($GLOBALS['themeRevisionConfig']) && $GLOBALS['themeRevisionConfig']['overwrite default task color'] == false){
+        if (isset($GLOBALS['themeRevisionConfig']) && !$GLOBALS['themeRevisionConfig']['overwrite default task color']){
             return $this->configModel->get('default_color', 'yellow');
         }
         return 'grey';
