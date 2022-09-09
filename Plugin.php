@@ -3,6 +3,7 @@ namespace Kanboard\Plugin\ThemeRevision;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
+use Kanboard\Plugin\ThemeRevision\Helper\ConfigsConvertHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
 
@@ -13,7 +14,13 @@ class Plugin extends Base
 	{
 		// load configuration file
 		global $themeRevisionConfig;
-		file_exists('plugins/ThemeRevision/config.php') ? require_once('plugins/ThemeRevision/config.php') : require_once('plugins/ThemeRevision/config-default.php');
+		$configsData = $this->configModel->get("ThemeRevision");
+		if ($configsData != ""){
+			$themeRevisionConfig = ConfigsConvertHelper::toCFFormat(json_decode($configsData, true));
+		}
+		else{
+			file_exists('plugins/ThemeRevision/config.php') ? require_once('plugins/ThemeRevision/config.php') : require_once('plugins/ThemeRevision/config-default.php');
+		}
 
 		// regist helper
 		$this->helper->register('modeSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper');
@@ -36,9 +43,17 @@ class Plugin extends Base
 		}
 		else {
 			// user config UI
+			$this->route->addRoute('user/:user_id/theme', 'UserSettingsController', 'show', 'ThemeRevision');
 			$this->template->hook->attach('template:user:sidebar:actions', 'ThemeRevision:user/sidebar');
+			$this->template->hook->attach('template:header:dropdown', 'ThemeRevision:user/header_dropdown');
 			$this->helper->colorSwitchHelper->setColorByUser();
 		}
+
+		// admin config UI
+		$this->route->addRoute('settings/themerevision', 'PluginConfigsController', 'show', 'ThemeRevision');
+		$this->template->hook->attach('template:config:sidebar', 'ThemeRevision:settings/sidebar');
+		$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.css'));
+		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.js'));
 
 		// main js
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/main.min.js'));

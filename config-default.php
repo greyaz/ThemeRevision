@@ -9,8 +9,8 @@
 $themeRevisionConfig['mode'] = 'production';
 
 // 'user':  Switch the color scheme by the users' choices. (default)
-// 'dark':  Always show the dark scheme.
 // 'light': Always show the light scheme.
+// 'dark':  Always show the dark scheme.
 $themeRevisionConfig['color scheme'] = 'user';
 
 // 'true': Overwrite to grey.  (default)
@@ -58,28 +58,41 @@ $themeRevisionConfig['light palette'] = array(
     'greyscale-8' => '#fff',
 
     // Tasks
-    // high brightness                    // medium brightness                      // low brightness
     // Grey
-    'task-grey-bg' => '#fff',             'task-dark-grey-bg' => '#e8ecf1',
-    'task-grey-bdr' => '#dce0e7',         'task-dark-grey-bdr' => '#c9ccd2',
+    'task-grey-bg' => '#fff',             
+    'task-grey-bdr' => '#dce0e7',         
+    'task-dark-grey-bg' => '#e8ecf1',
+    'task-dark-grey-bdr' => '#c9ccd2',
     // Red
-    'task-pink-bg' => '#ffb3cc',          'task-red-bg' => '#ffbdbd',
-    'task-pink-bdr' => '#f96b9f',         'task-red-bdr' => '#ff7676',
+    'task-pink-bg' => '#ffb3cc',          
+    'task-pink-bdr' => '#f96b9f',         
+    'task-red-bg' => '#ffbdbd',
+    'task-red-bdr' => '#ff7676',
     // Orange
-    'task-orange-bg' => '#ffd3ab',        'task-deep-orange-bg' => '#fdbca8',
-    'task-orange-bdr' => '#ffac62',       'task-deep-orange-bdr' => '#ff8762',
+    'task-orange-bg' => '#ffd3ab',        
+    'task-orange-bdr' => '#ffac62',       
+    'task-deep-orange-bg' => '#fdbca8',
+    'task-deep-orange-bdr' => '#ff8762',
     // Yellow
-    'task-yellow-bg' => '#ffe778',        'task-amber-bg' => '#ffd868',             'task-brown-bg' => '#d9d2d0',
-    'task-yellow-bdr' => '#f7c400',       'task-amber-bdr' => '#feb310',            'task-brown-bdr' => '#b79f9a',
+    'task-yellow-bg' => '#ffe778',                     
+    'task-yellow-bdr' => '#f7c400',                   
+    'task-amber-bg' => '#ffd868',
+    'task-amber-bdr' => '#feb310',
+    'task-brown-bg' => '#d9d2d0',
+    'task-brown-bdr' => '#b79f9a',
     // Lime
     'task-lime-bg' => '#e6ee9c',
     'task-lime-bdr' => '#afb42b',
     // Green
-    'task-light-green-bg' => '#dcedc8',   'task-green-bg' => '#bdf4cb',
-    'task-light-green-bdr' => '#689f38',  'task-green-bdr' => '#4ae371',
+    'task-light-green-bg' => '#dcedc8',   
+    'task-light-green-bdr' => '#689f38',  
+    'task-green-bg' => '#bdf4cb',
+    'task-green-bdr' => '#4ae371',
     // Cyan
-    'task-cyan-bg' => '#b7f2fa',          'task-teal-bg' => '#aaece5',
-    'task-cyan-bdr' => '#4ed5e7',         'task-teal-bdr' => '#6bb7ad',
+    'task-cyan-bg' => '#b7f2fa',          
+    'task-cyan-bdr' => '#4ed5e7',         
+    'task-teal-bg' => '#aaece5',
+    'task-teal-bdr' => '#6bb7ad',
     // Blue
     'task-blue-bg' => '#dae4ff',
     'task-blue-bdr' => '#97acff',
@@ -129,28 +142,41 @@ $themeRevisionConfig['dark palette'] = array(
     'greyscale-8' => '#1f1f1f',
 
     // Tasks
-    // high brightness                    // medium brightness                      // low brightness
     // Grey
-    'task-grey-bg' => '#2e2e2f',          'task-dark-grey-bg' => '#000',
-    'task-grey-bdr' => '#404040',         'task-dark-grey-bdr' => '#202020',
+    'task-grey-bg' => '#2e2e2f',          
+    'task-grey-bdr' => '#404040',         
+    'task-dark-grey-bg' => '#000',
+    'task-dark-grey-bdr' => '#202020',
     // Red
-    'task-pink-bg' => '#995d5e',          'task-red-bg' => '#861212',
-    'task-pink-bdr' => '#713737',         'task-red-bdr' => '#ac1a1a',
+    'task-pink-bg' => '#995d5e',          
+    'task-pink-bdr' => '#713737',         
+    'task-red-bg' => '#861212',
+    'task-red-bdr' => '#ac1a1a',
     // Orange
-    'task-orange-bg' => '#9f5d22',        'task-deep-orange-bg' => '#793711',
-    'task-orange-bdr' => '#883e00',       'task-deep-orange-bdr' => '#551f00',
+    'task-orange-bg' => '#9f5d22',        
+    'task-orange-bdr' => '#883e00',       
+    'task-deep-orange-bg' => '#793711',
+    'task-deep-orange-bdr' => '#551f00',
     // Yellow
-    'task-yellow-bg' => '#846100',        'task-amber-bg' => '#7b2101',             'task-brown-bg' => '#644f37',
-    'task-yellow-bdr' => '#423500',       'task-amber-bdr' => '#531100',            'task-brown-bdr' => '#402d17',
+    'task-yellow-bg' => '#846100',                     
+    'task-yellow-bdr' => '#423500',                   
+    'task-amber-bg' => '#7b2101',
+    'task-amber-bdr' => '#531100',
+    'task-brown-bg' => '#644f37',
+    'task-brown-bdr' => '#402d17',
     // Lime
     'task-lime-bg' => '#728224',
     'task-lime-bdr' => '#536400',
     // Green
-    'task-light-green-bg' => '#5e972d',   'task-green-bg' => '#136c18',
-    'task-light-green-bdr' => '#347100',  'task-green-bdr' => '#094d0d',
+    'task-light-green-bg' => '#5e972d',   
+    'task-light-green-bdr' => '#347100',  
+    'task-green-bg' => '#136c18',
+    'task-green-bdr' => '#094d0d',
     // Cyan
-    'task-cyan-bg' => '#298678',          'task-teal-bg' => '#236853',
-    'task-cyan-bdr' => '#00534c',         'task-teal-bdr' => '#094835',
+    'task-cyan-bg' => '#298678',          
+    'task-cyan-bdr' => '#00534c',        
+    'task-teal-bg' => '#236853',
+     'task-teal-bdr' => '#094835',
     // Blue
     'task-blue-bg' => '#3754a2',
     'task-blue-bdr' => '#062e97',

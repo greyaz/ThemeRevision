@@ -1,3 +1,5 @@
-<li <?= $this->app->checkMenuSelection('ThemeSettingsController', 'show', 'ThemeRevision') ?>>
-    <?= $this->url->link(t('Theme Settings'), 'ThemeSettingsController', 'show', array('plugin' => 'ThemeRevision')) ?>
+<?php if ($this->user->isCurrentUser($user['id'])): ?>
+<li <?= $this->app->checkMenuSelection('UserSettingsController', 'show', 'ThemeRevision') ?>>
+    <?= $this->url->link(t('Theme Mode'), 'UserSettingsController', 'show', array('plugin' => 'ThemeRevision', 'user_id' => $user['id'])) ?>
 </li>
+<?php endif ?>
