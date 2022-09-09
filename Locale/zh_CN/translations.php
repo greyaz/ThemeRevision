@@ -15,7 +15,7 @@ return array(
     'Development' => '开发',
     'Color Scheme' => '配色方案',
     'Default Task Color' => '默认任务颜色',
-    'Overwrite with "task-grey", the option in project settings will be invalidated.' => '锁定为“task-grey”，项目设置中的相关选项将失效。',
+    'Overwrite with "task-grey", the option in project settings will be invalidated' => '锁定为“task-grey”，项目设置中的相关选项将失效',
     'Light Palette' => '亮色色板',
     'Dark Palette' => '暗色色板',
     'Reset Configs' => '重置设置',
@@ -24,4 +24,5 @@ return array(
     'Warning:' => '警告：',
     'Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory.' => '启用配置编辑界面后，原有插件目录下的配置文件（“config-default.php”或“config.php”）将失效。',
     'Continue' => '继续',
+    'Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching to development mode' => '在切换到开发模式前，请先确保插件根目录下的“Asset”文件夹可写入且可执行'
 );

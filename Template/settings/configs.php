@@ -16,6 +16,7 @@
         <?= $this->form->csrf() ?>
         <fieldset>
             <legend><?= t('Basic Settings') ?></legend>
+            <p><small><?= t('Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching to development mode') ?></small></p>
 
             <label><?= t('Mode') ?></label>
             <?= $this->form->select('mode', 
@@ -31,7 +32,7 @@
             
             <label><?= t('Default Task Color') ?></label>
             <?= $this->form->checkbox('overwrite_default_task_color', 
-                t('Overwrite with "task-grey", the option in project settings will be invalidated.'), 
+                t('Overwrite with "task-grey", the option in project settings will be invalidated'), 
                 $configs['overwrite_default_task_color'] ? "true" : "false", 
                 $configs['overwrite_default_task_color'],
                 "overwrite-checkbox"

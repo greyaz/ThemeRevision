@@ -22,8 +22,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Calendar / Gantt / Group_assign / MetaMagic ...
 
 #### 4. Dark mode
-
-* Users can change the color scheme by themselves (User Profile -> Actions -> Theme Mode)
+* An individually controlled panel for non-administrative users (*Right Top Avatar -> Theme Mode*)
 * Three modes provided: Light / Dark / Auto
 
 #### 5. Customization friendly
@@ -33,22 +32,24 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Utilize "rem" as the global measuring unit.
 
 ## Installation
-* Install from the Kanboard plugin manager directly (recommend), **or**  
+* Install from the Kanboard plugin manager directly.  
+**or**  
 `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
-* ***Optional:*** ThemeRevision use the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
+* ***Your own logo?***  
+ ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
 
 ## Customization
 #### Colors and Configs
-* Just go to Settings -> ThemeRevision Settings. (recommend)  
-**or**
-1. Rename the file `config-default.php` to `config.php`.
-2. Edit the color values according to the instructions in the file`config.php`.
+* Just go to the [settings pannel](Screenshots/5.png): *Settings -> ThemeRevision Settings*  
+**or**  
+Rename the file `config-default.php` to `config.php` in the plugin directory. Then edit the color values according to the instructions in it.
 
-#### Other Styles
+#### More Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
-2. Rename the file `config-default.php` to `config.php`.
-3. Enable "development mode" in the configuration file.
-4. Edit raw CSS files in the folder `Asset/dev`.
+2. Switch "Mode" to "Development" in the [settings pannel](Screenshots/5.png).  
+**or**  
+Switch "Mode" in the config file according to the alternative method mentioned in the previous section.
+3. Edit raw CSS files in the folder `Asset/dev`.
 
 ## Author
 - greyaz
