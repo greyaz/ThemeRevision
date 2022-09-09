@@ -22,7 +22,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Calendar / Gantt / Group_assign / MetaMagic ...
 
 #### 4. Dark mode
-* An individually controlled panel for non-administrative users (*Right Top Avatar -> Theme Mode*)
+* An individually controlled panel for non-administrative users
 * Three modes provided: Light / Dark / Auto
 
 #### 5. Customization friendly
@@ -40,13 +40,13 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 
 ## Customization
 #### Colors and Configs
-* Just go to the [settings pannel](Screenshots/5.png): *Settings -> ThemeRevision Settings*  
+* Just go to the [settings pannel](Screenshots/5.png): *Settings -> ThemeRevision Settings* (≥ 1.0.9)  
 **or**  
 Rename the file `config-default.php` to `config.php` in the plugin directory. Then edit the color values according to the instructions in it.
 
 #### More Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
-2. Switch "Mode" to "Development" in the [settings pannel](Screenshots/5.png).  
+2. Switch "Mode" to "Development" in the [settings pannel](Screenshots/5.png). (≥ 1.0.9)  
 **or**  
 Switch "Mode" in the config file according to the alternative method mentioned in the previous section.
 3. Edit raw CSS files in the folder `Asset/dev`.
