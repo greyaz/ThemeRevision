@@ -40,7 +40,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 
 ## Customization
 #### Colors and Configs
-* Just go to the [settings pannel](Screenshots/5.png): `*Settings -> ThemeRevision Settings*` (≥ 1.0.9)  
+* Just go to the [settings pannel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`* (≥ 1.0.9)  
 **or**  
 Rename the file `config-default.php` to `config.php` in the plugin directory. Then edit the color values according to the instructions in it.
 
