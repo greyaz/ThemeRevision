@@ -5,9 +5,9 @@
     <span <?= !$data_in_db ? 'style="display:block;"' : 'style="display:none;"'; ?>>
         <p class="alert alert-warning">
             <b><?= t('Notice') ?></b><br>
-            <small><?= t('Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory. But you can still re-enable it later.') ?></small><br>
+            <?= t('Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory. But you can still re-enable it later.') ?>
         </p>
-        <a id="continue-btn" href="javascript:void(0)" class="btn btn-blue"><?= t('Continue') ?></a>
+        <button id="continue-btn" class="btn btn-blue"><?= t('Continue') ?></button>
     </span>
 
     <span id="tr-settings" <?= !$data_in_db ? 'style="display:none;"' : ''; ?>>
@@ -75,24 +75,7 @@
         </form>
     </span>
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', (event) => {
-            $(".tr-color-picker > input[type='text']").spectrum({
-                preferredFormat: "rgb",
-                showInput: true,
-                showAlpha: true
-            });
-
-            $(".overwrite-checkbox").change(function(event) {
-                $(event.target).val($(event.target).is(':checked')) 
-            });
-
-            $("#continue-btn").click((event) => {
-                $("#continue-btn").parent().hide();
-                $("#tr-settings").show();
-            });
-        });
-    </script>
+    <script  defer type="text/javascript" src="/plugins/ThemeRevision/Asset/settings.min.js"></script>
 <?php else: ?>
     <p class="alert alert-error"><?= t('Access Forbidden') ?></p>
 <?php endif ?>
