@@ -7,7 +7,7 @@
             <b><?= t('Notice') ?></b><br>
             <small><?= t('Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory. But you can still re-enable it later.') ?></small><br>
         </p>
-        <a id="continue-btn" href="javascript:void(0)" class="btn btn-blue"><?= t('Continue') ?></a>
+        <button id="continue-btn" class="btn btn-blue"><?= t('Continue') ?></button>
     </span>
 
     <span id="tr-settings" <?= !$data_in_db ? 'style="display:none;"' : ''; ?>>
