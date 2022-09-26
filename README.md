@@ -36,20 +36,27 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 **or**  
 `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
 * ***Your own logo?***  
- ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
+ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
 
 ## Upgrading
-* Don't forget to back up those CSS files you've customized in the folder `Asset/dev` before upgrading.
+* ***I have customized CSS files***  
+Back up those CSS files you've customized in the folder `Asset/dev` before upgrading.
+
+* ***I have customized configs in Kanboard's settings panel***  
+Export and then reset your configs in the settings panel before upgrading
+
+* ***I have the file `config.php` on my server***  
+Rename the file to `config.php.bak` before upgrading
 
 ## Customization
 #### Colors and Configs
-* Just go to the [settings pannel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`* (≥ 1.0.9)  
+* Just go to the [settings panel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`* (≥ 1.0.9)  
 **or**  
 Rename the file `config-default.php` to `config.php` in the plugin directory. Then edit the color values according to the instructions in it.
 
 #### More Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
-2. Switch "Mode" to "Development" in the [settings pannel](Screenshots/5.png). (≥ 1.0.9)  
+2. Switch "Mode" to "Development" in the [settings panel](Screenshots/5.png). (≥ 1.0.9)  
 **or**  
 Switch "Mode" in the config file according to the alternative method mentioned in the previous section.
 3. Edit raw CSS files in the folder `Asset/dev`.
