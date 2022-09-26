@@ -221,6 +221,9 @@
 	.js-text-editor-rendered {
 		max-width: 100%;
 	}
+	#modal-content form[action*="ActionCreationController"] > .select2 {
+		width: calc(100vw - 4rem) !important;
+	}
 }
 
 @media (max-width: 600px){

@@ -7,9 +7,10 @@
         document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';
     }
 
-    //assignee select
+    //assignee and action select
     KB.on('modal.afterRender',function(){
         $("#form-owner_id").select2();
+        $("#form-action_name").select2();
     });
 
     // Page Menu

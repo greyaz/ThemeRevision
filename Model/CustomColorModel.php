@@ -125,7 +125,7 @@ class CustomColorModel extends ColorModel
     }
 
     private function getCssString($color){
-        $buffer = '';
+        $buffer = 'color-scheme:'.$color.';';
         foreach ($GLOBALS['themeRevisionConfig'][$color.' palette'] as $cssName => $cssValue) {
             $buffer .= "--color-".$cssName.":".$cssValue.";";
         }

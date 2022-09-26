@@ -37,6 +37,14 @@ class PluginConfigsController extends ConfigController
         }
     }
 
+    public function export(){
+        if ($this->userSession->isAdmin()){
+            $data = $this->generateConfigsText();
+            $this->response->withFileDownload('config.php');
+            $this->response->text($data);
+        }
+    }
+
     private function getEndKeys($palette){
         $keys = array();
         foreach($palette as $key => $value){
@@ -47,5 +55,28 @@ class PluginConfigsController extends ConfigController
             $lastPrefix = $prefix;
         }
         return $keys;
+    }
+
+    private function generateConfigsText(){
+        $export = "<?php \n\n";
+        foreach($GLOBALS['themeRevisionConfig'] as $key => $value){
+            $export .= "\$themeRevisionConfig['" . $key . "'] = ";
+
+            if(is_bool($value)){
+                $export .= ($value ? "true" : "false") . ";\n\n";
+            }
+            elseif (is_array($value)){
+                $export .= "array(\n";
+                foreach($value as $subKey => $subVal){
+                    $export .= "\t'" . $subKey . "' => '" . $subVal . "',\n";
+                }
+                $export .= ");\n\n";
+            }
+            else {
+                $export .= "'" . $value . "';\n\n";
+            }
+            
+        }
+        return $export;
     }
 }

@@ -35,7 +35,7 @@ select, form > select {
 	padding-right: calc(1.5rem + 8px);
 }
 input[required]:not(:hover), select[required]:not(:hover), textarea[required]:not(:hover) {
-    border-bottom-color: var(--color-warning-secd) !important;
+    border-bottom-color: var(--color-warning-prim) !important;
 }
 input[type=checkbox], input[type=radio] {
 	margin: 0 0.25rem 1rem 0;
@@ -233,10 +233,17 @@ input::placeholder, textarea::placeholder{
     margin: .25rem .25rem .75rem !important;
     width: calc(100% - .5rem);
     padding: .5rem;
+	background: var(--color-greyscale-8);
 }
 .select2-container .select2-search--dropdown .select2-search__field:focus-visible {
     border-bottom-color: var(--color-brand-prim);
 	outline: 0;
+}
+#modal-content form[action*="ActionCreationController"] > .select2{
+	width: 45rem !important;
+}
+#select2-form-action_name-results{
+	max-height: calc(100vh - 20rem);
 }
 /*dropdown*/
 .dropdown {

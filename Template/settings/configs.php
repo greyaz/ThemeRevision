@@ -66,6 +66,14 @@
             
         </form>
 
+        <form method="post" action="<?= $this->url->href('PluginConfigsController', 'export', array('plugin' => 'ThemeRevision')) ?>">
+            <fieldset>
+                <legend><?= t('Export Configs') ?></legend>
+                <p><small><?= t('Export your current configs as a config file, which can help you compare the difference (between your configs and the new default config file) after upgrading, or replacing the one on the server.') ?></small></p>
+                <input type="submit" class="btn" value="<?= t('Export') ?>"> 
+            </fieldset>
+        </form>
+
         <form method="post" action="<?= $this->url->href('PluginConfigsController', 'reset', array('plugin' => 'ThemeRevision')) ?>">
             <fieldset>
                 <legend><?= t('Reset Configs') ?></legend>

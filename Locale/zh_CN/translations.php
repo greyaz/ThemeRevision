@@ -25,5 +25,7 @@ return array(
     'Notice' => '提示',
     'Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory. But you can still re-enable it later.' => '启用配置编辑界面后，原有插件目录下的配置文件（“config-default.php”或“config.php”）将失效。但您仍可稍后重新启用它。',
     'Continue' => '继续',
-    'Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>' => '开发模式将引入多个未压缩的CSS文件。<span style="color:var(--color-warning-prim)">切换前，请确保插件根目录下的“Asset”文件夹可写入且可执行</span>，用以在生产模式自动压缩'
+    'Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>' => '开发模式将引入多个未压缩的CSS文件。<span style="color:var(--color-warning-prim)">切换前，请确保插件根目录下的“Asset”文件夹可写入且可执行</span>，用以在生产模式自动压缩',
+    'Export Configs' => '导出配置',
+    'Export your current configs as a config file, which can help you compare the difference (between your configs and the new default config file) after upgrading, or replacing the one on the server.' => '将当前配置导出为配置文件。插件升级后，该配置文件可以帮助您比较升与新版本默认配置文件的配置差异，或者替换服务器上的配置文件。'
 );

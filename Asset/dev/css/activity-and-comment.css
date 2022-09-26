@@ -20,7 +20,7 @@
 }
 .comments .comment-highlighted{
 	background-color: var(--color-brand-secd);
-    border: 1px solid var(--color-brand-prim);
+    border: inherit;
 }
 .comments .comment:hover, .activity-event:hover,
 .comments .comment:nth-child(even):not(.comment-highlighted):hover,
@@ -34,6 +34,9 @@
 	font-weight: bold;
 	margin-bottom: 1rem;
 	border: none;
+}
+.comment-title{
+	margin-left: 5rem;
 }
 .comment-title .comment-date{
     font-weight: normal;

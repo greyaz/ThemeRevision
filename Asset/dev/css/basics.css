@@ -67,7 +67,7 @@
 	--button-primary-background-color-focus: var(--color-brand-prim);
     --button-primary-border-color-focus: var(--color-brand-prim);
 	
-	--button-danger-color: var(--color-greyscale-8);
+	--button-danger-color: var(--color-warning-cont);
 	--button-danger-border-color: var(--color-warning-prim);
 	--button-danger-background-color: var(--color-warning-prim);
 	--button-danger-color-focus: var(--color-warning-secd);

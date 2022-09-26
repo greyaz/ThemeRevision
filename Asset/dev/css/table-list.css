@@ -74,7 +74,7 @@ div[class^="table-list-row color-"] {
 .table-list-row > div:first-child {
 	display: inline;
 }
-.table-list-row > div:first-child *{
+.table-list-row > div:first-child *:not(.avatar-letter){
 	color: var(--color-greyscale-0);
 }
 .table-list-row .table-list-title {

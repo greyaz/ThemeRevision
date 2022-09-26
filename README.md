@@ -38,6 +38,9 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * ***Your own logo?***  
  ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
 
+## Upgrading
+* Don't forget to back up those CSS files you've customized in the folder `Asset/dev` before upgrading.
+
 ## Customization
 #### Colors and Configs
 * Just go to the [settings pannel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`* (≥ 1.0.9)  
