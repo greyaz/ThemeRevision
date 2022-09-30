@@ -65,9 +65,9 @@ class Plugin extends Base
 
 		// google fonts replacement
 		if (isset($themeRevisionConfig['google fonts'])){
-			$styles = GoogleFontsHelper::getCssStyles($themeRevisionConfig['google fonts']);
-			if (!empty($styles)){
-				$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('styles' => $styles));
+			$codes = GoogleFontsHelper::getCodes($themeRevisionConfig['google fonts']);
+			if (!empty($codes)){
+				$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('codes' => $codes));
 			}
 		}
 

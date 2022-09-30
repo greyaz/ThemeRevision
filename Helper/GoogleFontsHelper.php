@@ -3,29 +3,34 @@ namespace Kanboard\Plugin\ThemeRevision\Helper;
 
 class GoogleFontsHelper
 {
-    public static function getCssStyles(array $configs){
-        $varStr = "";
-        $return = "";
+    public static function getCodes(array $configs){
+        $styles = "";
+        $links = "";
 
         foreach($configs as $key => $value){
             if (!empty(trim($value))){
-                $return .= "family=".str_replace(" ", "+", trim($value)).":wght@400;700&";
+                $links .= "family=".str_replace(" ", "+", trim($value)).":wght@400;700&";
                 switch ($key){
                     case "ui":
-                        $varStr.= "--style-fontfamily:'".trim($value)."',sans-serif !important;";
+                        $styles.= "--style-fontfamily:'".trim($value)."',sans-serif !important;";
                         break;
                     case "codes":
-                        $varStr.= "--style-fontfamily-code:'".trim($value)."',monospace !important;";
+                        $styles.= "--style-fontfamily-code:'".trim($value)."',monospace !important;";
                         break;
                 }
             }
         }
-        if (!empty($varStr)){
-            $return = "@import url('https://fonts.googleapis.com/css2?".$return."display=swap');";
-            $return .= ":root{".$varStr."}";
+        if (!empty($styles)){
+            $styles = ":root{".$styles."}";
+            
+            return array(
+                "styles" => $styles,
+                "links" => $links
+            );
         }
-
-        return $return;
+        else{
+            return "";
+        }
     }
 }
 
