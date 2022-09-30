@@ -22,7 +22,7 @@
 }
 .project-overview-column strong {
 	font-size: 3rem;
-	font-family: Consolas, "SF Mono", ui-monospace;
+	font-family: var(--style-fontfamily-code);
 }
 .project-overview-column small {
     padding-top: .75rem;

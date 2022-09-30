@@ -36,6 +36,7 @@
 }
 .views-switcher-component .views{
 	margin: 0 1rem 0 0;
+	font-size: 1rem;
 }
 .project-header > .dropdown-component {
     padding: 0 0 0 1rem;

@@ -89,6 +89,10 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+.task-board-header > a {
+	font-weight: bold !important;
+	line-height: 1.667rem !important;
+}
 .task-board-header > .dropdown {
 	margin-bottom: 0.5rem;
 	min-width: 42px;

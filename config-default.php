@@ -13,10 +13,22 @@ $themeRevisionConfig['mode'] = 'production';
 // 'dark':  Always show the dark scheme.
 $themeRevisionConfig['color scheme'] = 'user';
 
-// 'true': Overwrite to grey.  (default)
+// 'true':  Overwrite to grey.  (default)
 // 'false': Keep system settings.
 $themeRevisionConfig['overwrite default task color'] = true;
 
+// 'true':  Replace Font Awesome with Google Material. (default)
+// 'false': Keep Font Awesome icons.
+$themeRevisionConfig['enable google material icons'] = true;
+
+// Override default fonts with "Google Fonts". Only one font name supported by Google can be filled in for each category.
+// The default value for each category is empty.
+// 'ui': A font for Most parts of the system UI.
+// 'codes': A font for all code blocks, and statistics in the overview page. Monospaced fonts are recommended.
+$themeRevisionConfig['google fonts'] = array(
+    'ui' => '',
+    'codes' => ''
+);
 
 // *-prim (primary):      button background, link, selected, alert foreground, helps or hints ...
 // *-secd (secondary):    hovered button foreground, linked comment ...
@@ -126,52 +138,52 @@ $themeRevisionConfig['dark palette'] = array(
     'success-cont' => '#115121',
 
     // Greyscales
-    'greyscale-0' => '#767680',
+    'greyscale-0' => '#a6a6b5',
     'greyscale-1' => '#515057',
     'greyscale-2' => '#47464a',
     'greyscale-3' => '#424146',
-    'greyscale-4' => '#353437',
+    'greyscale-4' => '#3c3b3e',
     'greyscale-5' => '#211f22',
-    'greyscale-6' => '#1d1c20',
+    'greyscale-6' => '#17161a',
     'greyscale-7' => '#101013',
-    'greyscale-8' => '#090909',
+    'greyscale-8' => '#020202',
 
     // Tasks
     // Grey
-    'task-grey-bg' => '#2c2a33',
+    'task-grey-bg' => '#28262f',
     'task-grey-bdr' => '#393646',
-    'task-dark-grey-bg' => '#26242c',
-    'task-dark-grey-bdr' => '#322d3a',
+    'task-dark-grey-bg' => '#020202',
+    'task-dark-grey-bdr' => '#1c1c1c',
     // Red
-    'task-pink-bg' => '#ff949a',
-    'task-pink-bdr' => '#eb858a',
-    'task-red-bg' => '#6a0000',
-    'task-red-bdr' => '#811010',
+    'task-pink-bg' => '#995457',
+    'task-pink-bdr' => '#ac6064',
+    'task-red-bg' => '#7b1900',
+    'task-red-bdr' => '#931d1d',
     // Orange
-    'task-orange-bg' => '#ff9b2a',
-    'task-orange-bdr' => '#ee8711',
-    'task-deep-orange-bg' => '#ff8b3c',
-    'task-deep-orange-bdr' => '#f77733',
+    'task-orange-bg' => '#995900',
+    'task-orange-bdr' => '#ae6a1c',
+    'task-deep-orange-bg' => '#9b4500',
+    'task-deep-orange-bdr' => '#b5521d',
     // Yellow
-    'task-yellow-bg' => '#ffb91b',
-    'task-yellow-bdr' => '#eaa50b',
-    'task-amber-bg' => '#683300',
-    'task-amber-bdr' => '#733e0c',
+    'task-yellow-bg' => '#885d00',
+    'task-yellow-bdr' => '#9f7109',
+    'task-amber-bg' => '#683800',
+    'task-amber-bdr' => '#7d430c',
     'task-brown-bg' => '#513d2d',
     'task-brown-bdr' => '#5e4633',
     // Lime
-    'task-lime-bg' => '#c3d738',
-    'task-lime-bdr' => '#b5c830',
+    'task-lime-bg' => '#687320',
+    'task-lime-bdr' => '#7b8820',
     // Green
-    'task-light-green-bg' => '#98ec85',
-    'task-light-green-bdr' => '#8ad778',
+    'task-light-green-bg' => '#528248',
+    'task-light-green-bdr' => '#57934a',
     'task-green-bg' => '#054208',
     'task-green-bdr' => '#054e09',
     // Cyan
-    'task-cyan-bg' => '#5edbcf',
-    'task-cyan-bdr' => '#54ccc1',
-    'task-teal-bg' => '#0dd2a6',
-    'task-teal-bdr' => '#0ec19a',
+    'task-cyan-bg' => '#007c80',
+    'task-cyan-bdr' => '#3a8e87',
+    'task-teal-bg' => '#007360',
+    'task-teal-bdr' => '#0c886d',
     // Blue
     'task-blue-bg' => '#183086',
     'task-blue-bdr' => '#1b379b',

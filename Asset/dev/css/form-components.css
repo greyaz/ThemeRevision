@@ -306,7 +306,7 @@ input[type=date]:hover, input[type=email]:hover, input[type=number]:hover, input
 
 /*others*/
 .assign-me {
-    vertical-align: inherit;
+    vertical-align: super;
 }
 label {
     line-height: 1rem;
@@ -368,4 +368,7 @@ legend {
 .ui-timepicker-select {
 	width: 100%;
     min-width: unset;
+}
+.form-actions a{
+	border-bottom: 1px dotted;
 }

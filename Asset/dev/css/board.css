@@ -39,7 +39,7 @@
 }
 .board-swimlane-header .board-swimlane-toggle i.fa{
 	font-size: 1rem;
-	color: var(--color-greyscale-3);
+	color: var(--color-greyscale-3) !important;
 	line-height: 4rem;
     vertical-align: bottom;
 }

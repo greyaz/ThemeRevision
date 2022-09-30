@@ -1,7 +1,10 @@
+<!-- Title -->
 <div class="page-header">
     <h2><?= t('ThemeRevision Settings') ?></h2>
 </div>
+
 <?php if ($this->user->isAdmin()): ?>
+    <!-- Notice -->
     <span <?= !$data_in_db ? 'style="display:block;"' : 'style="display:none;"'; ?>>
         <p class="alert alert-warning">
             <b><?= t('Notice') ?></b><br>
@@ -9,38 +12,57 @@
         </p>
         <button id="continue-btn" class="btn btn-blue"><?= t('Continue') ?></button>
     </span>
-
+    <!-- Configs -->
     <span id="tr-settings" <?= !$data_in_db ? 'style="display:none;"' : ''; ?>>
         <form method="post" action="<?= $this->url->href('PluginConfigsController', 'save', array('plugin' => 'ThemeRevision')) ?>">
             <?= $this->form->csrf() ?>
             <fieldset>
+                <!-- Mode -->
                 <legend><?= t('Mode') ?></legend>
                 <p><small><?= e('Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>') ?></small></p>
                 <?= $this->form->select('mode', 
                     array('production' => t('Production'), 'development' => t('Development')), 
                     array('mode' => $configs['mode'])
                 ) ?>
-
+                <!-- Color Scheme -->
                 <legend><?= t('Color Scheme') ?></legend>
                 <p><small><?= t('The "user" option will provide an individually controlled panel for users to switch between "Auto", "Light", and "Dark"') ?></small></p>
                 <?= $this->form->select('color_scheme', 
                     array('user' => t('User'), 'light' => t('Light'), 'dark' => t('Dark')), 
                     array('color_scheme' => $configs['color_scheme'])
                 ) ?>
-                
+                <!-- Task Color -->
                 <legend><?= t('Default Task Color') ?></legend>
                 <p><small><?= t('Overwrite the default task color for better UI consistency. The option in project settings will be invalidated') ?></small></p>
                 <?= $this->form->checkbox('overwrite_default_task_color', 
                     t('Overwrite with "task-grey"'), 
-                    $configs['overwrite_default_task_color'] ? "true" : "false", 
-                    $configs['overwrite_default_task_color'],
-                    "overwrite-checkbox"
+                    $configs['overwrite_default_task_color'], 
+                    $configs['overwrite_default_task_color']
                 ) ?>
+                <!-- Icons -->
+                <legend><?= t('Icons') ?></legend>
+                <?= $this->form->checkbox('enable_google_material_icons', 
+                    t('Replace default icons with "Google Material Symbols"'), 
+                    $configs['enable_google_material_icons'], 
+                    $configs['enable_google_material_icons']
+                ) ?>
+                <!-- Google Fonts -->
+                <legend><i class="fa fa-cloud"></i><a href="https://fonts.google.com/" target="_blank" style="font-weight:bold !important;border-bottom:1px dotted var(--color-greyscale-3);"><?= t('Google Fonts') ?></a></legend>
+                <p><small>
+                    <?= e('Override default fonts with "Google Fonts". <b>Only one font name</b> supported by Google can be filled in for each category.') ?><br>
+                    <?= e('<b>UI:</b> A font name for Most parts of the system UI. Example: ') ?><i>Noto Sans</i><br>
+                    <?= e('<b>Codes:</b> A font name for all code blocks, and statistics in the overview page. Monospaced fonts are recommended. Example: ') ?><i><code>Noto Sans Mono</code></i><br>
+                </small></p>
+                <label><?= t('UI:') ?></label>
+                <input type='text' value="<?= $configs['google_fonts']['ui'] ?>" name="google_fonts[ui]" placeholder="<?= t('Name, case-sensitive') ?>"/>
+                <label><?= t('Codes:') ?></label>
+                <input type='text' value="<?= $configs['google_fonts']['codes'] ?>" name="google_fonts[codes]" placeholder="<?= t('Name, case-sensitive') ?>"/>
             </fieldset>
 
             <fieldset>
+                <!-- Light Palette -->
                 <legend><?= t('Light Palette') ?></legend>
-                <p><small><?= t('Check the file "config-default.php" in the plugin directory for more information.') ?></small> <a href="https://github.com/greyaz/ThemeRevision/blob/main/config-default.php" target="_blank"><small><?= t("View on Github") ?></small></a></p>
+                <p><small><?= t('Check the file "config-default.php" in the plugin directory for more information.') ?></small> <a href="https://github.com/greyaz/ThemeRevision/blob/main/config-default.php" target="_blank" style="border-bottom:1px dotted var(--color-greyscale-3);"><small><?= t("View on Github") ?></small></a></p>
                 <div class="color-palette" style="display:flex;flex-wrap:wrap;">
                     <?php foreach($configs['light_palette'] as $key=>$value):  ?>
                         <?= in_array($key, $end_keys['light']) ? '<hr style="width:100%;margin-bottom:1.5rem;">' : ''; ?>
@@ -51,8 +73,9 @@
             </fieldset>
 
             <fieldset>
+                <!-- Dark Palette -->
                 <legend><?= t('Dark Palette') ?></legend>
-                <p><small><?= t('Check the file "config-default.php" in the plugin directory for more information.') ?></small> <a href="https://github.com/greyaz/ThemeRevision/blob/main/config-default.php" target="_blank"><small><?= t("View on Github") ?></small></a></p>
+                <p><small><?= t('Check the file "config-default.php" in the plugin directory for more information.') ?></small> <a href="https://github.com/greyaz/ThemeRevision/blob/main/config-default.php" target="_blank" style="border-bottom:1px dotted var(--color-greyscale-3);"><small><?= t("View on Github") ?></small></a></p>
                 <div class="color-palette" style="display:flex;flex-wrap:wrap;">
                     <?php foreach($configs['dark_palette'] as $key=>$value):  ?>
                         <?= in_array($key, $end_keys['dark']) ? '<hr style="width:100%;margin-bottom:1.5rem;">' : ''; ?>
@@ -61,11 +84,10 @@
                     <hr style="width:100%;margin-bottom:1rem;">
                 </div>
             </fieldset>
-
+            <!-- Save -->
             <input type="submit" class="btn btn-blue" value="<?= t('Save') ?>"> 
-            
         </form>
-
+        <!-- Export -->
         <form method="post" action="<?= $this->url->href('PluginConfigsController', 'export', array('plugin' => 'ThemeRevision')) ?>">
             <fieldset>
                 <legend><?= t('Export Configs') ?></legend>
@@ -73,7 +95,7 @@
                 <input type="submit" class="btn" value="<?= t('Export') ?>"> 
             </fieldset>
         </form>
-
+        <!-- Reset -->
         <form method="post" action="<?= $this->url->href('PluginConfigsController', 'reset', array('plugin' => 'ThemeRevision')) ?>">
             <fieldset>
                 <legend><?= t('Reset Configs') ?></legend>

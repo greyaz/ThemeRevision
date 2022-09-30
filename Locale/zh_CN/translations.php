@@ -27,5 +27,14 @@ return array(
     'Continue' => '继续',
     'Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>' => '开发模式将引入多个未压缩的CSS文件。<span style="color:var(--color-warning-prim)">切换前，请确保插件根目录下的“Asset”文件夹可写入且可执行</span>，用以在生产模式自动压缩',
     'Export Configs' => '导出配置',
-    'Export your current configs as a config file, which can help you compare the difference (between your configs and the new default config file) after upgrading, or replacing the one on the server.' => '将当前配置导出为配置文件。插件升级后，该配置文件可以帮助您比较当前配置与新版本默认配置文件的配置差异，或者用于替换服务器上的配置文件。'
+    'Export your current configs as a config file, which can help you compare the difference (between your configs and the new default config file) after upgrading, or replacing the one on the server.' => '将当前配置导出为配置文件。插件升级后，该配置文件可以帮助您比较当前配置与新版本默认配置文件的配置差异，或者用于替换服务器上的配置文件。',
+    'Icons' => '图标',
+    'Replace default icons with "Google Material Symbols"' => '将默认图标替换为Google Material Symbols',
+    'Override default fonts with "Google Fonts". <b>Only one font name</b> supported by Google can be filled in for each category.' => '将默认字体替换为“Google字体”。每个类别<b>仅能填写一个</b>Google支持的字体名称。',
+    '<b>UI:</b> A font name for Most parts of the system UI. Example: ' => '<b>界面：</b>绝大部分系统界面使用的字体名称。例如：',
+    '<b>Codes:</b> A font name for all code blocks, and statistics in the overview page. Monospaced fonts are recommended. Example: ' => '<b>代码：</b>代码块和概览页面上的统计数据所使用的字体名称。推荐使用等宽字体。例如：',
+    'Google Fonts' => 'Google字体',
+    'UI:' => '界面：',
+    'Codes:' => '代码：',
+    'Name, case-sensitive' => '名称，注意大小写'
 );

@@ -28,6 +28,8 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 #### 5. Customization friendly
 
 * All colors are configurable in the settings panel. [screenshot](Screenshots/5.png)
+* Support Google fonts by just typing a font name.
+* Switchable icon packages, _Google Material_ (default) and _Font Awesome_.
 * Structured CSS files, easy to locate elements.  
 * Utilize "rem" as the global measuring unit.
 
@@ -49,10 +51,10 @@ Export and then reset your configs in the settings panel before upgrading
 Rename the file to `config.php.bak` before upgrading
 
 ## Customization
-#### Colors and Configs
+#### Colors / Icons / Fonts
 * Just go to the [settings panel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`* (≥ 1.0.9)  
 **or**  
-Rename the file `config-default.php` to `config.php` in the plugin directory. Then edit the color values according to the instructions in it.
+Copy and move (**do not delete**) the file `config-default.php` to `config.php` in the plugin directory. Then edit the values according to the instructions in it.
 
 #### More Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.

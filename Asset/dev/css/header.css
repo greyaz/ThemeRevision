@@ -45,3 +45,7 @@ header .menus-container {
 .notification {
 	line-height: 2rem;
 }
+
+header .notification i.web-notification-icon{
+	color: var(--color-brand-prim) !important;
+}

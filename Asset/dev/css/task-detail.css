@@ -141,7 +141,7 @@
 }
 #task-summary .task-summary-column li a{
     font-size: var(--size-font-min) !important;
-    color: var(--color-brand-prim);
+    border-bottom: 1px dotted;
 }
 #task-summary .task-summary-column span{
 	color: var(--color-greyscale-0);
@@ -192,3 +192,15 @@
 	align-items: center;
 }
 
+.public-task #task-summary .task-summary-container{
+    margin: 1rem 0 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.public-task #task-summary h2{
+    max-width: unset;
+}
+.public-task .markdown pre{
+    margin: 1rem 0 0;
+    max-width: calc(800px - 6rem);
+}

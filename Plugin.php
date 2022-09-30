@@ -6,20 +6,23 @@ use Kanboard\Core\Translator;
 use Kanboard\Plugin\ThemeRevision\Helper\ConfigsConvertHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
+use Kanboard\Plugin\ThemeRevision\Helper\GoogleFontsHelper;
 
 
 class Plugin extends Base
 {
 	public function initialize()
 	{
-		// load configuration file
 		global $themeRevisionConfig;
+		
+		// load configs
+		require_once('plugins/ThemeRevision/config-default.php');
+		if (file_exists('plugins/ThemeRevision/config.php')){
+			require_once('plugins/ThemeRevision/config.php');
+		}
 		$configsData = $this->configModel->get("ThemeRevision");
 		if ($configsData != ""){
-			$themeRevisionConfig = ConfigsConvertHelper::toCFFormat(json_decode($configsData, true));
-		}
-		else{
-			file_exists('plugins/ThemeRevision/config.php') ? require_once('plugins/ThemeRevision/config.php') : require_once('plugins/ThemeRevision/config-default.php');
+			$themeRevisionConfig = array_merge($themeRevisionConfig, ConfigsConvertHelper::toCFFormat(json_decode($configsData, true)));
 		}
 
 		// regist helper
@@ -55,6 +58,19 @@ class Plugin extends Base
 		$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.css'));
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.js'));
 
+		// icons replacement
+		if (!isset($themeRevisionConfig['enable google material icons']) || $themeRevisionConfig['enable google material icons']) {
+			$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/material-symbols/index.min.css'));
+		}
+
+		// google fonts replacement
+		if (isset($themeRevisionConfig['google fonts'])){
+			$styles = GoogleFontsHelper::getCssStyles($themeRevisionConfig['google fonts']);
+			if (!empty($styles)){
+				$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('styles' => $styles));
+			}
+		}
+
 		// main js
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/main.min.js'));
 	}
@@ -73,7 +89,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.0'; 
+		return '1.1.1'; 
 	}
 
 	public function getPluginDescription() { 

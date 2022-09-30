@@ -9,10 +9,6 @@ class PluginConfigsController extends ConfigController
     public function show(){
         $dataInDB = $this->configModel->get("ThemeRevision") != "";
         $data = ConfigsConvertHelper::toDBFormat($GLOBALS['themeRevisionConfig']);
-
-        if (!isset($data['overwrite_default_task_color'])){
-            $data['overwrite_default_task_color'] = false;
-        }
         
         $this->response->html($this->helper->layout->config('ThemeRevision:settings/configs', array(
             'title' => t('Settings').' &gt; '.t('ThemeRevision Settings'),
@@ -24,10 +20,14 @@ class PluginConfigsController extends ConfigController
 
     public function save(){
         if ($this->userSession->isAdmin()){
-            $this->configModel->save(array("ThemeRevision" => json_encode($this->request->getValues())));
+            $values = $this->request->getValues();
+            //checkbox value fix
+            $values['overwrite_default_task_color'] = isset($values['overwrite_default_task_color']);
+            $values['enable_google_material_icons'] = isset($values['enable_google_material_icons']);
+
+            $this->configModel->save(array("ThemeRevision" => json_encode($values)));
             $this->response->redirect($this->helper->url->to('PluginConfigsController', 'show', array('plugin' => 'ThemeRevision',)));
         }
-        
     }
 
     public function reset(){
