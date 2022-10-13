@@ -4,8 +4,8 @@
 #board td,
 #board th {
 	border: none;
-	/*border-left: 1px solid var(--color-greyscale-6);*/
-	background: var(--color-greyscale-6);
+	/*border-left: 1px solid var(--color-greyscale-4);*/
+	background: var(--color-greyscale-4);
 	padding: .5rem .75rem;
 }
 #board th.board-column-header{
@@ -25,6 +25,10 @@
     line-height: 4rem;
 	padding: 0;
 }
+#board th.board-column-header-collapsed{
+	width: 3.654rem;
+    min-width: 3.654rem;
+}
 #board th.board-column-header-collapsed .board-add-icon{
     display: none;
 }
@@ -32,19 +36,19 @@
     display: none;
 }
 #board td {
-	border-color: var(--color-greyscale-5)
+	border-color: var(--color-greyscale-3)
 }
 #board .board-swimlane {
-	border-bottom: 2rem solid var(--color-greyscale-6);
+	border-bottom: 2rem solid var(--color-greyscale-4);
 }
 .board-swimlane-header .board-swimlane-toggle i.fa{
 	font-size: 1rem;
-	color: var(--color-greyscale-3) !important;
+	color: var(--color-greyscale-2) !important;
 	line-height: 4rem;
     vertical-align: bottom;
 }
 .board-swimlane-header .board-swimlane-toggle i.fa:hover{
-	color: var(--color-greyscale-0) !important;
+	color: var(--color-greyscale-1) !important;
 }
 #board th.board-column-header.board-column-compact {
 	padding-top: 0;
@@ -72,8 +76,8 @@ table th .board-add-icon:hover .fa-plus:before {
 	background: var(--color-brand-prim);
 }
 .board-add-icon .fa-plus:before {
-	background: var(--color-greyscale-6);
-	color: var(--color-greyscale-4);
+	background: var(--color-greyscale-4);
+	color: var(--color-greyscale-2);
 	padding: 2px;
 	display: block;
 	width: 1.5rem;

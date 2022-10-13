@@ -1,7 +1,7 @@
 /*input select textarea*/
 input[type=date], input[type=email], input[type=number], input[type=password], input[type=text], input[type="text"]:not(.input-addon-field), input[type=checkbox], input[type=radio], input[type=file], textarea, select, form > select {
     border: none;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     border-bottom: var(--style-border);
 	border-radius: var(--size-radius-def);
 	line-height: calc(1rem + 2px);
@@ -9,7 +9,7 @@ input[type=date], input[type=email], input[type=number], input[type=password], i
 	height: auto;
 	margin: 0 0 1rem;
 	font-size: 1rem;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	padding: .75rem;
 	box-shadow: var(--style-shadow-light);
 	font-family: var(--style-fontfamily);
@@ -64,7 +64,7 @@ input::placeholder, textarea::placeholder{
 	width: 100%;
 	max-width: unset;
 	margin: 0;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 	border-radius: var(--size-radius-def);
 	border: none;
 	border-bottom: var(--style-border);
@@ -73,7 +73,7 @@ input::placeholder, textarea::placeholder{
 	box-sizing: border-box;
 }
 .text-editor .text-editor-toolbar{
-	border-color: var(--color-greyscale-7);
+	border-color: var(--color-greyscale-5);
 }
 .text-editor-write-mode{
 	line-height: 0;
@@ -87,7 +87,7 @@ input::placeholder, textarea::placeholder{
 .select2-container, .select2-container--default, .select2-container--below, .select2-container--below, .select2-container--focus{
 	border: none;
 	margin: 0 0 1rem !important;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     border-bottom: var(--style-border);
 	border-radius: var(--size-radius-def);
 	height: auto;
@@ -103,7 +103,7 @@ input::placeholder, textarea::placeholder{
 	height: auto !important;
 	margin: 0;
 	font-size: 1rem;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	padding: 0;
 }
 .select2-selection--multiple {
@@ -120,15 +120,15 @@ input::placeholder, textarea::placeholder{
     width: 1rem !important;
 }
 .select2-selection__rendered{
-	color: var(--color-greyscale-0) !important;
+	color: var(--color-greyscale-1) !important;
 	line-height: calc(1rem + 2px) !important;
 	padding: 0 1rem 0 0 !important;
 }
 .select2-selection__choice{
 	font-size: 1rem;
-	color: var(--color-greyscale-8);
+	color: var(--color-greyscale-6);
 	list-style-type: none;
-	background-color: var(--color-greyscale-0) !important;
+	background-color: var(--color-greyscale-1) !important;
     border: none !important;
     border-radius: var(--size-radius-def) !important;
     cursor: default !important;
@@ -137,7 +137,7 @@ input::placeholder, textarea::placeholder{
     padding: 0 .5em !important;
 }
 .select2-selection__choice__remove{
-	color: var(--color-greyscale-8) !important;
+	color: var(--color-greyscale-6) !important;
 	margin-right: .5em !important;
 }
 .select2-search, .select2-search--inline {
@@ -150,7 +150,7 @@ input::placeholder, textarea::placeholder{
 	margin: 0 !important;
 }
 .select2-dropdown {
-    background-color: var(--color-greyscale-8);
+    background-color: var(--color-greyscale-6);
     border: var(--style-border);
     border-radius: var(--size-radius-def) !important;
 	border-top: var(--style-border) !important;
@@ -162,12 +162,12 @@ input::placeholder, textarea::placeholder{
     margin: 0;
     line-height: 2em;
     padding: .25rem .75em;
-    background: var(--color-greyscale-8);
-	border-bottom: 1px solid var(--color-greyscale-7);
+    background: var(--color-greyscale-6);
+	border-bottom: 1px solid var(--color-greyscale-5);
 }
 .select2-results__option[aria-selected=true] {
-    background-color: var(--color-greyscale-5) !important;
-	color: var(--color-greyscale-0) !important;
+    background-color: var(--color-greyscale-3) !important;
+	color: var(--color-greyscale-1) !important;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background: var(--color-brand-prim);
@@ -212,7 +212,7 @@ input::placeholder, textarea::placeholder{
 	min-width: var(--size-width-comp);
 	border-bottom: var(--style-border);
 	border-radius: var(--size-radius-def);
-	background-color: var(--color-greyscale-6);
+	background-color: var(--color-greyscale-4);
 }
 .select-dropdown-input-container input.select-dropdown-input {
     width: 90%;
@@ -233,7 +233,7 @@ input::placeholder, textarea::placeholder{
     margin: .25rem .25rem .75rem !important;
     width: calc(100% - .5rem);
     padding: .5rem;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 }
 .select2-container .select2-search--dropdown .select2-search__field:focus-visible {
     border-bottom-color: var(--color-brand-prim);
@@ -250,7 +250,7 @@ input::placeholder, textarea::placeholder{
 	line-height: 2rem;
 }
 .dropdown-menu-link-text, .dropdown-menu-link-icon {
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 #select-dropdown-menu{
 	overflow: auto;
@@ -258,7 +258,7 @@ input::placeholder, textarea::placeholder{
 ul.dropdown-submenu-open, #select-dropdown-menu {
 	border-radius: var(--size-radius-def);
 	padding: .5rem 0;
-	background-color: var(--color-greyscale-8);
+	background-color: var(--color-greyscale-6);
 	border: var(--style-border);
 	box-shadow: var(--style-shadow-heavy);
 	max-height: calc(100vh - 16.5rem);
@@ -267,7 +267,7 @@ ul.dropdown-submenu-open, #select-dropdown-menu {
 ul.dropdown-submenu-open li, #select-dropdown-menu li {
 	font-size: 1rem;
 	padding: 0.5rem 1rem;
-	border-bottom: 1px solid var(--color-greyscale-7);
+	border-bottom: 1px solid var(--color-greyscale-5);
 }
 ul.dropdown-submenu-open li:not(.no-hover) {
 	font-size: 0;
@@ -278,7 +278,7 @@ ul.dropdown-submenu-open li i.fa {
 	margin-right: 1rem;
 }
 ul.dropdown-submenu-open a {
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	vertical-align: middle;
 }
 
@@ -288,17 +288,17 @@ input[type=date]:hover, input[type=email]:hover, input[type=number]:hover, input
 .select-dropdown-input-container:hover {
 	box-shadow: var(--style-shadow-heavy);
     border-color: var(--color-brand-prim);
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .dropdown-submenu-open li:hover:not(.no-hover), .textarea-dropdown .active, .textarea-dropdown li:hover, .select-dropdown-menu-item.active{
 	background: var(--color-brand-prim);
 	color: var(--color-brand-cont);
 }
 .dropdown-submenu-open li:hover:not(.no-hover) a:hover{
-	color: var(--color-greyscale-8) !important;
+	color: var(--color-greyscale-6) !important;
 }
 .select-dropdown-input-container:hover {
-	background-color: var(--color-greyscale-8);
+	background-color: var(--color-greyscale-6);
 }
 .select-dropdown-input-container > input[type="text"]:hover {
 	box-shadow: none;
@@ -344,18 +344,18 @@ label {
 	padding: 1rem;
 	width: auto;
     min-width: var(--size-width-comp);
-	background: var(--color-greyscale-6);
+	background: var(--color-greyscale-4);
 }
 fieldset {
 	border: none;
-	background: var(--color-greyscale-6);
+	background: var(--color-greyscale-4);
     border-bottom: var(--style-border);
 	border-radius: var(--size-radius-def);
 	line-height: calc(1rem + 2px);
 	height: auto;
 	margin: 0 0 1rem;
 	font-size: 1rem;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	padding: 1rem 0;
 	box-shadow: none;
 }
@@ -369,6 +369,6 @@ legend {
 	width: 100%;
     min-width: unset;
 }
-.form-actions a{
+.form-actions a:not(.btn), #modal-content small a.assign-me{
 	border-bottom: 1px dotted;
 }

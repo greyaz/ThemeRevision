@@ -11,9 +11,9 @@
 }
 
 .page-header ul, .menu-inline ul, .views-switcher-component .views, .project-header > .dropdown-component, .filter-box .input-addon, .fc-state-default, .fc button{
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     border-bottom: var(--style-border);
-	border-top: 1px solid var(--color-greyscale-8);
+	border-top: 1px solid var(--color-greyscale-6);
 }
 .page-header ul, .menu-inline ul, .fc-state-default, .fc button {
 	margin: 0;
@@ -22,14 +22,12 @@
 	box-shadow: none;
 }
 .sidebar-content .page-header > ul, #modal-content .page-header > ul, .menu-inline ul, .fc-state-default, .fc button {
-	border: 1px solid var(--color-greyscale-6);
+	border: 1px solid var(--color-greyscale-4);
 	border-bottom: var(--style-border);
-	/*box-shadow: var(--style-shadow-medium);*/
-	/*background: linear-gradient(to bottom, var(--color-greyscale-7), var(--color-greyscale-8));*/
-	background: var(--color-greyscale-7);
+	background: var(--color-greyscale-5);
 }
 .sidebar-content .page-header > ul{
-	box-shadow: 0 2rem 0 0 var(--color-greyscale-8);
+	box-shadow: 0 2rem 0 0 var(--color-greyscale-6);
 }
 .sidebar-content .page-header > ul, #modal-content .page-header > ul {
 	margin: 1rem 0;
@@ -58,13 +56,13 @@
     border-left: 0;
 }
 .page-header li.active a, .menu-inline li.active a {
-    box-shadow: inset 0 2px 0 0 var(--color-greyscale-7);
-    background: var(--color-greyscale-8);
+    box-shadow: inset 0 2px 0 0 var(--color-greyscale-5);
+    background: var(--color-greyscale-6);
 	box-sizing: border-box;
 }
 .views-switcher-component .views li, .filter-box .input-addon .input-addon-item, .filter-box .input-addon input[type=text] {
 	padding: .75rem;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 	border: 0;
 }
 .views-switcher-component .views li {
@@ -83,16 +81,16 @@
 .views-switcher-component .views li:first-child {
 	border-top-left-radius: var(--size-radius-def);
 	border-bottom-left-radius: var(--size-radius-def);
-	border-left: 1px solid var(--color-greyscale-8);
+	border-left: 1px solid var(--color-greyscale-6);
 }
 .views-switcher-component .views li:last-child {
 	border-top-right-radius: var(--size-radius-def);
 	border-bottom-right-radius: var(--size-radius-def);
-	border-color: var(--color-greyscale-8);
-	border-bottom-color: var(--color-greyscale-5);
+	border-color: var(--color-greyscale-6);
+	border-bottom-color: var(--color-greyscale-3);
 }
 .views-switcher-component .views li.active {
-	background: linear-gradient(to top, var(--color-greyscale-0) 2px, var(--color-greyscale-8) 2px);
+	background: linear-gradient(to top, var(--color-greyscale-1) 2px, var(--color-greyscale-6) 2px);
 }
 
 
@@ -106,7 +104,7 @@
 .views-switcher-component .views li a, .views-switcher-component .views li.active a {
 	height: 1rem;
     display: block;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .filter-box .input-addon .input-addon-item:last-child {
 	border-radius: 0 var(--size-radius-def) var(--size-radius-def) 0;

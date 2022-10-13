@@ -1,6 +1,7 @@
-(function(window, document, KB, $){
+(function(window, document, KB, $, hljs){
     // Add Class
-    $("body").addClass("TR");
+    //$("body").addClass("TR");
+    document.querySelector("body").classList.add("TR");
 
     // Replace Logo
     if (document.querySelector("header .logo > a")){
@@ -8,10 +9,17 @@
     }
 
     //assignee and action select
-    KB.on('modal.afterRender',function(){
-        $("#form-owner_id").select2();
-        $("#form-action_name").select2();
-    });
+    if ($ && KB){
+        KB.on('modal.afterRender',function(){
+            $("#form-owner_id").select2();
+            $("#form-action_name").select2();
+        });
+    }
+
+    //syntax highlight
+    if (hljs){
+        hljs.highlightAll();
+    }
 
     // Page Menu
     initMenu("section.sidebar-container > .sidebar");
@@ -66,4 +74,4 @@
         }
     }    
     
-})(window, document, KB, jQuery);
+})(window, document, typeof KB == "undefined" ? null : KB, typeof jQuery == "undefined" ? null: jQuery, typeof hljs == "undefined" ? null: hljs); // compatible with public visit page

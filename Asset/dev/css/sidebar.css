@@ -14,12 +14,12 @@
 }
 .sidebar > ul{
 	background: none;
-	border-bottom: var(--color-greyscale-5);
+	border-bottom: var(--color-greyscale-3);
 	border-radius: 0 0 var(--size-radius-def) var(--size-radius-def);
 }
 .sidebar-content div[class*=js-chart-]{
 	padding: 1rem;
-	background: var(--color-greyscale-7);
+	background: var(--color-greyscale-5);
     margin-bottom: 1rem;
     border-bottom: var(--style-border);
 }
@@ -30,9 +30,9 @@
 	padding-left: 1.25rem;
 }
 .sidebar>ul li.active, .sidebar>ul li:hover {
-    border-left: 2px solid var(--color-greyscale-0);
+    border-left: 2px solid var(--color-greyscale-1);
     padding-left: .75rem;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     border-radius: var(--size-radius-def);
 }
 .sidebar>ul li a{
@@ -45,7 +45,7 @@
 	font-weight: bold;
 }
 .sidebar>ul li.active a:focus, .sidebar>ul li.active a:hover{
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .sidebar.sidebar-icons>ul ul li {
 	font-size: 0;

@@ -26,6 +26,7 @@
 .TR .table-list i.fa,
 .TR .task-board .task-date i.fa, 
 .TR .table-list .task-date i.fa,
+.TR .file-thumbnail-content i.fa,
 .TR ul.dropdown-submenu-open li a i.fa {
     vertical-align: text-top;
 }
@@ -230,6 +231,9 @@
 .TR i.fa-toggle-off:before{
     content:"\e9f5";
 }
+.TR i.fa-toggle-on:before{
+    content:"\e9f6";
+}
 .TR i.fa-bold:before{
     content:"\e238";
 }
@@ -309,5 +313,8 @@
 }
 .TR i.fa-chevron-circle-down:before{
     content:"\e146";
+}
+.TR i.fa-lock:before{
+    content:"\e898";
 }
 

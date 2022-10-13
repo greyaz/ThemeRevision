@@ -6,60 +6,60 @@
 	--size-radius-def: 2px;
 
 	--style-fontfamily: "SF Pro Display", Calibri, Helvetica, Verdana, Arial, sans-serif;
-	--style-fontfamily-code: Consolas, "SF Mono", ui-monospace, monospace;
+	--style-fontfamily-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	--style-letterspacing: .02rem;
-	--style-border: 1px solid var(--color-greyscale-5);
-	--style-shadow-light: 0 1px 2px 0 rgba(0, 0, 0, .04);
-	--style-shadow-medium: 0 2px 4px 0px rgb(0, 0, 0, .07);
-	--style-shadow-heavy: 0 3px 8px 0 rgba(0, 0, 0, .08);
+	--style-border: 1px solid var(--color-greyscale-3);
+	--style-border-thk: 3px solid var(--color-greyscale-3);
+	--style-shadow-light: 0 1px 2px 0 var(--color-shadow-lit);
+	--style-shadow-heavy: 0 3px 8px 0 var(--color-shadow-hev);
 
-	--pattern-dots-def: radial-gradient(var(--color-greyscale-4) .8px, transparent .8px);
-	--pattern-dots-ph: radial-gradient(var(--color-greyscale-2) .8px, var(--color-greyscale-7) .8px);
+	--pattern-dots-def: radial-gradient(var(--color-greyscale-2) .8px, transparent .8px);
+	--pattern-dots-ph: radial-gradient(var(--color-greyscale-2) .8px, var(--color-greyscale-5) .8px);
 	--pattern-dots-size: 16px 16px;
 
 	
 	/*default css override*/
-	--color-dark: var(--color-greyscale-0);
-	--color-primary: var(--color-greyscale-0);
-	--color-medium: var(--color-greyscale-0);
-	--color-light: var(--color-greyscale-0);
-	--color-lighter: var(--color-greyscale-0);
+	--color-dark: var(--color-greyscale-1);
+	--color-primary: var(--color-greyscale-1);
+	--color-medium: var(--color-greyscale-1);
+	--color-light: var(--color-greyscale-1);
+	--color-lighter: var(--color-greyscale-1);
 	--color-error: var(--color-warning-prim);
 
-	--link-color-primary: var(--color-greyscale-0);
+	--link-color-primary: var(--color-greyscale-1);
 	--link-color-focus: var(--color-brand-prim);
     --link-color-hover: var(--color-brand-prim);
 
-	--avatar-color-letter: var(--color-greyscale-8);
+	--avatar-color-letter: var(--color-greyscale-6);
 
 	--alert-color-info: var(--color-info-prim);
 	--alert-background-color-info: var(--color-info-cont);
-	--alert-border-color-info: var(--color-info-secd);
+	/*--alert-border-color-info: var(--color-info-secd);*/
 
 	--alert-color-default: var(--color-reminder-prim);
 	--alert-background-color-default: var(--color-reminder-cont);
-	--alert-border-color-default: var(--color-reminder-secd);
+	/*--alert-border-color-default: var(--color-reminder-secd);*/
 
-	--alert-color-normal: var(--color-greyscale-0);
-	--alert-background-color-normal: var(--color-greyscale-7);
-	--alert-border-color-normal: var(--color-greyscale-5);
+	--alert-color-normal: var(--color-greyscale-1);
+	--alert-background-color-normal: var(--color-greyscale-5);
+	/*--alert-border-color-normal: var(--color-greyscale-3);*/
 
 	--alert-color-error: var(--color-warning-prim);
 	--alert-background-color-error: var(--color-warning-cont);
-	--alert-border-color-error: var(--color-warning-secd);
+	/*--alert-border-color-error: var(--color-warning-secd);*/
 
 	--alert-color-success: var(--color-success-prim);
 	--alert-background-color-success: var(--color-success-cont);
-	--alert-border-color-success: var(--color-success-secd);
+	/*--alert-border-color-success: var(--color-success-secd);*/
 
-	--activity-title-color: var(--color-greyscale-0);
+	--activity-title-color: var(--color-greyscale-1);
 
-	--button-default-color: var(--color-greyscale-0);
-    --button-default-background-color: var(--color-greyscale-8);
-    --button-default-border-color: var(--color-greyscale-8);
-    --button-default-color-focus: var(--color-greyscale-1);
-    --button-default-background-color-focus: var(--color-greyscale-8);
-    --button-default-border-color-focus: var(--color-greyscale-8);
+	--button-default-color: var(--color-greyscale-1);
+    --button-default-background-color: var(--color-greyscale-6);
+    --button-default-border-color: var(--color-greyscale-6);
+    --button-default-color-focus: var(--color-greyscale-2);
+    --button-default-background-color-focus: var(--color-greyscale-6);
+    --button-default-border-color-focus: var(--color-greyscale-6);
 
 	--button-primary-color: var(--color-brand-cont);
 	--button-primary-background-color: var(--color-brand-prim);
@@ -75,16 +75,16 @@
 	--button-danger-background-color-focus: var(--color-warning-prim);
     --button-danger-border-color-focus: var(--color-warning-prim);
 	
-	--button-disabled-color: var(--color-greyscale-3);
-    --button-disabled-background-color: var(--color-greyscale-5);
-    --button-disabled-border-color: var(--color-greyscale-5);
+	--button-disabled-color: var(--color-greyscale-2);
+    --button-disabled-background-color: var(--color-greyscale-3);
+    --button-disabled-border-color: var(--color-greyscale-3);
 }
 html,
 body {
 	font-size: var(--size-font-def);
 }
 body {
-	background-color: var(--color-greyscale-6);
+	background-color: var(--color-greyscale-4);
 	padding: .5rem 2rem;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -113,11 +113,11 @@ p {
     margin-bottom: 1em;
     line-height: 1.5em;
 	font-size: 1rem;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 hr{
 	margin: 0;
-	border-top: 1px solid var(--color-greyscale-6);
+	border-top: 1px solid var(--color-greyscale-4);
 	border-bottom: 0;
 }
 small {
@@ -133,6 +133,7 @@ button, .btn {
     min-width: 6rem;
     text-align: center;
 	box-shadow: var(--style-shadow-light);
+	font-weight: bold !important;
 }
 .btn:disabled {
 	cursor: auto;
@@ -163,7 +164,7 @@ article {
 .markdown{
 	line-height: 1.5rem;
 }
-.markdown *{
+.markdown *:not(code){
 	line-height: 1.5rem;
 	text-align: justify;
 }
@@ -171,13 +172,43 @@ article {
 	margin-bottom: 1rem;
 }
 .markdown pre{
-    background: var(--color-greyscale-7);
-    padding: 1.5rem;
+    background: unset;
+    padding: .75rem 1.5rem;
     border-radius: var(--size-radius-def);
     border: 0;
+	border-left: var(--style-border-thk);
+    white-space: break-spaces;
+    text-align: left;
+    word-break: break-word;
+	font-size: 1rem;
+	margin: 0 0 1rem;
+}
+.markdown blockquote {
+    font-style: italic;
+    border-left: var(--style-border-thk);
+    padding: .75rem 1.5rem;
+	margin-bottom: 0;
+    margin-left: 0;
+	font-size: 1rem !important;
+	margin: 0 0 1rem;
+	color: var(--color-greyscale-2);
+}
+.markdown blockquote * {
+    font-size: 1rem !important;
+	color: var(--color-greyscale-2);
+}
+.markdown blockquote > *:last-child {
+	margin-bottom: 0;
 }
 .markdown ol, .markdown ul{
 	margin: 1rem 0 1rem 2rem;
+}
+.markdown p>code {
+    font-size: 1rem !important;
+    display: inline-block;
+    background: var(--color-greyscale-3);
+    border-radius: var(--size-radius-def);
+    padding: 0 0.5rem;
 }
 i.fa{
 	line-height: 1rem;
@@ -185,7 +216,7 @@ i.fa{
 	padding: 0;
 	margin: 0;
 	margin-right: .5rem;
-	color: var(--color-greyscale-0) !important;
+	color: var(--color-greyscale-1) !important;
 }
 .TR .avatar.avatar-left, .avatar.avatar-left {
 	margin-right: .5rem;
@@ -234,7 +265,7 @@ i.fa{
 	min-width: 0;
 	overflow-wrap: break-word;
     padding: 1rem;
-    background: var(--color-greyscale-8);
+    background: var(--color-greyscale-6);
     border: none;
 	border-bottom: var(--style-border);
     border-radius: var(--size-radius-def);

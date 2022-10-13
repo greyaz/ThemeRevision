@@ -4,7 +4,7 @@
 #modal-box{
 	border-radius: var(--size-radius-def);
 	padding: 2rem;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 	max-width: 1024px !important;
 }
 #modal-header{
@@ -21,13 +21,12 @@
 }
 #modal-content > form {
 	padding: 1rem;
-	background: var(--color-greyscale-6);
+	background: var(--color-greyscale-4);
     max-width: unset;
 }
 #modal-content .page-header{
     padding-top: 0;
 	margin-top: -1.5rem;
-	margin-right: 1.5rem;
 	background-image: none;
 }
 #modal-content .sidebar-container {

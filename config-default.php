@@ -13,6 +13,7 @@ $themeRevisionConfig['mode'] = 'production';
 // 'dark':  Always show the dark scheme.
 $themeRevisionConfig['color scheme'] = 'user';
 
+// Overwrite the default task color for better UI consistency. The option in project settings will be invalidated
 // 'true':  Overwrite to grey.  (default)
 // 'false': Keep system settings.
 $themeRevisionConfig['overwrite default task color'] = true;
@@ -21,10 +22,11 @@ $themeRevisionConfig['overwrite default task color'] = true;
 // 'false': Keep Font Awesome icons.
 $themeRevisionConfig['enable google material icons'] = true;
 
-// Override default fonts with "Google Fonts". Only one font name supported by Google can be filled in for each category.
+// Override default fonts with "Google Fonts". Only one font family name supported by Google can be filled in for each category. Note: the font family name of a font may differ from it's general name.
+// If this feature is not working, please check the CSP settings on your server first. 
 // The default value for each category is empty.
-// 'ui': A font for Most parts of the system UI.
-// 'codes': A font for all code blocks, and statistics in the overview page. Monospaced fonts are recommended.
+// 'ui':    A font name for Most parts of the system UI. Example: Noto Sans
+// 'codes': A font name for all code blocks, and statistics in the overview page. Monospaced fonts are recommended. Example: Noto Sans Mono
 $themeRevisionConfig['google fonts'] = array(
     'ui' => '',
     'codes' => ''
@@ -33,43 +35,39 @@ $themeRevisionConfig['google fonts'] = array(
 // *-prim (primary):      button background, link, selected, alert foreground, helps or hints ...
 // *-secd (secondary):    hovered button foreground, linked comment ...
 // *-cont (contrast):     button foreground, alert background ...
-// grayscales-*:          colors for common UI elements, 0 (min) for foreground / text, 8 (max) for background
+// grayscales-*:          colors for common UI elements, 1 (min) for foreground / text, 6 (max) for background
 // task-*-bg:             task background
 // task-*-bdr:            task border
+// code-*:                code syntax highlight
+// shadow-*:              shadow
 
 // Light Colors
 $themeRevisionConfig['light palette'] = array(
     // Messages & Actions
     'brand-prim' => '#3860f4',
-    'brand-secd' => '#dae4fe',
     'brand-cont' => '#fff',
+    'brand-secd' => '#dae4fe',
 
     'info-prim' => '#5574e3',
-    'info-secd' => '#a8baff',
     'info-cont' => '#e3ebff',
 
     'reminder-prim' => '#be7b04',
-    'reminder-secd' => '#f7c400',
     'reminder-cont' => '#ffed9d',
 
     'warning-prim' => '#cf5555',
-    'warning-secd' => '#e79392',
     'warning-cont' => '#fdd4d4',
+    'warning-secd' => '#e79392',
 
     'success-prim' => '#428b43',
-    'success-secd' => '#4ae371',
     'success-cont' => '#c4f7c5',
 
     // Greyscales
-    'greyscale-0' => '#02021d',
-    'greyscale-1' => '#727983',
-    'greyscale-2' => '#9ea1a7',
-    'greyscale-3' => '#bfc4cb',
-    'greyscale-4' => '#cbd0d9',
-    'greyscale-5' => '#e4e9f0',
-    'greyscale-6' => '#f0f3f7',
-    'greyscale-7' => '#f7f9fc',
-    'greyscale-8' => '#fff',
+    'greyscale-1' => '#02021d',
+    'greyscale-2' => '#bec3d0',
+    'greyscale-3' => '#e4e9f0',
+    'greyscale-4' => '#f0f3f7',
+    'greyscale-5' => '#f7f9fc',
+    'greyscale-6' => '#fff',
 
     // Tasks
     // Grey
@@ -112,48 +110,54 @@ $themeRevisionConfig['light palette'] = array(
     'task-blue-bdr' => '#c3ccf1',
     // Purple
     'task-purple-bg' => '#eacbff',
-    'task-purple-bdr' => '#dfb1ff'
+    'task-purple-bdr' => '#dfb1ff',
+
+    // Code Highlight
+    'code-a' => '#c56200',
+    'code-b' => '#d92792',
+    'code-c' => '#cc5e91',
+    'code-d' => '#3787c7',
+    'code-e' => '#0d7d6c',
+    'code-f' => '#7641bb',
+
+    // shadow
+    'shadow-lit' => 'rgba(0, 0, 0, .04)',
+    'shadow-hev' => 'rgba(0, 0, 0, .08)'
 );
 
 $themeRevisionConfig['dark palette'] = array(
     // Messages & Actions
     'brand-prim' => '#3860f4',
+    'brand-cont' => '#183086',
     'brand-secd' => '#051646',
-    'brand-cont' => '#102979',
 
-    'info-prim' => '#5478ff',
-    'info-secd' => '#051646',
-    'info-cont' => '#193084',
+    'info-prim' => '#7894ff',
+    'info-cont' => '#183086',
 
-    'reminder-prim' => '#edc52e',
-    'reminder-secd' => '#540',
-    'reminder-cont' => '#a17908',
+    'reminder-prim' => '#ffeb9e',
+    'reminder-cont' => '#a67100',
 
-    'warning-prim' => '#ce3d3d',
+    'warning-prim' => '#e33e3e',
+    'warning-cont' => '#7b1900',
     'warning-secd' => '#450909',
-    'warning-cont' => '#6a1616',
 
     'success-prim' => '#55a256',
-    'success-secd' => '#063e14',
-    'success-cont' => '#115121',
+    'success-cont' => '#054208',
 
     // Greyscales
-    'greyscale-0' => '#a6a6b5',
-    'greyscale-1' => '#515057',
-    'greyscale-2' => '#47464a',
-    'greyscale-3' => '#424146',
-    'greyscale-4' => '#3c3b3e',
-    'greyscale-5' => '#211f22',
-    'greyscale-6' => '#17161a',
-    'greyscale-7' => '#101013',
-    'greyscale-8' => '#020202',
+    'greyscale-1' => '#b9b8b8',
+    'greyscale-2' => '#4c4b53',
+    'greyscale-3' => '#2a2a32',
+    'greyscale-4' => '#19171e',
+    'greyscale-5' => '#1e1c24',
+    'greyscale-6' => '#25232b',
 
     // Tasks
     // Grey
-    'task-grey-bg' => '#28262f',
-    'task-grey-bdr' => '#393646',
-    'task-dark-grey-bg' => '#020202',
-    'task-dark-grey-bdr' => '#1c1c1c',
+    'task-grey-bg' => '#25232b',
+    'task-grey-bdr' => '#312e35',
+    'task-dark-grey-bg' => '#18161e',
+    'task-dark-grey-bdr' => '#2b2835',
     // Red
     'task-pink-bg' => '#995457',
     'task-pink-bdr' => '#ac6064',
@@ -165,8 +169,8 @@ $themeRevisionConfig['dark palette'] = array(
     'task-deep-orange-bg' => '#9b4500',
     'task-deep-orange-bdr' => '#b5521d',
     // Yellow
-    'task-yellow-bg' => '#885d00',
-    'task-yellow-bdr' => '#9f7109',
+    'task-yellow-bg' => '#a67100',
+    'task-yellow-bdr' => '#bf8300',
     'task-amber-bg' => '#683800',
     'task-amber-bdr' => '#7d430c',
     'task-brown-bg' => '#513d2d',
@@ -189,5 +193,17 @@ $themeRevisionConfig['dark palette'] = array(
     'task-blue-bdr' => '#1b379b',
     // Purple
     'task-purple-bg' => '#501d73',
-    'task-purple-bdr' => '#5e2386'
+    'task-purple-bdr' => '#5e2386',
+
+    // Code Highlight
+    'code-a' => '#c56200',
+    'code-b' => '#d92792',
+    'code-c' => '#cc5e91',
+    'code-d' => '#3787c7',
+    'code-e' => '#0d7d6c',
+    'code-f' => '#7641bb',
+
+    // shadow
+    'shadow-lit' => 'rgba(0, 0, 0, .15)',
+    'shadow-hev' => 'rgba(0, 0, 0, .28)'
 );

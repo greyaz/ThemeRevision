@@ -1,6 +1,6 @@
 /* Calendar */
 .TR .fc-toolbar.fc-header-toolbar, .TR .page > #main > .menu-inline {
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     border: none;
     border-radius: var(--size-radius-def);
     border-bottom: var(--style-border);
@@ -16,7 +16,7 @@
 }
 .TR .js-calendar{
 	padding: 1rem 2rem;
-    background: var(--color-greyscale-8);
+    background: var(--color-greyscale-6);
     border-radius: var(--size-radius-def);
     border-bottom: var(--style-border);
 	min-width: 680px;
@@ -29,7 +29,7 @@
 .TR .fc-state-default, .fc button{
 	text-shadow: none;
 	background-image: none;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	font-size: 1rem;
 	line-height: 1rem;
 	padding: .5rem 1rem;
@@ -44,24 +44,24 @@
     border-bottom-left-radius: var(--size-radius-def);
 }
 .TR .fc-toolbar .fc-state-active {
-    background: var(--color-greyscale-8);
-    box-shadow: inset 0 2px 0 0 var(--color-greyscale-7);
+    background: var(--color-greyscale-6);
+    box-shadow: inset 0 2px 0 0 var(--color-greyscale-5);
 }
 .TR .fc-state-disabled {
 	opacity: .5;
 	cursor: default !important;
 }
 .TR .fc-unthemed .fc-content, .TR .fc-unthemed .fc-divider, .TR .fc-unthemed .fc-list-heading td, .TR .fc-unthemed .fc-list-view, .TR .fc-unthemed .fc-popover, .TR .fc-unthemed .fc-row, .TR .fc-unthemed tbody, .TR .fc-unthemed td, .TR .fc-unthemed th, .TR .fc-unthemed thead{
-	border-color: var(--color-greyscale-5);
+	border-color: var(--color-greyscale-3);
 	border-right: 0;
 }
 .TR .fc-unthemed th {
 	line-height: 2rem;
 	border-top: 0;
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 }
 .TR .fc-unthemed td.fc-today {
-    background: var(--color-greyscale-6) !important;
+    background: var(--color-greyscale-4) !important;
 }
 .TR .fc-row table {
     margin: 0;
@@ -77,9 +77,9 @@
 }
 .TR .fc-event{
 	border-radius: var(--size-radius-def);
-	color: var(--color-greyscale-0) !important;
+	color: var(--color-greyscale-1) !important;
     font-size: var(--size-font-min) !important;
-	border-top: 1px solid var(--color-greyscale-7) !important;
+	border-top: 1px solid var(--color-greyscale-5) !important;
 }
 .TR .fc-basic-view .fc-day-number, .TR .fc-basic-view .fc-week-number {
     padding: 0.5rem;
@@ -95,20 +95,20 @@
 	box-shadow: var(--style-shadow-heavy);
 }
 .TR div.ganttview{
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 	border: none;
 	max-width: calc(100vw - 7rem);
 	border-bottom: var(--style-border);
 	padding: 0 1.5rem 1.5rem;
 }
 .TR div.ganttview-vtheader{
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 }
 .TR div.ganttview-slide-container{
-	border-color: var(--color-greyscale-5);
+	border-color: var(--color-greyscale-3);
 }
 .TR div.ganttview-vtheader-item{
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .TR div.ganttview-vtheader-series-name{
 	padding-left: 1rem;
@@ -118,7 +118,7 @@
     font-size: var(--size-font-min);
 }
 .TR div.ganttview-vtheader-series-name a {
-    color: var(--color-greyscale-0);
+    color: var(--color-greyscale-1);
 	font-size: var(--size-font-min) !important;
 }
 .TR div.ganttview-hzheader-month {
@@ -128,24 +128,24 @@
 .TR div.ganttview-hzheader-day {
     border-right: var(--style-border);
     border-top: var(--style-border);
-    color: var(--color-greyscale-1);
+    color: var(--color-greyscale-2);
 }
 .TR div.ganttview-grid-row-cell {
     border-right: var(--style-border);
     border-top: var(--style-border);
 }
 .TR div.ganttview-grid-row-cell.ganttview-today {
-    background-color: var(--color-greyscale-6);
+    background-color: var(--color-greyscale-4);
 }
 .TR div.ganttview-grid-row-cell.ganttview-weekend {
-    background-color: var(--color-greyscale-7);
+    background-color: var(--color-greyscale-5);
 }
 .TR div.ganttview-block{
 	border-radius: var(--size-radius-def);
 	border-top: 0;
 }
 .TR div.ganttview-block-text{
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	z-index: 1;
 }
 /* metaMagik: custom fields*/
@@ -170,7 +170,7 @@
 	border-radius: var(--size-radius-def);
 	line-height: 1rem;
 	margin: 0 .5em 1em 0;
-	color: var(--color-greyscale-8) !important;
+	color: var(--color-greyscale-6) !important;
 	font-size: var(--size-font-min);
 	vertical-align: middle;
 	max-width: 1.6rem;

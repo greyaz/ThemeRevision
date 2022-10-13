@@ -30,7 +30,7 @@ header {
 	height: 2.5rem;
 }
 #board-container {
-	background: var(--color-greyscale-6);
+	background: var(--color-greyscale-4);
 	overflow-x:inherit
 }
 .sidebar-container{
@@ -41,16 +41,16 @@ header {
 	padding-left: 0;
 	max-width: var(--size-width-def);
 	/*width: 60vw;*/
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
     padding: 1rem 2rem;
 	border-radius: var(--size-radius-def);
 	border-bottom: var(--style-border);
 	margin-bottom: 1rem;
 	box-sizing: border-box;
-	/*background-image: linear-gradient(0deg, var(--color-greyscale-8) 1rem, transparent 1rem),
-						linear-gradient(90deg, var(--color-greyscale-8) 1rem, transparent 1rem),
-						linear-gradient(180deg, var(--color-greyscale-8) 1rem, transparent 1rem),
-						linear-gradient(270deg, var(--color-greyscale-8) 1rem, transparent 1rem);*/
+	/*background-image: linear-gradient(0deg, var(--color-greyscale-6) 1rem, transparent 1rem),
+						linear-gradient(90deg, var(--color-greyscale-6) 1rem, transparent 1rem),
+						linear-gradient(180deg, var(--color-greyscale-6) 1rem, transparent 1rem),
+						linear-gradient(270deg, var(--color-greyscale-6) 1rem, transparent 1rem);*/
 }
 #main .sidebar-content, #main > .accordion-section, .page > .table-list{
 	box-shadow: var(--style-shadow-heavy);
@@ -59,7 +59,7 @@ header {
 	padding: 2rem;
 }
 .page-header, .sidebar-content > h2, .sidebar-content > h3, .accordion-title{
-	/*background: var(--color-greyscale-8);*/
+	/*background: var(--color-greyscale-6);*/
     border: none;
     border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
     /*border-bottom: var(--style-border);*/
@@ -67,7 +67,7 @@ header {
     margin: 0 0 0.5rem;
 	background-image: var(--pattern-dots-def);
     background-size: var(--pattern-dots-size);
-	text-shadow: 0 0 1em var(--color-greyscale-8);
+	text-shadow: 0 0 1em var(--color-greyscale-6);
 }
 .sidebar-content > h3 {
 	background-image: none;
@@ -91,16 +91,16 @@ header {
 	margin: 0;
 	margin-bottom: 1rem;
 	font-size: 1rem;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	height: auto;
     padding: 1rem 1.5rem;
     width: auto;
     max-width: var(--size-width-def);
-    background: var(--color-greyscale-6);
+    background: var(--color-greyscale-4);
 	box-sizing: border-box;
 }
 .table-list{
-	background: var(--color-greyscale-8);
+	background: var(--color-greyscale-6);
 }
 .panel > * , .table-list > * , form > * , .accordion-content > * {
     border-bottom: none;
@@ -110,6 +110,11 @@ header {
 .panel > *:last-child:not(.alert) , .table-list > *:last-child:not(.alert) , form > *:last-child:not(.alert) , .accordion-content > *:last-child:not(.alert) {
     margin-bottom: 0;
 	margin-right: 0;
+}
+.panel li {
+    list-style-type: unset;
+    margin-left: 1.25rem;
+    line-height: unset;
 }
 .panel > ul:last-child > li:last-child{
 	margin-bottom: 0;

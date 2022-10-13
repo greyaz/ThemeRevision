@@ -71,6 +71,10 @@ class Plugin extends Base
 			}
 		}
 
+		// syntax highlight
+		$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/highlight/style.min.css'));
+		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/highlight/highlight.min.js'));
+
 		// main js
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/main.min.js'));
 	}
@@ -89,7 +93,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.1'; 
+		return '1.1.2'; 
 	}
 
 	public function getPluginDescription() { 

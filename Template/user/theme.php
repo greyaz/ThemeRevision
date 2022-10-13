@@ -4,7 +4,8 @@
 <form method="post" action="<?= $this->url->href('UserSettingsController', 'save', array('plugin' => 'ThemeRevision', 'user_id' => $user['id'])) ?>">
     <?= $this->form->csrf() ?>
     <fieldset>
-        <label><?= t('Theme Color') ?></label>
+        <legend><?= t('Theme Color') ?></legend>
+        <p><small><?= t('The "auto" option switches the theme automatically by your operating system\'s setting.') ?></small></p>
         <select name="color" title="<?= t('Theme Color') ?>" <?= $this->user->isCurrentUser($user['id']) ? '' : 'disabled="disabled"'; ?>>
             <option value="auto" <?= $colorScheme=='auto'?'selected="selected"':''; ?>><?= t('Auto') ?></option>
             <option value="light" <?= $colorScheme=='light'?'selected="selected"':''; ?>><?= t('Light') ?></option>
@@ -15,6 +16,14 @@
         <?php endif ?>
     </fieldset>
 </form>
-<p class="alert alert-info"><?= t('The "auto" option switches the theme automatically by your operating system\'s setting.') ?></p>
+<?php if ($this->user->isAdmin()): ?>
+    <div class="panel">
+    <fieldset>
+        <legend><?= t('Admin Panel') ?></legend>
+        <?= $this->url->link(t('ThemeRevision Settings'), 'PluginConfigsController', 'show', array('plugin' => 'ThemeRevision'), false, 'btn') ?>
+    </fieldset>
+    </div>
+<?php endif ?>
+
 
 

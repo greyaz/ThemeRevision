@@ -36,7 +36,7 @@
 	}
 	.themeRevisionMenuBtn {
 		font-size: 1.3rem;
-		background: var(--color-greyscale-8);
+		background: var(--color-greyscale-6);
 		width: 2rem;
 		height: 2rem;
 		line-height: 2rem;
@@ -51,7 +51,7 @@
 		order: unset;
 		margin: 2.5rem 0 0;
 		display: none;
-		background: var(--color-greyscale-8);
+		background: var(--color-greyscale-6);
 		border-radius: var(--size-radius-def);
 		border: var(--style-border);
 		max-width: calc(100vw - 4rem);
@@ -93,7 +93,7 @@
 		white-space: inherit;
 	}
 	#modal-overlay{
-		background: var(--color-greyscale-6);
+		background: var(--color-greyscale-4);
 	}
 	#modal-box{
 		position: absolute;
@@ -102,7 +102,7 @@
 		left: 0;
 		top: 0;
 		max-height: unset;
-		background: var(--color-greyscale-6);
+		background: var(--color-greyscale-4);
 	}
 	#modal-header{
 		text-align: left;
@@ -113,7 +113,7 @@
 	}
 	#modal-content {
 		padding: 4rem .5rem 0;
-    	background: var(--color-greyscale-6);
+    	background: var(--color-greyscale-4);
 	}
 	#modal-content > .page-header,
 	#modal-content > #main > .page-header {
@@ -128,7 +128,7 @@
 		white-space: nowrap;
 		line-height: 1.5rem;
 		position: fixed;
-		background: var(--color-greyscale-8);
+		background: var(--color-greyscale-6);
 		left: 0;
 		top: 0;
 		width: calc(100vw - 4rem);
@@ -205,7 +205,7 @@
 	table.table-scrolling{
 		display: inline-block;
 		white-space: nowrap;
-		background: var(--color-greyscale-8);
+		background: var(--color-greyscale-6);
 	}
 	.task-form-main-column{
 		min-width: 320px;
@@ -246,8 +246,8 @@
 		left: 0;
 		bottom: 0;
 		margin: 0;
-		box-shadow: 0 -4px 4px -4px var(--color-greyscale-5);
-		background: var(--color-greyscale-8);
+		box-shadow: 0 -4px 4px -4px var(--color-greyscale-3);
+		background: var(--color-greyscale-6);
 	}
 	.project-header > .views-switcher-component,
 	.page > .page-header, .page > #main > .page-header {
@@ -255,7 +255,7 @@
 		overflow-x: scroll;
 	}
 	.project-header > .dropdown-component {
-		box-shadow: 4px -4px 4px -4px var(--color-greyscale-5);
+		box-shadow: 4px -4px 4px -4px var(--color-greyscale-3);
 	}
 	.project-header > .views-switcher-component{
 		left: 4.5rem;

@@ -23,9 +23,13 @@
     font-size: 1.1rem;
     line-height: 1.8rem;
 }
+#task-view .sidebar-content .accordion-content article.markdown pre code,
+#task-view .sidebar-content .accordion-content article.markdown pre code * {
+    font-size: 1rem;
+}
 #task-view .sidebar-content .file-thumbnails{
     padding: 1rem;
-    background: var(--color-greyscale-6);
+    background: var(--color-greyscale-4);
     border-radius: var(--style-border);
 }
 #task-view #comments .comment-sorting{
@@ -68,11 +72,11 @@
 	padding: 2.5rem 0 1rem;
     border-radius: var(--size-radius-def);
     margin: 0 auto 1rem;
-    border-bottom: 2px solid var(--color-greyscale-0) !important;
+    border-bottom: 2px solid var(--color-greyscale-1) !important;
     font-size: 2rem !important;
     background: none;
     line-height: 3rem !important;
-    text-shadow: 0 0 1em var(--color-greyscale-8);
+    text-shadow: 0 0 1em var(--color-greyscale-6);
     max-width: 900px;
 }
 #task-summary .accordion-section {
@@ -86,7 +90,7 @@
     border-left-width: 0;
     border-right-width: 0;
     border-radius: 0;
-    box-shadow: 0 -1rem 0 0 var(--color-greyscale-8);
+    box-shadow: 0 -1rem 0 0 var(--color-greyscale-6);
     text-align: center;
 }
 .task-summary-container .task-tags{
@@ -117,7 +121,7 @@
     margin: auto;
 }
 #task-summary .task-summary-column {
-    color: var(--color-greyscale-0);
+    color: var(--color-greyscale-1);
 	margin-bottom: 1rem;
     border: inherit;
     border-width: 0;
@@ -144,7 +148,7 @@
     border-bottom: 1px dotted;
 }
 #task-summary .task-summary-column span{
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 #task-summary .task-summary-column .avatar.avatar-inline{
 	margin: -.5rem 0 0 .5rem;
@@ -164,7 +168,7 @@
 
 .file-thumbnail {
     box-shadow: var(--style-shadow-light);
-    background-color: var(--color-greyscale-8);
+    background-color: var(--color-greyscale-6);
     border-radius: var(--size-radius-def);
     margin: 0 1rem 1rem 0;
 	border: none;
@@ -180,27 +184,23 @@
 
 #file-dropzone, #screenshot-zone{
 	width: auto;
-    background: var(--color-greyscale-6);
+    background: var(--color-greyscale-4);
     border: none;
     border-bottom: var(--style-border);
 }
 #file-dropzone-inner, #screenshot-inner{
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 
 .js-subtask-toggle-status{
 	align-items: center;
 }
 
+.public-task > *{
+    width: 100%;
+}
 .public-task #task-summary .task-summary-container{
     margin: 1rem 0 0;
     width: 100%;
     box-sizing: border-box;
-}
-.public-task #task-summary h2{
-    max-width: unset;
-}
-.public-task .markdown pre{
-    margin: 1rem 0 0;
-    max-width: calc(800px - 6rem);
 }

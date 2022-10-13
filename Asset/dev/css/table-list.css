@@ -20,10 +20,10 @@
 	display: inline-grid;*/
 }
 .table-list-row:nth-child(even){
-	background: var(--color-greyscale-8) !important;
+	background: var(--color-greyscale-6) !important;
 }
 .table-list-row:nth-child(odd){
-	background: var(--color-greyscale-7) !important;
+	background: var(--color-greyscale-5) !important;
 }
 .table-list-row:hover, .table-list-row:nth-child(odd):hover {
 	border-right: 0;
@@ -35,11 +35,11 @@
 
 /* color fix for .page > .table-list, .page > .panel */
 .page > .table-list, .page > .panel, .page > #main > .table-list {
-	background-color: 	var(--color-greyscale-8);
-	/*background-image: 	linear-gradient(0deg, var(--color-greyscale-8) 2rem, transparent 2rem),
-						linear-gradient(90deg, var(--color-greyscale-8) 2rem, transparent 2rem),
-						linear-gradient(180deg, var(--color-greyscale-8) 2rem, transparent 2rem),
-						linear-gradient(270deg, var(--color-greyscale-8) 2rem, transparent 2rem);*/
+	background-color: 	var(--color-greyscale-6);
+	/*background-image: 	linear-gradient(0deg, var(--color-greyscale-6) 2rem, transparent 2rem),
+						linear-gradient(90deg, var(--color-greyscale-6) 2rem, transparent 2rem),
+						linear-gradient(180deg, var(--color-greyscale-6) 2rem, transparent 2rem),
+						linear-gradient(270deg, var(--color-greyscale-6) 2rem, transparent 2rem);*/
 	padding: 3rem;
 }
 
@@ -50,7 +50,7 @@
 
 /* header */
 .table-list-header * {
-	color: var(--color-greyscale-0) !important;
+	color: var(--color-greyscale-1) !important;
 }
 .table-list-header .list-item-links, .table-list-header .list-item-actions, .table-list-header .table-list-header-menu a {
 	margin: 0 0 0 1rem;
@@ -65,17 +65,17 @@
 div[class^="table-list-row color-"] {
 	padding-right: 3rem;
     border-left-width: 2px !important;
-	border-bottom-color: var(--color-greyscale-5) !important;
+	border-bottom-color: var(--color-greyscale-3) !important;
 }
 .table-list-row .table-list-title a {
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 /* 1 */
 .table-list-row > div:first-child {
 	display: inline;
 }
 .table-list-row > div:first-child *:not(.avatar-letter){
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .table-list-row .table-list-title {
 	display: inline;
@@ -86,7 +86,7 @@ div[class^="table-list-row color-"] {
 /* 2 */
 .table-list-row .table-list-details {
 	font-weight: normal;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 	line-height: 2rem;
 	/*margin-bottom: 1rem;*/
 	display: inline;
@@ -102,11 +102,11 @@ div[class^="table-list-row color-"] {
 }
 .table-list-row .table-list-details strong {
 	font-weight: bold;
-	color: var(--color-greyscale-0);
+	color: var(--color-greyscale-1);
 }
 .table-list-row .table-list-details small {
 	padding-right: 1rem;
-	color: var(--color-greyscale-1);
+	color: var(--color-greyscale-2);
 }
 .table-list-row .table-list-details span:first-child{
 	margin-left: .5rem !important;
@@ -128,7 +128,7 @@ div[class^="table-list-row color-"] {
 	margin-top: 1rem !important;
 }
 .subtask-cell{
-    border-top: 1px solid var(--color-greyscale-5);
-    border-left: 1px solid var(--color-greyscale-7);
+    border-top: 1px solid var(--color-greyscale-3);
+    border-left: 1px solid var(--color-greyscale-5);
     padding: 1rem .5rem;
 }
