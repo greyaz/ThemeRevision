@@ -1,9 +1,11 @@
 <?php
-/*******************************************************************/
-/* Rename this file to config.php if you want to change the values */
-/* Make sure the "Asset" folder is writable and executable !!!     */
-/*******************************************************************/
+/****************************************************************************/
+/* DO NOT REMOVE THIS FILE !!!                                              */
+/* Copy and Rename this file to config.php if you want to change the values */
+/****************************************************************************/
 
+// Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. 
+// Make sure the "Asset" folder in plugin's root directory is WRITABLE and EXECUTABLE before switching !
 // 'production':    Load a minified CSS file. (default)
 // 'development':   Load all CSS files in the "Asset/dev" folder.
 $themeRevisionConfig['mode'] = 'production';
