@@ -3,6 +3,13 @@
     //$("body").addClass("TR");
     document.querySelector("body").classList.add("TR");
 
+    // Login
+    if (document.querySelector("body > .form-login")){
+        var html = document.querySelector("body > .form-login").innerHTML;
+        html = '<div class="page-header"></div><img class="logo" src="/assets/img/favicon.png">' + html;
+        document.querySelector("body > .form-login").innerHTML = html;
+    }
+
     // Replace Logo
     if (document.querySelector("header .logo > a")){
         document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';

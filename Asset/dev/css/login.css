@@ -1,11 +1,39 @@
-.form-login > form {
-    padding: 2rem;
+.TR .form-login{
+    margin: 1rem auto;
+    height:calc(100vh - 3rem);
+    min-height: 480px;
+    background: var(--color-greyscale-6);
+    position: relative;
     box-shadow: var(--style-shadow-light);
-    background-color: var(--color-greyscale-6);
-    background-image: var(--pattern-dots-def);
-    background-size: var(--pattern-dots-size);
-    border: 2rem solid var(--color-greyscale-6);
+    border-radius: var(--size-radius-def);
+    border-bottom: var(--style-border);
 }
-.form-login input#form-username, .form-login input#form-password {
+.TR .form-login > .page-header {
+    position: fixed;
+    display: block;
+    height: 4.5vh;
+    width: 430px;
+    top: 8.5vh;
+    left: calc(50vw - 215px);
+}
+.TR .form-login > .logo{
+    background: var(--color-greyscale-6);
+    margin: 11vh 1.25rem .25rem;
+    height: 2.5rem;
+    border-radius: var(--size-radius-def);
+    box-shadow: var(--style-shadow-heavy);
+    border-bottom: var(--style-border);
+    z-index: 999;
+    position: relative;
+}
+.TR .form-login > form{
+    padding: 2rem;
+    background-color: var(--color-greyscale-6);
+    box-shadow: inset 0 15rem 10rem 0 var(--color-greyscale-5); 
+    margin: 1.25rem;
+    z-index: 999;
+    position: relative;
+}
+.TR .form-login input#form-username, .form-login input#form-password {
     width: 100%;
 }

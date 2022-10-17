@@ -317,4 +317,7 @@
 .TR i.fa-lock:before{
     content:"\e898";
 }
+.TR i.fa-sign-out:before{
+    content: "\e9ba";
+}
 
