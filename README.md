@@ -36,7 +36,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 
 ## Installation
 * Install from the Kanboard plugin manager directly.  
-**or**  
+   > **or**  
    > `git clone https://github.com/greyaz/ThemeRevision.git` into `your_kanboard_root/plugins`.
 * ***Your own logo?***  
 ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` as the head logo, replace it if needed.
@@ -54,13 +54,13 @@ Rename the file to `config.php.bak` before upgrading
 ## Customization
 #### Colors / Icons / Fonts
 * Just go to the [settings panel](Screenshots/5.png): *`Settings -> ThemeRevision Settings`*   
-**or (< 1.0.9)**  
+   > **or (< 1.0.9)**  
    > Copy and move (**do not delete**) the file `config-default.php` to `config.php` in the plugin directory. Then edit the values according to the instructions in it.
 
 #### More Styles
 1. ***Make sure*** the folder `your_kanboard_root/plugins/ThemeRevision/Asset` is ***writable and executable***.
 2. Switch "Mode" to "Development" in the [settings panel](Screenshots/5.png).   
-**or (< 1.0.9)**  
+   > **or (< 1.0.9)**  
    > Switch "Mode" in the config file according to the alternative method mentioned in the previous section.
 3. Edit raw CSS files in the folder `Asset/dev`.
 
