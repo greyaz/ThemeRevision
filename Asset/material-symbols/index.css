@@ -12,6 +12,7 @@
   font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' -15, 'opsz' 26;
 }
 
+.TR .page-header ul a i.fa, 
 .TR .project-header .dropdown-component i.fa,
 .TR .project-header .views-switcher-component i.fa, 
 .TR .project-header .filter-box-component i.fa {
@@ -31,7 +32,7 @@
     vertical-align: text-top;
 }
 
-.TR .page-header ul a i.fa, .TR .menu-inline ul a i.fa,
+.TR .menu-inline ul a i.fa,
 .TR .board-column-task-collapsed i.fa[role="button"]{
     vertical-align: middle;
 }
