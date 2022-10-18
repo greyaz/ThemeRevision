@@ -39,7 +39,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	width: 100%;
-	line-height: 3rem !important;
+	line-height: 3rem;
 }
 .sidebar>ul li.active a{
 	font-weight: bold;

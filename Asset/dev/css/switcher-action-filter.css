@@ -105,6 +105,7 @@
 	height: 1rem;
     display: block;
 	color: var(--color-greyscale-1);
+	font-weight: normal;
 }
 .filter-box .input-addon .input-addon-item:last-child {
 	border-radius: 0 var(--size-radius-def) var(--size-radius-def) 0;
@@ -112,7 +113,7 @@
 .dropdown .action-menu{
 	display: block;
 	padding: .75rem 0;
-	font-size: 0;
+	/*font-size: 0;*/
 	box-sizing: border-box;
 }
 .filter-box .input-addon .input-addon-item .dropdown-menu,

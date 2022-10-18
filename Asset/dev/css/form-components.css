@@ -295,7 +295,7 @@ input[type=date]:hover, input[type=email]:hover, input[type=number]:hover, input
 	color: var(--color-brand-cont);
 }
 .dropdown-submenu-open li:hover:not(.no-hover) a:hover{
-	color: var(--color-greyscale-6) !important;
+	color: var(--color-greyscale-6);
 }
 .select-dropdown-input-container:hover {
 	background-color: var(--color-greyscale-6);

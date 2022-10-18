@@ -25,9 +25,17 @@
     line-height: 4rem;
 	padding: 0;
 }
-#board th.board-column-header-collapsed{
-	width: 3.654rem;
-    min-width: 3.654rem;
+#board .board-swimlane-columns-first th.board-column-header-collapsed{
+    width: 4.5rem;
+    min-width: 4.5rem;
+}
+#board .board-swimlane-columns-first th.board-column-header-collapsed:last-child{
+    width: 3.75rem;
+    min-width: 3.75rem;
+}
+#board th.board-column-header-collapsed {
+    width: 3rem;
+    min-width: 3rem;
 }
 #board th.board-column-header-collapsed .board-add-icon{
     display: none;
@@ -43,12 +51,12 @@
 }
 .board-swimlane-header .board-swimlane-toggle i.fa{
 	font-size: 1rem;
-	color: var(--color-greyscale-2) !important;
+	color: var(--color-greyscale-2);
 	line-height: 4rem;
     vertical-align: bottom;
 }
 .board-swimlane-header .board-swimlane-toggle i.fa:hover{
-	color: var(--color-greyscale-1) !important;
+	color: var(--color-greyscale-1);
 }
 #board th.board-column-header.board-column-compact {
 	padding-top: 0;
@@ -62,6 +70,18 @@
 }
 .board-column-expanded-header .board-column-title .dropdown-menu:hover{
 	text-decoration: underline;
+}
+#board td.board-column-task-collapsed {
+    line-height: 3rem;
+}
+#board td.board-column-task-collapsed .board-rotation-wrapper{
+    padding: 0;
+}
+.TR .board-column-task-collapsed .board-toggle-column-view{
+    cursor: pointer;
+}
+.TR .board-column-task-collapsed .board-toggle-column-view:hover{
+    color: var(--color-brand-prim);
 }
 .board-add-icon {
 	margin: 0 1rem 0 0;

@@ -13,6 +13,10 @@
 	font-size: var(--size-font-min);
     line-height: var(--size-font-min);
 }
+#modal-close-button {
+    z-index: 999;
+    position: relative;
+}
 #modal-close-button i.fa {
 	margin: 0;
 }

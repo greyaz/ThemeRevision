@@ -91,16 +91,16 @@ body {
 	font-family: var(--style-fontfamily);
 	letter-spacing: var(--style-letterspacing);
 }
-a {
-	font-size: 1rem !important;
-	line-height: 1rem !important;
-	font-weight: normal !important;
-	opacity: 1 !important;
-	text-decoration: none !important;
+body.TR a {
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: normal;
+	opacity: 1;
+	text-decoration: none;
 }
-a:not(.btn):hover, a > *:hover{
-	color: var(--link-color-hover) !important;
-	text-decoration: none !important;
+body.TR a:not(.btn):hover, body.TR a > *:hover{
+	color: var(--link-color-hover);
+	text-decoration: none;
 }
 li {
 	padding: 0;
@@ -210,13 +210,13 @@ article {
     border-radius: var(--size-radius-def);
     padding: 0 0.5rem;
 }
-i.fa{
+body.TR i.fa{
 	line-height: 1rem;
 	width: 1rem;
 	padding: 0;
 	margin: 0;
 	margin-right: .5rem;
-	color: var(--color-greyscale-1) !important;
+	color: var(--color-greyscale-1);
 }
 .TR .avatar.avatar-left, .avatar.avatar-left {
 	margin-right: .5rem;

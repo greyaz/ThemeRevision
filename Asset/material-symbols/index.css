@@ -31,10 +31,9 @@
     vertical-align: text-top;
 }
 
+.TR .page-header ul a i.fa, .TR .menu-inline ul a i.fa,
 .TR .board-column-task-collapsed i.fa[role="button"]{
     vertical-align: middle;
-    cursor: pointer;
-    transform: rotate(90deg);
 }
 
 .TR .board-add-icon i.fa{
@@ -106,7 +105,7 @@
     content:"\e574";
 }
 .TR i.fa-plus-square:before{
-    content:"\f1ce";
+    content:"\e146";
 }
 .TR i.fa-minus-square:before{
     content:"\ef9e";
@@ -180,8 +179,11 @@
 .TR i.fa-hand-o-right:before{
     content:"\ebb9";
 }
-.TR i.fa-play:before{
+.TR i.fa-play:before, .TR i.fa-play-circle-o:before{
     content:"\e037";
+}
+.TR i.fa-pause:before{
+    content:"\e034";
 }
 .TR i.fa-external-link:before, .TR i.fa-link:before{
     content:"\e157";
@@ -319,5 +321,8 @@
 }
 .TR i.fa-sign-out:before{
     content: "\e9ba";
+}
+.TR i.fa-rss-square:before{
+    content: "\e0e5";
 }
 
