@@ -58,8 +58,14 @@
 .board-swimlane-header .board-swimlane-toggle i.fa:hover{
 	color: var(--color-greyscale-1);
 }
+#board th.board-column-header-collapsed{
+	text-align: left;
+}
 #board th.board-column-header.board-column-compact {
 	padding-top: 0;
+}
+.TR .board-column-collapsed .board-column-header-task-count{
+	padding-left: 1rem;
 }
 .board-column-expanded-header > span{
 	margin-right: .5rem;
