@@ -9,7 +9,7 @@
 	margin-left: 0.5rem;
 }
 .comment, .activity-event {
-    padding: 1rem;
+    padding: 1.5rem;
     margin-bottom: 0;
 	border-bottom: var(--style-border);
 	background: var(--color-greyscale-4);

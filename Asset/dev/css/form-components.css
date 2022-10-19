@@ -355,6 +355,7 @@ label {
 .form-inline {
 	height: auto;
 	padding: 1rem;
+	padding-left: 1rem !important;
 	width: auto;
     min-width: var(--size-width-comp);
 	background: var(--color-greyscale-4);

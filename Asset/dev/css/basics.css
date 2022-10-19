@@ -164,9 +164,8 @@ article {
 .markdown{
 	line-height: 1.5rem;
 }
-.markdown *:not(code){
-	line-height: 1.5rem;
-	/*text-align: justify;*/
+.markdown a{
+	border-bottom: 1px dotted var(--color-greyscale-2);
 }
 .markdown p {
 	margin-bottom: 1rem;
