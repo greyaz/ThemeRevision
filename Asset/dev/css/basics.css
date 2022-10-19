@@ -166,7 +166,7 @@ article {
 }
 .markdown *:not(code){
 	line-height: 1.5rem;
-	text-align: justify;
+	/*text-align: justify;*/
 }
 .markdown p {
 	margin-bottom: 1rem;
@@ -217,6 +217,9 @@ body.TR i.fa{
 	margin: 0;
 	margin-right: .5rem;
 	color: var(--color-greyscale-1);
+}
+body.TR a:hover i.fa{
+	color: var(--link-color-hover);
 }
 .TR .avatar.avatar-left, .avatar.avatar-left {
 	margin-right: .5rem;

@@ -326,4 +326,14 @@
 .TR i.fa-rss-square:before{
     content: "\e0e5";
 }
+.TR i.fa-vcard-o:before, .TR i.fa-address-card-o:before {
+    content: "\e0d0";
+}
+
+@media (max-width: 768px){
+    .TR #modal-close-button i.fa-times:before {
+        content: "\e2ea";
+    }
+}
+
 

@@ -59,6 +59,7 @@
     box-shadow: inset 0 2px 0 0 var(--color-greyscale-5);
     background: var(--color-greyscale-6);
 	box-sizing: border-box;
+	font-weight: bold;
 }
 .views-switcher-component .views li, .filter-box .input-addon .input-addon-item, .filter-box .input-addon input[type=text] {
 	padding: .75rem;

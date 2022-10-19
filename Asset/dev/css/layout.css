@@ -99,14 +99,18 @@ header {
     background: var(--color-greyscale-4);
 	box-sizing: border-box;
 }
+form > .panel{
+	border-left: var(--style-border-thk);
+}
 .table-list{
 	background: var(--color-greyscale-6);
 }
-.panel > * , .table-list > * , form > * , .accordion-content > * {
+.panel > * , .table-list > * , form > *:not(textarea, select, input), .accordion-content > * {
     border-bottom: none;
     margin: 0 0 1rem;
     padding: 0;
 }
+
 .panel > *:last-child:not(.alert) , .table-list > *:last-child:not(.alert) , form > *:last-child:not(.alert) , .accordion-content > *:last-child:not(.alert) {
     margin-bottom: 0;
 	margin-right: 0;

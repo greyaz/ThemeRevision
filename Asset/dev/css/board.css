@@ -74,9 +74,6 @@
 .board-column-expanded-header .board-column-title{
 	display: inline-block;
 }
-.board-column-expanded-header .board-column-title .dropdown-menu:hover{
-	text-decoration: underline;
-}
 #board td.board-column-task-collapsed {
     line-height: 3rem;
 }

@@ -68,3 +68,7 @@
 #modal-content .task-form-container > *:nth-child(3){
 	border-right: 0;
 }
+
+#modal-content .js-mail-form > .dropdown{
+	margin-left: 1rem;
+}

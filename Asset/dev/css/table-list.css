@@ -49,8 +49,8 @@
 }
 
 /* header */
-.table-list-header * {
-	color: var(--color-greyscale-1) !important;
+body.TR .table-list-header * {
+	color: var(--color-greyscale-1);
 }
 .table-list-header .list-item-links, .table-list-header .list-item-actions, .table-list-header .table-list-header-menu a {
 	margin: 0 0 0 1rem;

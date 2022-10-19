@@ -19,8 +19,12 @@ input[type=date], input[type=email], input[type=number], input[type=password], i
 textarea{
 	min-height: 10rem;
 }
-input[type="text"][name*="url"], input[type="text"][name*="mail"], input[type="email"], input[type="text"][value*="http"], textarea[name="application_stylesheet"], textarea[name*="mail"] {
+input[type="text"][name*="url"], input[type="text"][name*="mail"], input[type="email"], input[type="text"][value*="http"], textarea/*[name="application_stylesheet"], textarea[name*="mail"]*/ {
 	min-width: var(--size-width-comp);
+}
+textarea[name="application_stylesheet"]{
+	width: 40rem;
+	height: 15rem;
 }
 input[type="date"][name*="metamagikkey"]{
 	max-width: calc(var(--size-width-comp) - 1.5rem);
@@ -252,6 +256,9 @@ input::placeholder, textarea::placeholder{
 .dropdown-menu-link-text, .dropdown-menu-link-icon {
 	color: var(--color-greyscale-1);
 }
+body.TR .dropdown-menu i.fa-caret-down, body.TR .active-dropdown-menu i.fa-caret-down{
+	margin-left: -.25rem;
+}
 #select-dropdown-menu{
 	overflow: auto;
 }
@@ -272,6 +279,9 @@ ul.dropdown-submenu-open li, #select-dropdown-menu li {
 ul.dropdown-submenu-open li:not(.no-hover) {
 	font-size: 0;
 }
+ul.dropdown-submenu-open li.js-autocomplete-email{
+	font-size: 1rem;
+}
 ul.dropdown-submenu-open li i.fa {
 	font-size: 1rem;
 	vertical-align: middle;
@@ -290,11 +300,14 @@ input[type=date]:hover, input[type=email]:hover, input[type=number]:hover, input
     border-color: var(--color-brand-prim);
 	color: var(--color-greyscale-1);
 }
+body.TR a.dropdown-menu-link-icon:hover > * {
+	color: var(--link-color-hover);
+}
 .dropdown-submenu-open li:hover:not(.no-hover), .textarea-dropdown .active, .textarea-dropdown li:hover, .select-dropdown-menu-item.active{
 	background: var(--color-brand-prim);
 	color: var(--color-brand-cont);
 }
-.dropdown-submenu-open li:hover:not(.no-hover) a:hover{
+.dropdown-submenu-open li:hover:not(.no-hover) a:hover, .dropdown-submenu-open li:hover:not(.no-hover) i.fa{
 	color: var(--color-greyscale-6);
 }
 .select-dropdown-input-container:hover {
@@ -345,6 +358,7 @@ label {
 	width: auto;
     min-width: var(--size-width-comp);
 	background: var(--color-greyscale-4);
+	border-left: var(--style-border-thk);
 }
 fieldset {
 	border: none;
@@ -371,4 +385,8 @@ legend {
 }
 .form-actions a:not(.btn), #modal-content small a.assign-me{
 	border-bottom: 1px dotted;
+	vertical-align: middle;
+}
+#modal-content .task-form-secondary-column small a.assign-me{
+	vertical-align: super;
 }

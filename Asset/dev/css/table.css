@@ -20,6 +20,9 @@ table th{
 	background: var(--color-greyscale-4);
 	border-bottom: var(--style-border);
 }
+table th a:focus, table th a:hover {
+    text-decoration: auto;
+}
 table tr:last-child td{
 	border-bottom: var(--style-border);
 }

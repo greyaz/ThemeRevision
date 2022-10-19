@@ -26,10 +26,10 @@
 	padding: 0;
 	box-shadow: none;
 }
-.TR .fc button .fc-icon{
+.TR .fc-button .fc-icon{
 	display: block;
 }
-.TR .fc-state-default, .fc button{
+.TR .fc-state-default, .TR .fc-button{
 	text-shadow: none;
 	background-image: none;
 	color: var(--color-greyscale-1);
@@ -37,6 +37,12 @@
 	line-height: 1rem;
 	padding: .5rem 1rem;
 	height: auto;
+}
+.TR .fc-button-group .fc-button:not(.fc-state-active){
+	font-weight: normal !important;
+}
+.TR .fc-button:not(.fc-state-disabled):hover{
+	color: var(--link-color-hover);
 }
 .TR .fc-state-default.fc-corner-right {
     border-top-right-radius: var(--size-radius-def);

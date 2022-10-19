@@ -102,7 +102,7 @@ body.TR .task-board-category a, body.TR .table-list-category a {
 	margin-bottom: 0.5rem;
 	min-width: 42px;
 }
-.task-board-header > .dropdown * {
+body.TR .task-board-header > .dropdown * {
 	color: var(--color-greyscale-1);
 }
 .task-board-header > .js-modal-large {

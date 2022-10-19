@@ -71,9 +71,7 @@
 .comments>form .js-text-editor-rendered{
     max-width: 100%;
 }
-.comments>form .text-editor textarea {
+.comments>form .text-editor textarea, .comments>form .text-editor .text-editor-preview-area {
     box-sizing: border-box;
-}
-.comments>form .text-editor .text-editor-preview-area {
-    box-sizing: border-box;
+    height: 10rem;
 }
