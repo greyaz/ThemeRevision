@@ -276,6 +276,9 @@ ul.dropdown-submenu-open li, #select-dropdown-menu li {
 	padding: 0.5rem 1rem;
 	border-bottom: 1px solid var(--color-greyscale-5);
 }
+.dropdown-submenu-open li:hover a{
+	color: var(--color-greyscale-6);
+}
 ul.dropdown-submenu-open li:not(.no-hover) {
 	font-size: 0;
 }
