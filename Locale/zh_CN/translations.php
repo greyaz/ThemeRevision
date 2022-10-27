@@ -20,14 +20,8 @@ return array(
     'Light Palette' => '亮色色板',
     'Dark Palette' => '暗色色板',
     'Reset Configs' => '重置设置',
-    'Clear all configs stored in the database and reuse your config file on the server.' => '清除数据库中存储的配置信息，并重新启用服务器上的配置文件。',
     'Reset' => '重置',
-    'Notice' => '提示',
-    'Editing the theme settings via UI will disable your config file ("config-default.php" or "config.php") in the plugin directory. But you can still re-enable it later.' => '启用配置编辑界面后，原有插件目录下的配置文件（“config-default.php”或“config.php”）将失效。但您仍可稍后重新启用它。',
-    'Continue' => '继续',
     'Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>' => '开发模式将引入多个未压缩的CSS文件。<span style="color:var(--color-warning-prim)">切换前，请确保插件根目录下的“Asset”文件夹可写入且可执行</span>，用以在生产模式自动压缩',
-    'Export Configs' => '导出配置',
-    'Export your current configs as a config file, which can help you compare the difference (between your configs and the new default config file) after upgrading, or replacing the one on the server.' => '将当前配置导出为配置文件。插件升级后，该配置文件可以帮助您比较当前配置与新版本默认配置文件的配置差异，或者用于替换服务器上的配置文件。',
     'Icons' => '图标',
     'Replace default icons with "Google Material Symbols"' => '将默认图标替换为Google Material Symbols',
     'Override default fonts with "Google Fonts". <b>Only one font family name</b> supported by Google can be filled in for each category. Note: the font family name of a font may differ from it\'s general name.' => '将默认字体替换为“Google字体”。每个类别<b>仅能填写一个</b>Google支持的“font family”名称。注意：字体的“font family”名称和其通用名称可能会有区别。',
@@ -39,5 +33,8 @@ return array(
     'Name, case-sensitive' => '名称，注意大小写',
     'Admin Panel' => '管理面板',
     'If this feature is not working, please check the CSP settings on your server first.' => '若该功能不可用，请先检查您服务器上的CSP设置。',
-    'More' => '更多'
+    'More' => '更多',
+    'Notice' => '注意',
+    'Some color values have been changed after last upgrading.' => '部分色值在升级后发生了变化。',
+    'Dismiss' => '忽略'
 );

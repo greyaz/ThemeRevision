@@ -23,6 +23,9 @@
 #modal-content{
 	padding: 0;
 }
+#modal-content > .table-list{
+	padding: 0;
+}
 #modal-content > form {
 	padding: 1rem;
 	background: var(--color-greyscale-4);

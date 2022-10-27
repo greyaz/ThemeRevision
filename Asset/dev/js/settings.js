@@ -9,10 +9,5 @@
         $(".overwrite-checkbox").change(function(event) {
             $(event.target).val($(event.target).is(':checked')) 
         });
-
-        $("#continue-btn").click((event) => {
-            $("#continue-btn").parent().hide();
-            $("#tr-settings").show();
-        });
     });
 })(window, document, KB, jQuery);

@@ -99,14 +99,19 @@
 	color: var(--color-greyscale-2);
 }
 /* Gantt */
+#gantt-chart{
+	width: 100%;
+	background: var(--color-greyscale-6);
+}
 .TR .page > #main > #gantt-chart{
 	margin: 0 0 1rem;
 	box-shadow: var(--style-shadow-heavy);
 }
+.TR .page > #main > section > #gantt-chart{
+	padding-top: 1.5rem;
+}
 .TR div.ganttview{
-	background: var(--color-greyscale-6);
 	border: none;
-	max-width: calc(100vw - 7rem);
 	border-bottom: var(--style-border);
 	padding: 0 1.5rem 1.5rem;
 }

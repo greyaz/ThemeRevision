@@ -5,7 +5,7 @@
 	display: block;
 }
 .sidebar .sidebar-title{
-	padding: 1rem;
+	padding: 1rem 1.25rem;
 	border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
 	border-bottom: var(--style-border);
 }
@@ -27,11 +27,10 @@
 	margin: 0;
 	line-height: 3rem;
     border-bottom: var(--style-border);
-	padding-left: 1.25rem;
+	padding-left: 1.25rem !important;
 }
 .sidebar>ul li.active, .sidebar>ul li:hover {
     border-left: 2px solid var(--color-greyscale-1);
-    padding-left: .75rem;
 	background: var(--color-greyscale-6);
     border-radius: var(--size-radius-def);
 }

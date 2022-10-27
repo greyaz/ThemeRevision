@@ -1,9 +1,9 @@
 <?php
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
-use Kanboard\Plugin\ThemeRevision\Helper\BaseSwitchHelper;
+use Kanboard\Plugin\ThemeRevision\Helper\BaseHelper;
 
-class ModeSwitchHelper extends BaseSwitchHelper
+class ModeSwitchHelper extends BaseHelper
 {
     private $prdCSSFile = 'plugins/ThemeRevision/Asset/main.min.css';
     private $devCSSFiles = array(
@@ -23,6 +23,7 @@ class ModeSwitchHelper extends BaseSwitchHelper
 		'plugins/ThemeRevision/Asset/dev/css/board-task-list.css',
 		'plugins/ThemeRevision/Asset/dev/css/activity-and-comment.css',
 		'plugins/ThemeRevision/Asset/dev/css/modal.css',
+        'plugins/ThemeRevision/Asset/dev/css/markdown.css',
 		'plugins/ThemeRevision/Asset/dev/css/break-points.css'
     );
 

@@ -1,0 +1,110 @@
+body.TR .markdown, body.TR .markdown *{
+	line-height: 1.8rem !important;
+    font-size: 1.1rem;
+}
+body.TR .markdown a{
+	border-bottom: 1px dotted var(--color-greyscale-2);
+    font-size: 1.1rem;
+}
+body.TR .markdown p {
+	margin-bottom: 1rem;
+}
+body.TR .markdown p > code {
+    font-size: 1rem;
+    display: inline-block;
+    background: var(--color-greyscale-3);
+    border-radius: var(--size-radius-def);
+    padding: 0 0.5rem;
+}
+body.TR .markdown pre{
+    background: unset;
+    padding: .75rem 1.5rem;
+    border-radius: var(--size-radius-def);
+    border: 0;
+	border-left: var(--style-border-thk);
+    white-space: break-spaces;
+    text-align: left;
+    word-break: break-word;
+	font-size: 1rem;
+	margin: 0 0 1rem;
+}
+body.TR .markdown pre code, body.TR .markdown pre code * {
+    font-size: 1rem;
+}
+body.TR .markdown h1, .markdown h2, body.TR .markdown h3, .markdown h4 {
+    line-height: 1em !important;
+    margin: 0 0 1rem;
+    padding-top: .8em;
+}
+body.TR .markdown h3 {
+    font-size: 1.4rem !important;
+}
+body.TR .markdown h2 {
+    font-size: 1.8rem !important;
+}
+body.TR .markdown h1 {
+    font-size: 2.3rem !important;
+}
+body.TR .markdown blockquote {
+    border-left: var(--style-border-thk);
+    padding: .75rem 1.5rem;
+	margin-bottom: 0;
+    margin-left: 0;
+	margin: 0 0 1rem;
+}
+body.TR .markdown blockquote, body.TR .markdown blockquote * {
+    font-size: 1rem;
+    font-style: italic;
+	color: var(--color-greyscale-2);
+}
+body.TR .markdown blockquote > *:last-child {
+	margin-bottom: 0;
+}
+body.TR .markdown ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+body.TR .markdown ol {
+    margin: 1rem 0 1rem 1.25rem;
+}
+body.TR .markdown > ul {
+    margin: 0 0 1rem .5rem;
+    list-style: circle;
+}
+body.TR .markdown > ol{
+    margin: 0 0 1rem .25rem;
+}
+body.TR .markdown img {
+    margin: 0;
+}
+body.TR .markdown img.emojione{
+    max-width: 1rem;
+    max-height: 1rem;
+}
+body.TR .markdown h3 img.emojione{
+    max-width: 1.2rem;
+    max-height: 1.2rem;
+    vertical-align: top;
+}
+body.TR .markdown h2 img.emojione{
+    max-width: 1.6rem;
+    max-height: 1.6rem;
+    vertical-align: top;
+}
+body.TR .markdown h1 img.emojione{
+    max-width: 2.1rem;
+    max-height: 2.1rem;
+    vertical-align: top;
+}
+body.TR .markdown img:not(.emojione){
+    vertical-align: text-top;
+}
+body.TR .markdown>img {
+    margin: 0 1rem 1rem 0;
+}
+body.TR .markdown > *:last-child {
+    margin-bottom: 0;
+}
+body.TR .markdown>*:first-child {
+	padding-top: 0;
+}
+

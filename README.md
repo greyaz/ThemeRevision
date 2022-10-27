@@ -20,7 +20,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Modern mobile application's interactive behaviour. [screenshot1](Screenshots/10.png) [screenshot2](Screenshots/11.png)
 
 #### Common plugins' compatibilities
-* Calendar / Gantt / Group_assign / MetaMagic ...
+* Calendar / Gantt / Group_assign / MetaMagic / MarkdownPlus ...
 
 #### Dark mode
 * An individually controlled panel for non-administrative users
@@ -45,11 +45,12 @@ ThemeRevision utilize the file `favicon.png` in `your_kanboard_root/assets/img` 
 * ***I have customized CSS files***  
 Back up those CSS files you've customized in the folder `Asset/dev` before upgrading.
 
-* ***I have customized configs in Kanboard's settings panel***  
-Export and then reset your configs in the settings panel before upgrading
-
-* ***I have the file `config.php` on my server***  
-Rename the file to `config.php.bak` before upgrading
+   > **and (< 1.1.4)**
+   > * ***I have customized configs in Kanboard's settings panel***  
+   > Export and then reset your configs in the settings panel before upgrading
+   > 
+   > * ***I have the file `config.php` on my server***  
+   > Rename the file to `config.php.bak` before upgrading
 
 ## Customization
 #### Colors / Icons / Fonts

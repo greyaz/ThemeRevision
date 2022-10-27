@@ -2,6 +2,9 @@
     max-width: 900px;
     margin: auto;
 }
+#task-view .sidebar-content #comments{
+    background: var(--color-greyscale-4);
+}
 #task-view .sidebar-content .accordion-section{
     padding: 0;
     margin: 2.5rem auto;
@@ -19,32 +22,37 @@
     padding: 0;
     margin: 1rem 0 0;
 }
-#task-view .sidebar-content .accordion-content article.markdown *{
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+#task-view .sidebar-content *:not(:nth-child(2)) .accordion-content{
+    padding: 1.5rem;
+    background: var(--color-greyscale-4);
 }
-#task-view .sidebar-content .accordion-content article.markdown pre code,
-#task-view .sidebar-content .accordion-content article.markdown pre code * {
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
+
 #task-view .sidebar-content .file-thumbnails{
-    padding: 1rem;
+    padding: 0;
+    margin-bottom: -1rem;
     background: var(--color-greyscale-4);
     border-radius: var(--style-border);
 }
-#task-view #comments .comment-sorting{
+#task-view .sidebar-content #comments .comment-sorting{
     margin-bottom: 0;
+    padding: 0 0 1rem;
+}
+#task-view .sidebar-content #comments .comment{
+    padding: 1.5rem 0;
 }
 #task-view .sidebar-content #comments > form{
-    padding: 1rem;
+    padding: 1.5rem 0 0;
     box-sizing: border-box;
+    margin: 0;
 }
 #task-view .sidebar-content #comments > form .form-actions button{
     margin: 0;
 }
 #task-view .sidebar-content .page-header{
     margin-top: 2.5rem;
+}
+#task-view .sidebar-content > .page-header {
+    margin-bottom: 1rem;
 }
 #task-view .sidebar-content .activity-event{
     box-sizing: border-box;
@@ -167,6 +175,7 @@
     height: auto;
 }
 
+
 .file-thumbnail {
     box-shadow: var(--style-shadow-light);
     background-color: var(--color-greyscale-6);
@@ -174,13 +183,40 @@
     margin: 0 1rem 1rem 0;
 	border: none;
     border-bottom: var(--style-border);
+    width: 14rem;
 }
 .file-thumbnail img{
 	border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
 	width: 100%;
 }
-body.TR .file-thumbnail-description, body.TR .file-thumbnail-description i.fa{
-	color: var(--color-greyscale-2);
+.file-thumbnail-content{
+    padding: .5rem .75rem;
+}
+.file-thumbnail-title {
+    margin-bottom: .5rem;
+}
+.file-thumbnail-title .dropdown > a i.fa{
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+}
+.file-thumbnail-description {
+    font-size: var(--size-font-min);
+    color: var(--color-greyscale-2);
+    margin: 0;
+}
+body.TR .file-thumbnail-description .tooltip > i.fa {
+    margin-right: 0;
+    color: var(--color-greyscale-2);
+}
+.file-thumbnail-title .dropdown > a{
+    height: 1.5rem;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.5rem;
+    white-space: nowrap;
+    width: 11rem;
 }
 
 #file-dropzone, #screenshot-zone{

@@ -97,7 +97,7 @@ class CustomColorModel extends ColorModel
 
     public function getDefaultColor()
     {
-        if (isset($GLOBALS['themeRevisionConfig']) && !$GLOBALS['themeRevisionConfig']['overwrite default task color']){
+        if (isset($GLOBALS['themeRevisionConfig']) && !$GLOBALS['themeRevisionConfig']['overwrite_default_task_color']){
             return $this->configModel->get('default_color', 'yellow');
         }
         return 'grey';
@@ -126,7 +126,7 @@ class CustomColorModel extends ColorModel
 
     private function getCssString($color){
         $buffer = 'color-scheme:'.$color.';';
-        foreach ($GLOBALS['themeRevisionConfig'][$color.' palette'] as $cssName => $cssValue) {
+        foreach ($GLOBALS['themeRevisionConfig'][$color.'_palette'] as $cssName => $cssValue) {
             $buffer .= "--color-".$cssName.":".$cssValue.";";
         }
         return $buffer;

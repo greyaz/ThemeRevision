@@ -20,6 +20,9 @@
         KB.on('modal.afterRender',function(){
             $("#form-owner_id").select2();
             $("#form-action_name").select2();
+            $(document).on("click", ".assign-me", function(e) {
+                $("#form-owner_id").trigger("change");
+            })
         });
     }
 

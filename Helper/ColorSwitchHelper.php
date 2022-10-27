@@ -1,10 +1,10 @@
 <?php
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
-use Kanboard\Plugin\ThemeRevision\Helper\BaseSwitchHelper;
+use Kanboard\Plugin\ThemeRevision\Helper\BaseHelper;
 use Kanboard\Plugin\ThemeRevision\Model\CustomColorModel;
 
-class ColorSwitchHelper extends BaseSwitchHelper
+class ColorSwitchHelper extends BaseHelper
 {
     public function setColor2Dark(){
         $this->container['colorModel'] = $this->container->factory(function ($c) {

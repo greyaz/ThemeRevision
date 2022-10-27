@@ -3,10 +3,8 @@ namespace Kanboard\Plugin\ThemeRevision;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-use Kanboard\Plugin\ThemeRevision\Helper\ConfigsConvertHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
-use Kanboard\Plugin\ThemeRevision\Helper\GoogleFontsHelper;
 
 
 class Plugin extends Base
@@ -14,20 +12,40 @@ class Plugin extends Base
 	public function initialize()
 	{
 		global $themeRevisionConfig;
-		
-		// load configs
-		require_once('plugins/ThemeRevision/config-default.php');
-		if (file_exists('plugins/ThemeRevision/config.php')){
-			require_once('plugins/ThemeRevision/config.php');
-		}
-		$configsData = $this->configModel->get("ThemeRevision");
-		if ($configsData != ""){
-			$themeRevisionConfig = array_merge($themeRevisionConfig, ConfigsConvertHelper::toCFFormat(json_decode($configsData, true)));
-		}
 
 		// regist helper
+		$this->helper->register('configsDataHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ConfigsDataHelper');
 		$this->helper->register('modeSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper');
 		$this->helper->register('colorSwitchHelper', '\Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper');
+
+		// load configs
+        $defConfigs = $this->helper->configsDataHelper->getDefaultConfigs();
+        $dbConfigs = $this->helper->configsDataHelper->loadConfigs();
+        $oldConfigs = $this->helper->configsDataHelper->calcOldConfigs($dbConfigs);
+        //old user, need update
+        if (!empty($oldConfigs)){
+			// check color diffs
+            $colorDiffs = $this->helper->configsDataHelper->calcColorDiffs($oldConfigs);
+            if (!empty($colorDiffs)){
+                $this->helper->configsDataHelper->saveColorDiffs($colorDiffs);
+            }
+			// merged configs
+            $mergedConfigs = $this->helper->configsDataHelper->calcMergedConfigs($oldConfigs, $defConfigs);
+			// load and save configs
+            $themeRevisionConfig = $mergedConfigs;
+            $this->helper->configsDataHelper->saveConfigs($themeRevisionConfig);
+        }
+        //old user, need not update
+        elseif (!empty($dbConfigs)){
+			// load configs
+            $themeRevisionConfig = $dbConfigs;
+        }
+        //new user
+        else {
+			// load and save configs
+            $themeRevisionConfig = $defConfigs;
+            $this->helper->configsDataHelper->saveConfigs($themeRevisionConfig);
+        }
 
 		// mode switch
 		if (isset($themeRevisionConfig['mode']) && $themeRevisionConfig['mode'] == "development") {
@@ -38,10 +56,10 @@ class Plugin extends Base
 		}
 
 		// color switch
-		if (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "light") {
+		if (isset($themeRevisionConfig['color_scheme']) && $themeRevisionConfig['color_scheme'] == "light") {
 			$this->helper->colorSwitchHelper->setColor2Light();
 		}
-		elseif (isset($themeRevisionConfig['color scheme']) && $themeRevisionConfig['color scheme'] == "dark"){
+		elseif (isset($themeRevisionConfig['color_scheme']) && $themeRevisionConfig['color_scheme'] == "dark"){
 			$this->helper->colorSwitchHelper->setColor2Dark();
 		}
 		else {
@@ -59,16 +77,13 @@ class Plugin extends Base
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.js'));
 
 		// icons replacement
-		if (!isset($themeRevisionConfig['enable google material icons']) || $themeRevisionConfig['enable google material icons']) {
+		if (!isset($themeRevisionConfig['enable_google_material_icons']) || $themeRevisionConfig['enable_google_material_icons']) {
 			$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/material-symbols/index.min.css'));
 		}
 
 		// google fonts replacement
-		if (isset($themeRevisionConfig['google fonts'])){
-			$codes = GoogleFontsHelper::getCodes($themeRevisionConfig['google fonts']);
-			if (!empty($codes)){
-				$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('codes' => $codes));
-			}
+		if (isset($themeRevisionConfig['google_fonts'])){
+			$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('configs' => $themeRevisionConfig['google_fonts']));
 		}
 
 		// syntax highlight
@@ -93,7 +108,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.3'; 
+		return '1.1.4'; 
 	}
 
 	public function getPluginDescription() { 

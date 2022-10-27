@@ -20,6 +20,9 @@ table th{
 	background: var(--color-greyscale-4);
 	border-bottom: var(--style-border);
 }
+body.TR table th a{
+	font-weight: bold;
+}
 table th a:focus, table th a:hover {
     text-decoration: auto;
 }

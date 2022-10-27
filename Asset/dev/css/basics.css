@@ -57,7 +57,7 @@
 	--button-default-color: var(--color-greyscale-1);
     --button-default-background-color: var(--color-greyscale-6);
     --button-default-border-color: var(--color-greyscale-6);
-    --button-default-color-focus: var(--color-greyscale-2);
+    --button-default-color-focus: var(--color-brand-prim);
     --button-default-background-color-focus: var(--color-greyscale-6);
     --button-default-border-color-focus: var(--color-greyscale-6);
 
@@ -160,54 +160,6 @@ h3, h3 a {
 article {
 	line-height: 1.5rem;
 	word-break: break-word;
-}
-.markdown{
-	line-height: 1.5rem;
-}
-.markdown a{
-	border-bottom: 1px dotted var(--color-greyscale-2);
-}
-.markdown p {
-	margin-bottom: 1rem;
-}
-.markdown pre{
-    background: unset;
-    padding: .75rem 1.5rem;
-    border-radius: var(--size-radius-def);
-    border: 0;
-	border-left: var(--style-border-thk);
-    white-space: break-spaces;
-    text-align: left;
-    word-break: break-word;
-	font-size: 1rem;
-	margin: 0 0 1rem;
-}
-.markdown blockquote {
-    font-style: italic;
-    border-left: var(--style-border-thk);
-    padding: .75rem 1.5rem;
-	margin-bottom: 0;
-    margin-left: 0;
-	font-size: 1rem !important;
-	margin: 0 0 1rem;
-	color: var(--color-greyscale-2);
-}
-.markdown blockquote * {
-    font-size: 1rem !important;
-	color: var(--color-greyscale-2);
-}
-.markdown blockquote > *:last-child {
-	margin-bottom: 0;
-}
-.markdown ol, .markdown ul{
-	margin: 1rem 0 1rem 2rem;
-}
-.markdown p>code {
-    font-size: 1rem !important;
-    display: inline-block;
-    background: var(--color-greyscale-3);
-    border-radius: var(--size-radius-def);
-    padding: 0 0.5rem;
 }
 body.TR i.fa{
 	line-height: 1rem;

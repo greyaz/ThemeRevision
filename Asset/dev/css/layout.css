@@ -40,17 +40,16 @@ header {
 .sidebar-content, .accordion-section{
 	padding-left: 0;
 	max-width: var(--size-width-def);
-	/*width: 60vw;*/
 	background: var(--color-greyscale-6);
     padding: 1rem 2rem;
 	border-radius: var(--size-radius-def);
 	border-bottom: var(--style-border);
 	margin-bottom: 1rem;
 	box-sizing: border-box;
-	/*background-image: linear-gradient(0deg, var(--color-greyscale-6) 1rem, transparent 1rem),
-						linear-gradient(90deg, var(--color-greyscale-6) 1rem, transparent 1rem),
-						linear-gradient(180deg, var(--color-greyscale-6) 1rem, transparent 1rem),
-						linear-gradient(270deg, var(--color-greyscale-6) 1rem, transparent 1rem);*/
+}
+.accordion-section{
+    margin-bottom: 0;
+    border-bottom: 0;
 }
 #main .sidebar-content, #main > .accordion-section, .page > .table-list{
 	box-shadow: var(--style-shadow-heavy);
@@ -83,7 +82,7 @@ header {
 .page-header ul {
     width: 100%;
 }
-.panel, .table-list, form, .accordion-content, .sidebar-content > .markdown {
+.panel, .table-list, form, .accordion-content {
 	border: none;
     /*border-bottom: var(--style-border);*/
 	border-radius: var(--size-radius-def);
@@ -98,6 +97,17 @@ header {
     max-width: var(--size-width-def);
     background: var(--color-greyscale-4);
 	box-sizing: border-box;
+}
+.accordion-section > *{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.accordion-section .accordion-content {
+    padding: 1.5rem;
+}
+.accordion-section .accordion-content .buttons-header > *{
+    margin-top: 0;
 }
 form > .panel{
 	border-left: var(--style-border-thk);

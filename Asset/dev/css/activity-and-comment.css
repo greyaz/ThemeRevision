@@ -12,31 +12,45 @@
     padding: 1.5rem;
     margin-bottom: 0;
 	border-bottom: var(--style-border);
-	background: var(--color-greyscale-4);
+	background: none;
     border-radius: var(--size-radius-def);
 }
 .comments .comment:nth-child(even):not(.comment-highlighted), .activity-event:nth-child(even){
-	background: var(--color-greyscale-5);
+	background: none;
 }
-.comments .comment-highlighted{
-	background-color: var(--color-brand-secd);
-    border: inherit;
+#modal-content > .activity-event, #task-view .activity-event{
+    background: var(--color-greyscale-4);
 }
 .comments .comment:hover, .activity-event:hover,
 .comments .comment:nth-child(even):not(.comment-highlighted):hover,
 .comments .comment:nth-child(odd):not(.comment-highlighted):hover{
-	background: var(--color-greyscale-6);
+	background: unset;
+}
+.comments .comment-highlighted, .comments .comment-highlighted:hover {
+	background-color: var(--color-brand-secd);
+    border: inherit;
 }
 .comment .avatar-left, .activity-event .avatar-left{
 	margin-right: 1rem;
 }
 .comment-title, .activity-title{
-	font-weight: bold;
+	font-weight: normal;
 	margin-bottom: 1rem;
 	border: none;
+    font-size: var(--size-font-min);
+}
+.activity-event .activity-title a{
+    font-size: var(--size-font-min);
+    font-weight: bold;
+}
+.comment-title *, .activity-title *{
+    font-size: var(--size-font-min);
 }
 .comment-title{
 	margin-left: 5rem;
+}
+.comment-title strong.comment-username {
+	font-weight: normal;
 }
 .comment-title .comment-date{
     font-weight: normal;
@@ -59,11 +73,28 @@
 .activity-description{
 	margin: 0;
 }
-.activity-description ul{
-	margin: 0;
+.activity-description .activity-task-title {
+    font-weight: bold;
 }
-.activity-description li {
-	list-style-type: decimal;
+.activity-description ul{
+    margin: 1rem 0 0;
+}
+.activity-description li{
+    list-style-type: inherit;
+}
+.activity-description > ul > li, .activity-changes > ul > li, .activity-description > .markdown, .activity-changes > .markdown, .comment-content > .markdown{
+	margin: 0 0 2px;
+    padding: 1rem 1.5rem;
+    background: var(--color-greyscale-6);
+    border-radius: var(--size-radius-def);
+    box-shadow: var(--style-shadow-light);
+    list-style-type: none;
+}
+.activity-changes > p > strong {
+    font-size: var(--size-font-min);
+    margin-top: 1rem;
+    display: block;
+    font-weight: normal;
 }
 .comments>form {
     margin-top: 1rem;
@@ -74,4 +105,7 @@
 .comments>form .text-editor textarea, .comments>form .text-editor .text-editor-preview-area {
     box-sizing: border-box;
     height: 10rem;
+}
+.accordion-content > .activity-event{
+    padding: 1.5rem 0;
 }
