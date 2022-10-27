@@ -35,6 +35,6 @@ return array(
     'If this feature is not working, please check the CSP settings on your server first.' => '若该功能不可用，请先检查您服务器上的CSP设置。',
     'More' => '更多',
     'Notice' => '注意',
-    'Some color values have been changed after last upgrading.' => '部分色值在升级后发生了变化。',
+    'Some colors have been changed after last upgrading.' => '部分色值在升级后发生了变化。',
     'Dismiss' => '忽略'
 );

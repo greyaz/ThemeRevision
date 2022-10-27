@@ -8,7 +8,7 @@
     <?php if (!empty($color_diffs)): ?>
     <form method="post" action="<?= $this->url->href('PluginConfigsController', 'dismiss', array('plugin' => 'ThemeRevision')) ?>">
     <fieldset>
-        <p class="alert alert-warning"><b><?= t('Notice') ?></b><br><?= t('Some color values have been changed after last upgrading.') ?></p>
+        <p class="alert alert-warning"><b><?= t('Notice') ?></b><br><?= t('Some colors have been changed after last upgrading.') ?></p>
         <?php foreach($color_diffs as $paletteName=>$paletteValue):  ?>
         <p style="clear: both;">
             <legend><?= t(ucwords(str_replace("_", " ", $paletteName))) ?></legend>
