@@ -53,6 +53,8 @@
 	/*--alert-border-color-success: var(--color-success-secd);*/
 
 	--activity-title-color: var(--color-greyscale-1);
+	--user-mention-color: var(--color-greyscale-1);
+    --board-task-limit-color: var(--color-warning-prim);
 
 	--button-default-color: var(--color-greyscale-1);
     --button-default-background-color: var(--color-greyscale-6);

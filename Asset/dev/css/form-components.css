@@ -294,6 +294,23 @@ ul.dropdown-submenu-open a {
 	color: var(--color-greyscale-1);
 	vertical-align: middle;
 }
+body.TR #suggest-menu{
+	padding: 1rem 1rem 0 0;
+    border-radius: var(--size-radius-def);
+    border: var(--style-border);
+    box-shadow: var(--style-shadow-heavy);
+	background: var(--color-greyscale-6);
+}
+body.TR #suggest-menu > .suggest-menu-item {
+    padding: 0.5rem;
+}
+body.TR #suggest-menu > .suggest-menu-item.active {
+    color: var(--color-greyscale-6);
+    background: var(--color-brand-prim);
+}
+body.TR #suggest-menu > .suggest-menu-item.active small{
+	color: var(--color-greyscale-6);
+}
 
 /*hover and focus*/
 input[type=date]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=text]:focus, input[type=checkbox]:focus, input[type=radio]:focus, input[type=file]:focus, textarea:focus, .text-editor textarea:focus, select:focus, .select2-container--focus,

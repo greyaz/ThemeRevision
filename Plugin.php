@@ -75,6 +75,7 @@ class Plugin extends Base
 		$this->template->hook->attach('template:config:sidebar', 'ThemeRevision:settings/sidebar');
 		$this->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.css'));
 		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/spectrum/min.js'));
+		$this->hook->on('template:layout:js', array('template' => 'plugins/ThemeRevision/Asset/settings.min.js'));
 
 		// icons replacement
 		if (!isset($themeRevisionConfig['enable_google_material_icons']) || $themeRevisionConfig['enable_google_material_icons']) {
@@ -108,7 +109,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.4'; 
+		return '1.1.5'; 
 	}
 
 	public function getPluginDescription() { 

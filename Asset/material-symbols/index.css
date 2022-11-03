@@ -28,7 +28,8 @@
 .TR .task-board .task-date i.fa, 
 .TR .table-list .task-date i.fa,
 .TR .file-thumbnail-content i.fa,
-.TR ul.dropdown-submenu-open li a i.fa {
+.TR ul.dropdown-submenu-open li a i.fa,
+.TR a.dropdown-menu-link-icon i.fa {
     vertical-align: text-top;
 }
 
@@ -329,6 +330,31 @@
 .TR i.fa-vcard-o:before, .TR i.fa-address-card-o:before {
     content: "\e0d0";
 }
+.TR i.fa-floppy-o:before{
+    content: "\e161";
+}
+.TR i.fa-file-image-o:before{
+    content: "\e3f4";
+}
+.TR i.fa-file-excel-o:before,
+.TR i.fa-file-word-o:before,
+.TR i.fa-file-powerpoint-o:before,
+.TR i.fa-file-archive-o:before {
+    content: "\e66d";
+}
+.TR i.fa-file-audio-o:before{
+    content: "\eb82";
+}
+.TR i.fa-file-video-o:before{
+    content: "\eb87";
+}
+.TR i.fa-file-code-o:before{
+    content: "\f84d";
+}
+.TR i.fa-file-pdf-o:before{
+    content: "\e415";
+}
+
 
 @media (max-width: 768px){
     .TR #modal-close-button i.fa-times:before {

@@ -218,3 +218,13 @@
 	width: calc(1rem + 2px);
 	height: auto;
 }
+
+/* color picker */
+.TR .tr-color-picker .sp-replacer{
+	border: 0;
+	background: none;
+	color: var(--color-greyscale-1);
+}
+.TR .tr-color-picker .sp-preview{
+	border: 1px solid var(--color-greyscale-1);
+}

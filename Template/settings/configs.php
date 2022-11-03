@@ -126,8 +126,6 @@
             <input type="submit" class="btn btn-red" value="<?= t('Reset') ?>"> 
         </fieldset>
     </form>
-
-    <script  defer type="text/javascript" src="/plugins/ThemeRevision/Asset/settings.min.js"></script>
 <?php else: ?>
     <p class="alert alert-error"><?= t('Access Forbidden') ?></p>
 <?php endif ?>
