@@ -222,8 +222,7 @@ body.TR a:hover i.fa{
 	overflow-wrap: break-word;
     padding: 1rem;
     background: var(--color-greyscale-6);
-    border: none;
-	border-bottom: var(--style-border);
+	border: var(--style-border);
     border-radius: var(--size-radius-def);
     box-shadow: var(--style-shadow-heavy);
     position: absolute;

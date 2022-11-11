@@ -114,6 +114,10 @@ class ConfigsDataHelper extends BaseHelper
         return $this->defConfigsModel->getDefaultConfigs();
     }
 
+    public function getVersion(){
+        return $this->defConfigsModel->getVersion();
+    }
+
     private function toV2Format(array $config){
         $return = (object)[];
         foreach($config as $key => $value){

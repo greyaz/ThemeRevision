@@ -19,7 +19,7 @@ return array(
     'Overwrite with "task-grey"' => '锁定为“task-grey”',
     'Light Palette' => '亮色色板',
     'Dark Palette' => '暗色色板',
-    'Reset Configs' => '重置设置',
+    'Reset Configs' => '恢复默认配置',
     'Reset' => '重置',
     'Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. <span style="color:var(--color-warning-prim)">Make sure the "Asset" folder in plugin\'s root directory is writable and executable before switching</span>' => '开发模式将引入多个未压缩的CSS文件。<span style="color:var(--color-warning-prim)">切换前，请确保插件根目录下的“Asset”文件夹可写入且可执行</span>，用以在生产模式自动压缩',
     'Icons' => '图标',
@@ -36,5 +36,7 @@ return array(
     'More' => '更多',
     'Notice' => '注意',
     'Some colors have been changed after last upgrading.' => '部分色值在升级后发生了变化。',
-    'Dismiss' => '忽略'
+    'Dismiss' => '忽略',
+    'Header Logo' => '页头Logo',
+    'ThemeRevision utilize the file "favicon.png" in the directory "your_kanboard_root/assets/img" as the header logo, replace it if needed.' => 'ThemeRevision利用“your_kanboard_root/assets/img”目录下的“favicon.png”文件作为页头logo。如需自定义，请替换该文件。',
 );

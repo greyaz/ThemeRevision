@@ -5,7 +5,7 @@ namespace Kanboard\Plugin\ThemeRevision\Model;
 class DefaultConfigsModel
 {
     private $default_Configs_Schema = array(
-        'version'                           => array('default' => '20221026v1'),
+        'version'                           => array('default' => '20221111v1'),
 
         // Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. 
         // Make sure the "Asset" folder in plugin's root directory is WRITABLE and EXECUTABLE before switching !
@@ -54,14 +54,14 @@ class DefaultConfigsModel
             'brand-cont'                    => array('default' => '#fff'),
             'brand-secd'                    => array('default' => '#dae4fe'),
 
-            'info-prim'                     => array('default' => '#5574e3'),
-            'info-cont'                     => array('default' => '#e3ebff'),
+            'info-prim'                     => array('default' => '#3860f4'),
+            'info-cont'                     => array('default' => '#d9e7ff'),
 
             'reminder-prim'                 => array('default' => '#be7b04'),
             'reminder-cont'                 => array('default' => '#ffed9d'),
 
-            'warning-prim'                  => array('default' => '#cf5555'),
-            'warning-cont'                  => array('default' => '#fdd4d4'),
+            'warning-prim'                  => array('default' => '#d9371c'),
+            'warning-cont'                  => array('default' => '#ffd9d9'),
             'warning-secd'                  => array('default' => '#e79392'),
 
             'success-prim'                  => array('default' => '#428b43'),
@@ -69,7 +69,7 @@ class DefaultConfigsModel
 
             // Greyscales
             'greyscale-1'                   => array('default' => '#02021d'),
-            'greyscale-2'                   => array('default' => '#bec3d0'),
+            'greyscale-2'                   => array('default' => 'rgba(0, 0, 0, .15)'),
             'greyscale-3'                   => array('default' => '#e4e9f0'),
             'greyscale-4'                   => array('default' => '#f0f3f7'),
             'greyscale-5'                   => array('default' => '#f7f9fc'),
@@ -133,36 +133,36 @@ class DefaultConfigsModel
         'dark_palette' => array(
             // Messages & Actions
             'brand-prim'                    => array('default' => '#3860f4'),
-            'brand-cont'                    => array('default' => '#183086'),
+            'brand-cont'                    => array('default' => '#e7f0ff'),
             'brand-secd'                    => array('default' => '#051646'),
 
-            'info-prim'                     => array('default' => '#7894ff'),
-            'info-cont'                     => array('default' => '#183086'),
+            'info-prim'                     => array('default' => '#3860f4'),
+            'info-cont'                     => array('default' => '#d4d7ff'),
 
-            'reminder-prim'                 => array('default' => '#ffeb9e'),
-            'reminder-cont'                 => array('default' => '#a67100'),
+            'reminder-prim'                 => array('default' => '#a46a01'),
+            'reminder-cont'                 => array('default' => '#ffe4be'),
 
-            'warning-prim'                  => array('default' => '#e33e3e'),
-            'warning-cont'                  => array('default' => '#7b1900'),
+            'warning-prim'                  => array('default' => '#b62500'),
+            'warning-cont'                  => array('default' => '#fbd0d6'),
             'warning-secd'                  => array('default' => '#450909'),
 
-            'success-prim'                  => array('default' => '#55a256'),
-            'success-cont'                  => array('default' => '#054208'),
+            'success-prim'                  => array('default' => '#09590d'),
+            'success-cont'                  => array('default' => '#82c483'),
 
             // Greyscales
             'greyscale-1'                   => array('default' => '#a3a3a3'),
-            'greyscale-2'                   => array('default' => '#3f3f44'),
-            'greyscale-3'                   => array('default' => '#2b2b32'),
-            'greyscale-4'                   => array('default' => '#1c1a21'),
-            'greyscale-5'                   => array('default' => '#1f1d24'),
-            'greyscale-6'                   => array('default' => '#27252c'),
+            'greyscale-2'                   => array('default' => 'rgba(255, 255, 255, .15)'),
+            'greyscale-3'                   => array('default' => 'rgba(255, 255, 255, .043)'),
+            'greyscale-4'                   => array('default' => '#29272d'),
+            'greyscale-5'                   => array('default' => '#2b292f'),
+            'greyscale-6'                   => array('default' => '#302e35'),
 
             // Tasks
             // Grey
-            'task-grey-bg'                  => array('default' => '#27252c'),
-            'task-grey-bdr'                 => array('default' => '#363439'),
-            'task-dark-grey-bg'             => array('default' => '#1c1a21'),
-            'task-dark-grey-bdr'            => array('default' => '#2b2835'),
+            'task-grey-bg'                  => array('default' => '#302e35'),
+            'task-grey-bdr'                 => array('default' => 'rgba(255, 255, 255, .043)'),
+            'task-dark-grey-bg'             => array('default' => '#29272d'),
+            'task-dark-grey-bdr'            => array('default' => 'rgba(255, 255, 255, .07)'),
             // Red
             'task-pink-bg'                  => array('default' => '#995457'),
             'task-pink-bdr'                 => array('default' => '#ac6064'),
@@ -174,8 +174,8 @@ class DefaultConfigsModel
             'task-deep-orange-bg'           => array('default' => '#9b4500'),
             'task-deep-orange-bdr'          => array('default' => '#b5521d'),
             // Yellow
-            'task-yellow-bg'                => array('default' => '#926300'),
-            'task-yellow-bdr'               => array('default' => '#b17a03'),
+            'task-yellow-bg'                => array('default' => '#a46a01'),
+            'task-yellow-bdr'               => array('default' => '#bd7d08'),
             'task-amber-bg'                 => array('default' => '#683800'),
             'task-amber-bdr'                => array('default' => '#7d430c'),
             'task-brown-bg'                 => array('default' => '#513d2d'),
@@ -209,8 +209,8 @@ class DefaultConfigsModel
             'code-f'                        => array('default' => '#7641bb'),
 
             // shadow
-            'shadow-lit'                    => array('default' => 'rgba(0, 0, 0, .15)'),
-            'shadow-hev'                    => array('default' => 'rgba(0, 0, 0, .28)')
+            'shadow-lit'                    => array('default' => 'rgba(0, 0, 0, .25)'),
+            'shadow-hev'                    => array('default' => 'rgba(0, 0, 0, .4)')
         )
     );
 

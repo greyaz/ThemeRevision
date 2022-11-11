@@ -74,6 +74,9 @@
 .board-column-expanded-header .board-column-title{
 	display: inline-block;
 }
+.board-column-expanded-header .board-column-title a{
+	font-weight: normal;
+}
 #board td.board-column-task-collapsed {
     line-height: 3rem;
 }

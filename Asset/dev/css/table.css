@@ -67,9 +67,21 @@ table select{
 table td > a{
 	text-decoration: underline;
 }
+.subtasks-table .column-30{
+    width: unset;
+}
 .subtasks-table .subtask-table-td{
 	align-items: center;
+	min-width: unset;
 }
 .subtasks-table .subtask-table-td > *{
 	margin-right: .5rem;
+}
+.subtasks-table tr[data-subtask-id] td > p:last-child{
+    margin-bottom: 0;
+}
+.js-subtask-toggle-status{
+	align-items: center;
+	display: inline;
+    word-break: break-all;
 }

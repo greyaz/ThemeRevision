@@ -106,7 +106,7 @@ div[class^="table-list-row color-"] {
 }
 .table-list-row .table-list-details small {
 	padding-right: 1rem;
-	color: var(--color-greyscale-2);
+	color: var(--color-greyscale-1);
 }
 .table-list-row .table-list-details span:first-child{
 	margin-left: .5rem !important;

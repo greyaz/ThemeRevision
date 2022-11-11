@@ -58,6 +58,7 @@
     position: relative;
     margin-right: 0.5rem;
     color: var(--color-brand-prim);
+	text-shadow: 0 0 2rem var(--color-brand-prim);
 }
 .task-board-sort-handle i.fa-arrows-alt{
 	padding: 1rem;
@@ -163,30 +164,33 @@ body.TR .task-board-title a, body.TR .table-list-title a {
 }
 .task-board-category, .task-tags li, .table-list-category, .task-list-tag {
     border: none;
+	border-bottom: 1.55em solid var(--color-greyscale-2);
     border-radius: var(--size-radius-def);
+	height: 0;
     line-height: 1.5rem;
     padding: 0 4px;
-    margin: 0 .5rem 1rem 0 !important;
-    font-weight: normal;
+    margin: 0 .5rem .5rem 0 !important;
+    font-weight: bold;
     font-size: var(--size-font-min);;
 	color: var(--color-greyscale-6);
-    background: var(--color-greyscale-1);
+    background: none;
 	float: left;
-	opacity: .1;
+	opacity: .8;
+}
+body.TR .task-board-category a, body.TR .task-tags li a, body.TR .table-list-category a, body.TR .task-list-tag a{
+    color: var(--color-greyscale-6);
+    font-weight: bold;
 }
 .task-board-category:hover, .task-tags li:hover, .table-list-category:hover, .task-list-tag:hover{
 	opacity: 1;
+}
+body.TR .task-board-category a:hover, body.TR .task-tags li a:hover, body.TR .table-list-category a:hover, body.TR .task-list-tag a:hover{
+    color: var(--color-greyscale-6);
 }
 .table-list-category, .task-list-tag {
 	float: none;
 	display: inline-block;
 	margin-bottom: 0 !important;
-}
-.task-board-category:hover, .table-list-category:hover {
-	opacity: 1;
-}
-body.TR .task-board-category a:hover, body.TR .table-list-category a:hover {
-	color: var(--color-greyscale-6);
 }
 
 /* icons */
@@ -196,10 +200,14 @@ body.TR .task-board-category a:hover, body.TR .table-list-category a:hover {
 	text-align: left;
     line-height: 2rem;
     margin-top: 0;
-    opacity: .15;
+    opacity: .1;
 }
 .task-board-icons .task-board-icons-row {
 	line-height: 2rem;
+	display: inline;
+}
+.task-board-icons .task-board-icons-row br {
+	display: none;
 }
 .task-board-icons:hover, .task-list-icons:hover {
     opacity: 1;
@@ -218,7 +226,6 @@ body.TR .task-board-category a:hover, body.TR .table-list-category a:hover {
 .task-board-icons .task-board-icons-row .task-date-overdue, .task-list-icons .task-date-overdue,
 .task-board-icons .task-board-icons-row .task-date-overdue i.fa, .task-list-icons .task-date-overdue i.fa {
 	color: var(--color-warning-prim) !important;
-	background: var(--color-warning-cont);
 }
 .task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-total,
 .task-board-icons .task-board-icons-row .task-icon-age .task-icon-age-column,

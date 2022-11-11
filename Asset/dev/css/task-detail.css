@@ -229,10 +229,6 @@ body.TR .file-thumbnail-description .tooltip > i.fa {
 	color: var(--color-greyscale-1);
 }
 
-.js-subtask-toggle-status{
-	align-items: center;
-}
-
 .public-task > *{
     width: 100%;
 }
