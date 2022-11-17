@@ -80,7 +80,7 @@
     position: relative;
     margin-right: 0.5rem;
     color: var(--color-brand-prim);
-	text-shadow: 0 0 2rem var(--color-brand-prim);
+	text-shadow: 1px 2px 6px var(--color-greyscale-2);
 }
 
 /* header */
