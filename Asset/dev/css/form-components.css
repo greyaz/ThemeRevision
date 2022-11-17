@@ -279,9 +279,10 @@ ul.dropdown-submenu-open li, #select-dropdown-menu li {
 .dropdown-submenu-open li:hover a{
 	color: var(--color-greyscale-6);
 }
-ul.dropdown-submenu-open li:not(.no-hover) {
+/* move to main.js due to the compability with firefox */
+/*ul.dropdown-submenu-open li:not(.no-hover):has(i.fa) {
 	font-size: 0;
-}
+}*/
 ul.dropdown-submenu-open li.js-autocomplete-email{
 	font-size: 1rem;
 }

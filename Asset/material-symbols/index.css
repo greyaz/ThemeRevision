@@ -354,6 +354,9 @@
 .TR i.fa-file-pdf-o:before{
     content: "\e415";
 }
+.TR i.fa-table:before{
+    content: "\f191";
+}
 
 
 @media (max-width: 768px){

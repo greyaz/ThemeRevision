@@ -67,6 +67,9 @@ table select{
 table td > a{
 	text-decoration: underline;
 }
+table td a.dropdown-menu strong{
+    color: var(--link-color-primary);
+}
 .subtasks-table .column-30{
     width: unset;
 }

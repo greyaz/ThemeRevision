@@ -20,7 +20,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Modern mobile application's interactive behaviour. [screenshot1](Screenshots/10.png) [screenshot2](Screenshots/11.png)
 
 #### Common plugins' compatibilities
-* Calendar / Gantt / Group_assign / MetaMagic / MarkdownPlus ...
+* Calendar / Gantt / Group_assign / MarkdownPlus / MetaMagic / Table View ...
 
 #### Dark mode
 * An individually controlled panel for non-administrative users

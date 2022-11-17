@@ -1,6 +1,5 @@
 (function(window, document, KB, $, hljs){
     // Add Class
-    //$("body").addClass("TR");
     document.querySelector("body").classList.add("TR");
 
     // Login
@@ -15,27 +14,39 @@
         document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';
     }
 
-    //assignee and action select
-    if ($ && KB){
-        KB.on('modal.afterRender',function(){
-            $("#form-owner_id").select2();
-            $("#form-action_name").select2();
-            $(document).on("click", ".assign-me", function(e) {
-                $("#form-owner_id").trigger("change");
-            })
+    // Init page Menu
+    initMenu("section.sidebar-container > .sidebar");
+
+    if (KB){
+        KB.on('modal.afterRender', function(){
+            // Init modal menu
+            initMenu("#modal-overlay #modal-content section.sidebar-container > .sidebar");
+            //assignee and action select
+            if ($){
+                $("#form-owner_id").select2();
+                $("#form-action_name").select2();
+                $(document).on("click", ".assign-me", function(e) {
+                    $("#form-owner_id").trigger("change");
+                })
+            }
+        });
+        KB.on('dropdown.afterRender', function(){
+            // fix a bug that displays ghost spacing, compatible with firefox
+            if ($){
+                $("ul.dropdown-submenu-open li:not(.no-hover)").has("i.fa").css({
+                    fontSize: 0
+                });
+            }
         });
     }
-
+    
     //syntax highlight
     if (hljs){
         hljs.highlightAll();
     }
 
-    // Page Menu
-    initMenu("section.sidebar-container > .sidebar");
-
     // Modal Menu
-    var observer = new MutationObserver(function(mutationsList, observer){
+    /*var observer = new MutationObserver(function(mutationsList, observer){
         for(let mutation of mutationsList) {
             if (mutation.type === 'childList' && 
                 mutation.addedNodes.length > 0 &&
@@ -52,7 +63,7 @@
             }
         }
     });
-    observer.observe(document.body, {attributes: true, childList: true, subtree: true});
+    observer.observe(document.body, {attributes: true, childList: true, subtree: true});*/
 
     // Menu Init Function
     function initMenu(menuQS){

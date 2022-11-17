@@ -171,13 +171,13 @@
 	table-layout: fixed;
 }
 /* Group_Assign */
-.TR .task-board-expanded > span, .task-board-expanded > span {
+.TR .task-board-expanded > span {
 	float: left;
 }
-.TR .assigned-group-label, .assigned-group-label {
+.TR .assigned-group-label {
 	display: none;
 }
-.TR .assigned-group, .assigned-group {
+.TR .assigned-group {
 	display: inline-block;
 	padding: 1px;
 	font-weight: normal;
@@ -195,28 +195,13 @@
 .TR .assigned-group:hover{
 	max-width: unset;
 }
-.TR .task-board .task-board-expanded .assigned-other-label,
-.task-board .task-board-expanded .assigned-other-label {
+.TR .task-board .task-board-expanded .assigned-other-label {
 	display: none;
 }
-.TR .task-board .task-board-expanded > .avatar,
-.task-board .task-board-expanded > .avatar {
+.TR .task-board .task-board-expanded > .avatar {
 	margin-bottom: 1rem;
 	margin-right: .5rem;
-	vertical-align: middle;
 	line-height: 1rem;
-}
-.TR .task-board .task-board-expanded > .avatar .avatar-letter,
-.task-board .task-board-expanded > .avatar .avatar-letter {
-	font-size: var(--size-font-min);
-	width: 1rem;
-	line-height: 1rem;
-	padding: 1px;
-}
-.TR .task-board .task-board-expanded > .avatar img,
-.task-board .task-board-expanded > .avatar img {
-	width: calc(1rem + 2px);
-	height: auto;
 }
 
 /* color picker */
@@ -227,4 +212,19 @@
 }
 .TR .tr-color-picker .sp-preview{
 	border: 1px solid var(--color-greyscale-1);
+}
+
+/* table view*/
+.TR #table-view{
+	overflow: auto;
+}
+.TR #table-view .assigned-group{
+	line-height: 1.667rem;
+	margin: 0;
+	padding: 0 .35rem;
+	font-size: 1rem;
+	max-width: unset;
+    text-overflow: initial;
+    white-space: initial;
+    overflow: initial;
 }

@@ -174,40 +174,50 @@ body.TR i.fa{
 body.TR a:hover i.fa{
 	color: var(--link-color-hover);
 }
-.TR .avatar.avatar-left, .avatar.avatar-left {
+.TR .avatar.avatar-left {
 	margin-right: .5rem;
 }
-.TR .avatar.avatar-inline, .avatar.avatar-inline {
+.TR .avatar.avatar-inline {
 	margin: 0 .5rem 0 0;
+	vertical-align: middle;
 }
-.TR .avatar .avatar-letter, .avatar .avatar-letter {
+.TR .avatar .avatar-letter, .TR .avatar div {
 	white-space: nowrap;
+	border-radius: var(--size-radius-def) !important;
 }
-.TR .avatar.avatar-20 .avatar-letter, .TR .avatar.avatar-13 .avatar-letter,
-.avatar.avatar-20 .avatar-letter, .TR .avatar.avatar-13 .avatar-letter {
+.TR .avatar img{
+    vertical-align: middle;
+	border-radius: var(--size-radius-def) !important;
+}
+.TR .avatar.avatar-13 .avatar-letter {
+	font-size: var(--size-font-min);
+	line-height: 1rem;
+	width: 1rem;
+	padding: 1px;
+}
+.TR .avatar.avatar-13 img {
+	width: calc(1rem + 2px);
+    height: auto;
+	display: block;
+}
+.TR .avatar.avatar-20 .avatar-letter {
 	font-size: 1rem;
 	line-height: 1.667rem;
 	width: 1.667rem;
 }
+.TR .avatar.avatar-20 img {
+	width: 1.538rem;
+    height: auto;
+	display: block;
+}
+.TR .avatar.avatar-48 .avatar-letter {
+    font-size: 1.5rem; 
+	line-height: 3.692rem;
+	width: 3.692rem;
+	font-weight: bold;
+}
 .TR #user-section .sidebar-content > .avatar-48, #user-section .sidebar-content > .avatar-48{
 	padding: 1rem;
-}
-.TR .avatar img, .avatar img{
-    vertical-align: middle;
-}
-.TR .avatar-13 img, .avatar-13 div,
-.TR .avatar-20 img, .avatar-20 div,
-.TR .avatar-48 img, .avatar-48 div,
-.avatar-13 img, .avatar-13 div,
-.avatar-20 img, .avatar-20 div,
-.avatar-48 img, .avatar-48 div {
-	border-radius: var(--size-radius-def) !important;
-}
-.TR .avatar.avatar-48 .avatar-letter, .avatar.avatar-48 .avatar-letter {
-    font-size: 1.5rem; 
-	line-height: 4rem;
-	width: 4rem;
-	font-weight: bold;
 }
 .alert{
 	margin: 1rem 0;
@@ -256,6 +266,7 @@ body.TR a:hover i.fa{
 }
 .pagination-previous, .pagination-next {
     margin-right: .5em;
+	color: var(--color-greyscale-2);
 }
 
 
