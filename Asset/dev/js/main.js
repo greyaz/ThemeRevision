@@ -16,54 +16,83 @@
 
     // Init page Menu
     initMenu("section.sidebar-container > .sidebar");
-
     if (KB){
         KB.on('modal.afterRender', function(){
             // Init modal menu
             initMenu("#modal-overlay #modal-content section.sidebar-container > .sidebar");
-            //assignee and action select
+            // add search box to select
             if ($){
-                $("#form-owner_id").select2();
-                $("#form-action_name").select2();
-                $(document).on("click", ".assign-me", function(e) {
-                    $("#form-owner_id").trigger("change");
-                })
+                if (checkListSize($("#form-action_name"))){
+                    $("#form-action_name").select2();
+                }
+                if (checkListSize($("#form-owner_id"))){
+                    $("#form-owner_id").select2();
+                    $(document).on("click", ".assign-me[data-target-id='form-owner_id']", function() {
+                        $("#form-owner_id").trigger("change");
+                    })
+                }
             }
         });
         KB.on('dropdown.afterRender', function(){
-            // fix a bug that displays ghost spacing, compatible with firefox
             if ($){
-                $("ul.dropdown-submenu-open li:not(.no-hover)").has("i.fa").css({
+                $dropdownMenu = $("#dropdown > ul.dropdown-submenu-open");
+                // fix a bug that displays ghost spacing, compatible with firefox
+                $dropdownMenu.children("li:not(.no-hover)").has("i.fa").css({
                     fontSize: 0
                 });
+                // add search box to dropdown menu
+                if (checkListSize($dropdownMenu)){
+                    $dropdownMenu.prepend('<li id="dropdown-search"><input tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox"></li>');
+                    $searchInput = $("#dropdown > ul.dropdown-submenu-open > #dropdown-search input");
+                    $searchInput.on("click", function(event){
+                        event.preventDefault();
+                        event.stopImmediatePropagation();
+                    });
+                    $searchInput.on("keyup", searchKeyupHandler);
+                }
             }
         });
     }
     
-    //syntax highlight
+    // syntax highlight
     if (hljs){
         hljs.highlightAll();
     }
 
-    // Modal Menu
-    /*var observer = new MutationObserver(function(mutationsList, observer){
-        for(let mutation of mutationsList) {
-            if (mutation.type === 'childList' && 
-                mutation.addedNodes.length > 0 &&
-                mutation.addedNodes[0] == document.querySelector("#modal-overlay")
-            ){
-                initMenu("#modal-overlay #modal-content section.sidebar-container > .sidebar");
-                break;
-            }
-            if (document.querySelector("#modal-overlay") &&
-                (! document.querySelector("#modal-overlay .themeRevisionMenuBtn"))
-            ){
-                initMenu("#modal-overlay #modal-content section.sidebar-container > .sidebar");
-                break;
-            }
+    // check list size
+    function checkListSize($dropList){
+        if ($dropList && $dropList.children(":not(.no-hover)").length > 25){
+            return true;
         }
-    });
-    observer.observe(document.body, {attributes: true, childList: true, subtree: true});*/
+        return false;
+    }
+    // keyup event handler
+    function searchKeyupHandler(){
+        $(this).off("keyup");
+        $searchList = $("#dropdown ul.dropdown-submenu-open li:not(.no-hover):not(#dropdown-search) > a");
+        keyword = $(this).val();
+        search($searchList, keyword, $(this));
+    }
+
+    // search function
+    function search($searchList, keyword, $input){
+        $searchList.each(function(){
+            curentVal = $(this).text();
+            if (keyword && curentVal.indexOf(keyword) < 0){
+                $(this).parent().hide();
+            }
+            else {
+                $(this).parent().show();
+            }
+        });
+        curentInputVal = $input.val();
+        if (curentInputVal == keyword){
+            $input.on("keyup", searchKeyupHandler);
+        }
+        else{
+            search($searchList, curentInputVal, $input);
+        }
+    }
 
     // Menu Init Function
     function initMenu(menuQS){
@@ -94,5 +123,4 @@
             }
         }
     }    
-    
 })(window, document, typeof KB == "undefined" ? null : KB, typeof jQuery == "undefined" ? null: jQuery, typeof hljs == "undefined" ? null: hljs); // compatible with public visit page

@@ -89,6 +89,19 @@
 	color: var(--color-greyscale-1) !important;
     font-size: var(--size-font-min) !important;
 	border-top: 1px solid var(--color-greyscale-5) !important;
+	box-shadow: var(--style-shadow-light);
+}
+.TR .fc-event .fc-content {
+    padding: 1px 4px 0;
+}
+.TR .fc-event:hover{
+	z-index: 999;
+	font-weight: bold;
+	box-shadow: var(--style-shadow-heavy);
+}
+.TR .fc-event:hover .fc-title, .TR .fc-event:hover .fc-time{
+	color: var(--color-greyscale-1) !important;
+	line-height: 1.2rem;
 }
 .TR .fc-basic-view .fc-day-number, .TR .fc-basic-view .fc-week-number {
     padding: 0.5rem;
@@ -97,6 +110,21 @@
     font-size: var(--size-font-min) !important;
     display: block;
 	color: var(--color-greyscale-2);
+}
+.TR hr.fc-divider{
+	background: none;
+}
+.TR .fc-time-grid .fc-slats tr.fc-minor td{
+	background: var(--color-greyscale-4) !important;
+}
+.TR .fc-time-grid .fc-slats tr:not(.fc-minor) td{
+	background: var(--color-greyscale-5) !important;
+}
+.TR .fc-day.fc-widget-content{
+	background: var(--color-greyscale-5);
+}
+.TR .fc-time-grid-container{
+	border-top: var(--style-border);
 }
 /* Gantt */
 #gantt-chart{
@@ -147,16 +175,18 @@
 .TR div.ganttview-grid-row-cell {
     border-right: var(--style-border);
     border-top: var(--style-border);
+	background-color: var(--color-greyscale-5);
+}
+.TR div.ganttview-grid-row-cell.ganttview-weekend {
+    background-color: var(--color-greyscale-6);
 }
 .TR div.ganttview-grid-row-cell.ganttview-today {
     background-color: var(--color-greyscale-4);
 }
-.TR div.ganttview-grid-row-cell.ganttview-weekend {
-    background-color: var(--color-greyscale-5);
-}
 .TR div.ganttview-block{
 	border-radius: var(--size-radius-def);
 	border-top: 0;
+	box-shadow: var(--style-shadow-heavy);
 }
 .TR div.ganttview-block-text{
 	color: var(--color-greyscale-1);
@@ -173,6 +203,7 @@
 /* Group_Assign */
 .TR .task-board-expanded > span {
 	float: left;
+	font-size: 0;
 }
 .TR .assigned-group-label {
 	display: none;
@@ -183,14 +214,14 @@
 	font-weight: normal;
 	border-radius: var(--size-radius-def);
 	line-height: 1rem;
-	margin: 0 .5em 1em 0;
+	margin: 0 6px calc(1rem - 3px) 0;
 	color: var(--color-greyscale-6) !important;
 	font-size: var(--size-font-min);
 	vertical-align: middle;
-	max-width: 1.6rem;
+	/*max-width: 1.6rem;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: hidden;*/
 }
 .TR .assigned-group:hover{
 	max-width: unset;
@@ -199,9 +230,10 @@
 	display: none;
 }
 .TR .task-board .task-board-expanded > .avatar {
-	margin-bottom: 1rem;
-	margin-right: .5rem;
+	margin-bottom: calc(1rem - 3px);
+	margin-right: 6px;
 	line-height: 1rem;
+	vertical-align: top;
 }
 
 /* color picker */

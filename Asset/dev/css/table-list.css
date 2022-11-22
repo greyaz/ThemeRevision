@@ -73,9 +73,11 @@ div[class^="table-list-row color-"] {
 /* 1 */
 .table-list-row > div:first-child {
 	display: inline;
+	line-height: 1rem;;
 }
 .table-list-row > div:first-child *:not(.avatar-letter){
 	color: var(--color-greyscale-1);
+	margin-bottom: 0;
 }
 .table-list-row .table-list-title {
 	display: inline;
