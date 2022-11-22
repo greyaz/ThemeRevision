@@ -223,6 +223,9 @@
     white-space: nowrap;
     overflow: hidden;*/
 }
+.TR #task-summary .assigned-group{
+	margin-right: 0;
+}
 .TR .assigned-group:hover{
 	max-width: unset;
 }
