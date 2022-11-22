@@ -15,7 +15,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 #### Task-first
 * ThemeRivision has been trying to create a high quality but minimalist UI, helps you focus on your tasks.
 * Provide support for syntax highlighting.
-* Display a search box automatically if the items in a dropdown menu are more than 25.
+* More Search box. Display a search box in a drop-down menu automatically if items of it are more than 25.
 
 #### Better mobile experiences
 * Modern mobile application's interactive behaviour. [screenshot1](Screenshots/10.png) [screenshot2](Screenshots/11.png)
