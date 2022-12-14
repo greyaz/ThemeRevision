@@ -85,6 +85,7 @@ class Plugin extends Base
 
 		// google fonts replacement
 		if (isset($themeRevisionConfig['google_fonts'])){
+			$this->setContentSecurityPolicy(array('style-src' => '\'self\' \'unsafe-inline\' fonts.googleapis.com'));
 			$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_google_fonts', array('configs' => $themeRevisionConfig['google_fonts']));
 		}
 

@@ -25,6 +25,19 @@
     line-height: 4rem;
 	padding: 0;
 }
+#board th.board-swimlane-header *{
+	line-height: 4rem;
+    vertical-align: middle;
+}
+#board th.board-swimlane-header .tooltip{
+	font-size: 1rem;
+}
+#board th.board-swimlane-header .tooltip i.fa{
+	color: var(--color-greyscale-2);
+}
+#board th.board-swimlane-header .board-column-header-task-count{
+	font-size: 1rem;
+}
 #board .board-swimlane-columns-first th.board-column-header-collapsed{
     width: 4.5rem;
     min-width: 4.5rem;
@@ -99,7 +112,7 @@
     margin-right: 0;
     
 }
-.board-column-expanded-header .board-column-header-task-count:last-child{
+.board-column-expanded-header .board-column-header-task-count{
     margin-right: .5rem;
 }
 #board td.board-column-task-collapsed {
