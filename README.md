@@ -28,7 +28,7 @@ ThemeRevision is a task-first and high quality theme for [Kanboard](https://gith
 * Three modes provided: Light / Dark / Auto
 
 #### Customization friendly
-* Customized display content in the header of a column or the footer of a task card.
+* Customizable display content in the header of a column and the footer of a task card.
 * All colors are configurable in the settings panel. [screenshot](Screenshots/5.png)
 * Support Google fonts by just typing a font name.
 * Switchable icon packages, _Google Material_ (default) and _Font Awesome_.
