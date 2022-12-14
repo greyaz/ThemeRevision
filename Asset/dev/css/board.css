@@ -61,6 +61,9 @@
 #board th.board-column-header-collapsed{
 	text-align: left;
 }
+#board th.board-column-header-collapsed > .board-column-expanded-header{
+	display: none;
+}
 #board th.board-column-header.board-column-compact {
 	padding-top: 0;
 }
@@ -68,14 +71,36 @@
 	padding-left: 1rem;
 }
 .board-column-expanded-header > span{
-	margin-right: .5rem;
-	display: none;
+	margin-right: 0;
+    display: inline;
+    font-weight: normal;
+}
+.board-column-expanded-header>span[title="Task count"]:not(.board-column-header-task-count){
+    display: none;
 }
 .board-column-expanded-header .board-column-title{
 	display: inline-block;
 }
 .board-column-expanded-header .board-column-title a{
 	font-weight: normal;
+}
+.board-column-expanded-header .pull-right{
+    display: contents;
+}
+.board-column-expanded-header .pull-right > *:last-child{
+    margin-right: .5rem;
+}
+.board-column-expanded-header .pull-right > *:nth-child(3){
+    margin-left: .5rem;
+}
+.board-column-expanded-header .pull-right > .tooltip i.fa{
+    color: var(--color-greyscale-2);
+    margin-bottom: 1px;
+    margin-right: 0;
+    
+}
+.board-column-expanded-header .board-column-header-task-count:last-child{
+    margin-right: .5rem;
 }
 #board td.board-column-task-collapsed {
     line-height: 3rem;

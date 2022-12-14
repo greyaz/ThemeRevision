@@ -225,6 +225,7 @@
 }
 .TR #task-summary .assigned-group{
 	margin-right: 0;
+	margin-left: 1rem;
 }
 .TR .assigned-group:hover{
 	max-width: unset;

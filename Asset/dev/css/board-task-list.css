@@ -199,14 +199,21 @@ body.TR .task-board-category a, body.TR .table-list-category a{
 	font-size: var(--size-font-min);
     font-weight: bold;
 	line-height: calc(1rem + 6px);
+	display: contents;
 }
 body.TR .task-board-category a:hover, body.TR .table-list-category a:hover {
     color: var(--color-greyscale-6);
 }
 body.TR .task-board-category a {
-	display: block;
+	/*display: block;*/
     overflow: hidden;
     text-overflow: ellipsis;
+}
+body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category span.tooltip i.fa{
+    margin: 0;
+    color: var(--color-greyscale-6);
+    vertical-align: middle;
+    opacity: .5;
 }
 
 /* icons */

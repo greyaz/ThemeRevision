@@ -39,4 +39,20 @@ return array(
     'Dismiss' => 'Ausblenden',
     'Header Logo' => 'Kopfzeilenlogo',
     'ThemeRevision utilize the file "favicon.png" in the directory "your_kanboard_root/assets/img" as the header logo, replace it if needed.' => 'ThemeRevision nutzt die Datei "favicon.png" im Verzeichnis "your_kanboard_root/assets/img" als Favicon, diese kann nach Bedarf geändert werden.',
+    /*
+    'Column Header Info' => '',
+    'Display the following statistics in the column header if they exist. Hide all by default. "More Statistics" represents the number of tasks across all swimlanes and the limitation of tasks\' number in the current column.' => '',
+    'Column Description' => '',
+    'Tasks Number' => '',
+    'More Statistics' => '',
+    'Board Task Info' => '',
+    'Display the following information in the footer of a task card if it exists. Show all by default.' => '',
+    'Recurrence Status' => '',
+    'Links Number' => '',
+    'Subtasks Number' => '',
+    'Files Number' => '',
+    'Comments Number' => '',
+    'Task Age' => '',
+    'MetaMagik Metadata' => '',
+    */
 );

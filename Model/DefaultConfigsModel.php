@@ -5,7 +5,7 @@ namespace Kanboard\Plugin\ThemeRevision\Model;
 class DefaultConfigsModel
 {
     private $default_Configs_Schema = array(
-        'version'                           => array('default' => '20221151v1'),
+        'version'                           => array('default' => '20221206v1'),
 
         // Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. 
         // Make sure the "Asset" folder in plugin's root directory is WRITABLE and EXECUTABLE before switching !
@@ -37,6 +37,35 @@ class DefaultConfigsModel
             'codes'                         => array('default' => ''),
         ),
 
+        // Display the statistics of a column if they exist. Hide all by default.
+        'column_header_info' => array(
+            'score'                         => array('default' => false,         'candidates' => array(true, false)),
+            'column_description'            => array('default' => false,         'candidates' => array(true, false)),
+            'tasks_number'                  => array('default' => false,         'candidates' => array(true, false)),
+            'more_statistics'               => array('default' => false,         'candidates' => array(true, false)),
+        ),
+        
+        // Display the information of a task if it exists. Show all by default.
+        'board_task_info' => array(
+            'category'                      => array('default' => true,         'candidates' => array(true, false)),
+            'tags'                          => array('default' => true,         'candidates' => array(true, false)),
+            'reference'                     => array('default' => true,         'candidates' => array(true, false)),
+            'milestone'                     => array('default' => true,         'candidates' => array(true, false)),
+            'score'                         => array('default' => true,         'candidates' => array(true, false)),
+            'time_estimated'                => array('default' => true,         'candidates' => array(true, false)),
+            'due_date'                      => array('default' => true,         'candidates' => array(true, false)),
+            'recurrence_status'             => array('default' => true,         'candidates' => array(true, false)),
+            'links_number'                  => array('default' => true,         'candidates' => array(true, false)),
+            'subtasks_number'               => array('default' => true,         'candidates' => array(true, false)),
+            'files_number'                  => array('default' => true,         'candidates' => array(true, false)),
+            'comments_number'               => array('default' => true,         'candidates' => array(true, false)),
+            'description'                   => array('default' => true,         'candidates' => array(true, false)),
+            'task_age'                      => array('default' => true,         'candidates' => array(true, false)),
+            'priority'                      => array('default' => true,         'candidates' => array(true, false)),
+            'metaMagik'                     => array('default' => true,         'candidates' => array(true, false)),
+            'metaMagik_metadata'            => array('default' => true,         'candidates' => array(true, false)),
+        ),
+        
         // Color Palettes
         // *-prim (primary):      button background, link, selected, alert foreground, helps or hints ...
         // *-secd (secondary):    hovered button foreground, linked comment ...

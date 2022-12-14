@@ -22,6 +22,12 @@ class PluginConfigsController extends ConfigController
             //checkbox value fix
             $values['overwrite_default_task_color'] = isset($values['overwrite_default_task_color']);
             $values['enable_google_material_icons'] = isset($values['enable_google_material_icons']);
+            foreach($GLOBALS['themeRevisionConfig']['column_header_info'] as $key => $value){
+                $values['column_header_info'][$key] = isset($values['column_header_info'][$key]);
+            }
+            foreach($GLOBALS['themeRevisionConfig']['board_task_info'] as $key => $value){
+                $values['board_task_info'][$key] = isset($values['board_task_info'][$key]);
+            }
             //add version info
             $values['version'] = $this->helper->configsDataHelper->getVersion();
 

@@ -229,7 +229,7 @@
 .TR i.fa-copy:before{
     content:"\e2ec";
 }
-.TR i.fa-trash-o:before, .TR i.fa-remove:before{
+.TR i.fa-trash-o:before, .TR i.fa-trash:before, .TR i.fa-remove:before{
     content:"\e872";
 }
 .TR i.fa-toggle-off:before{

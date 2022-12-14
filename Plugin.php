@@ -5,6 +5,7 @@ use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 use Kanboard\Plugin\ThemeRevision\Helper\ModeSwitchHelper;
 use Kanboard\Plugin\ThemeRevision\Helper\ColorSwitchHelper;
+use Kanboard\Plugin\ThemeRevision\Model\TaskInfoCSSModel;
 
 
 class Plugin extends Base
@@ -98,6 +99,25 @@ class Plugin extends Base
 	public function onStartup(){
 		// load translations
 		Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+
+		// column and task info dispaly
+		$data = $GLOBALS['themeRevisionConfig'];
+		$columnList = array();
+		$taskList = array();
+		foreach($data['column_header_info'] as $key => $value){
+			if ($value == false){
+				$columnList[] = $key;
+			}
+		}
+		foreach($data['board_task_info'] as $key => $value){
+			if ($value == false){
+				$taskList[] = $key;
+			}
+		}
+        $css = TaskInfoCSSModel::getFullCSS($columnList, $taskList);
+		if (!empty($css)){
+			$this->template->hook->attach('template:layout:head', 'ThemeRevision:layout/head_task_info_display', array('styles' => $css));
+		}
 	}
 
 	public function getPluginName()	{ 	 
@@ -109,7 +129,7 @@ class Plugin extends Base
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.8'; 
+		return '1.1.9'; 
 	}
 
 	public function getPluginDescription() { 

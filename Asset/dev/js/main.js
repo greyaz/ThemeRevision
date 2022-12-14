@@ -2,16 +2,22 @@
     // Add Class
     document.querySelector("body").classList.add("TR");
 
+    // Get Favicon
+    var favicon = "/assets/img/favicon.png";
+    if (document.querySelector("head link[rel='icon']")){
+        favicon = document.querySelector("head link[rel='icon']").getAttribute("href");
+    }
+
     // Login
     if (document.querySelector("body > .form-login")){
         var html = document.querySelector("body > .form-login").innerHTML;
-        html = '<div class="page-header"></div><img class="logo" src="/assets/img/favicon.png">' + html;
+        html = '<div class="page-header"></div><img class="logo" src="' + favicon + '">' + html;
         document.querySelector("body > .form-login").innerHTML = html;
     }
 
     // Replace Logo
     if (document.querySelector("header .logo > a")){
-        document.querySelector("header .logo > a").innerHTML = '<img src="/assets/img/favicon.png" />';
+        document.querySelector("header .logo > a").innerHTML = '<img src="' + favicon + '" />';
     }
 
     // Init page Menu
