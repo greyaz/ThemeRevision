@@ -4,7 +4,7 @@
 ![Kanboard Support Good](https://img.shields.io/static/v1?label=Kanboard&message=%E2%89%A51.2.22%20Good&color=green&style=flat-square)
 ![Kanboard Support OK](https://img.shields.io/static/v1?label=Kanboard&message=%E2%89%A51.2.8%20OK&color=%23f7c400&style=flat-square)
 
-ThemeRevision is a task-first and high quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's also aimed at better mobile experiences, common plugins' compatibilities, and customization friendly.
+ThemeRevision is a task-first and high-quality theme for [Kanboard](https://github.com/kanboard/kanboard). It's also aimed at better mobile experiences, common plugins' compatibilities, and customization friendly.
 
 ## Screenshots
 <img src="Screenshots/7.png" width="97%"><br>
