@@ -32,6 +32,9 @@
 .table-list-row:last-child{
 	border-radius: inherit;
 }
+.table-list-row.table-border-left > div:first-child{
+	margin-right: 1rem;
+}
 
 /* color fix for .page > .table-list, .page > .panel */
 .page > .table-list, .page > .panel, .page > #main > .table-list {

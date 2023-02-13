@@ -15,10 +15,10 @@
 	padding: 1rem;
 	border: none;
 	border-bottom: 1px solid;
-	transition: box-shadow 0.15s, transform 0.15s;
+	transition: all 0.15s;
 	transition-timing-function: ease-in-out;
 	font-size: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: .5rem;
 	box-shadow: var(--style-shadow-light);
 }
 .task-board:hover {
@@ -92,6 +92,9 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: 0;
+}
+.task-board-expanded .task-board-header>a i.fa{
+    color: var(--color-greyscale-2);
 }
 /*.task-board-header > a {
 	font-weight: bold;
@@ -256,7 +259,8 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 	line-height: calc(1rem + 6px);
 }
 .task-board-icons .task-board-icons-row > .metamagik-footer-title, .task-list-icons > .metamagik-footer-title{
-	margin: 0 .1rem 0 0 !important;
+	/*margin: 0 .1rem 0 0 !important;*/
+	display: none;
 }
 .task-board-icons .task-board-icons-row .task-date-overdue, .task-list-icons .task-date-overdue,
 .task-board-icons .task-board-icons-row .task-date-overdue i.fa, .task-list-icons .task-date-overdue i.fa {

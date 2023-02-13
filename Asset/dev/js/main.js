@@ -65,6 +65,15 @@
         hljs.highlightAll();
     }
 
+    // turn metamagik title to tips
+    var metamagikTitles = document.querySelectorAll(".metamagik-footer-title");
+    if (metamagikTitles.length > 0){
+        document.querySelectorAll(".metamagik-footer-value").forEach((item, index) => {
+            var text = metamagikTitles[index].querySelector("strong").innerText.trim();
+            item.title = text.substring(0, text.length - 1);
+        });
+    }
+
     // check list size
     function checkListSize($dropList){
         if ($dropList && $dropList.children(":not(.no-hover)").length > 25){

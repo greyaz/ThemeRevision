@@ -34,7 +34,9 @@
 }
 
 .TR .menu-inline ul a i.fa,
-.TR .board-column-task-collapsed i.fa[role="button"]{
+.TR .board-column-task-collapsed i.fa[role="button"],
+.TR .notification i.web-notification-icon:before,
+.TR .notification i.fa-bell:before {
     vertical-align: middle;
 }
 

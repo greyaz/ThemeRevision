@@ -5,7 +5,7 @@ namespace Kanboard\Plugin\ThemeRevision\Model;
 class DefaultConfigsModel
 {
     private $default_Configs_Schema = array(
-        'version'                           => array('default' => '20221206v1'),
+        'version'                           => array('default' => '20230210v1'),
 
         // Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. 
         // Make sure the "Asset" folder in plugin's root directory is WRITABLE and EXECUTABLE before switching !
@@ -98,7 +98,7 @@ class DefaultConfigsModel
 
             // Greyscales
             'greyscale-1'                   => array('default' => '#02021d'),
-            'greyscale-2'                   => array('default' => 'rgba(0, 0, 0, .15)'),
+            'greyscale-2'                   => array('default' => 'rgba(5, 12, 77, .15)'),
             'greyscale-3'                   => array('default' => '#e4e9f0'),
             'greyscale-4'                   => array('default' => '#f0f3f7'),
             'greyscale-5'                   => array('default' => '#f7f9fc'),
@@ -179,7 +179,7 @@ class DefaultConfigsModel
             'success-cont'                  => array('default' => '#82c483'),
 
             // Greyscales
-            'greyscale-1'                   => array('default' => '#a5a5a5'),
+            'greyscale-1'                   => array('default' => '#b7b7b7'),
             'greyscale-2'                   => array('default' => 'rgba(255, 255, 255, .15)'),
             'greyscale-3'                   => array('default' => 'rgba(255, 255, 255, .043)'),
             'greyscale-4'                   => array('default' => '#27262c'),

@@ -10,6 +10,7 @@
 }
 #board th.board-column-header{
 	line-height: 0;
+	padding-bottom: 0.25rem;
 }
 #board td:first-child,
 #board th:first-child {
