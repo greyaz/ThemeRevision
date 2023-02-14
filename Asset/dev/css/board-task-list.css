@@ -230,7 +230,7 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 	text-align: left;
     line-height: 0;
     margin-top: calc(1rem - 9px);
-    opacity: .08;
+    opacity: 0.8;
 	display: inline-block;
 	width: 100%;
 }
