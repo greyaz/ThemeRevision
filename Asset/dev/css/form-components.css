@@ -45,7 +45,7 @@ input[type=checkbox], input[type=radio] {
 	margin: 0 0.25rem 1rem 0;
 }
 input::placeholder, textarea::placeholder{
-	color: var(--color-greyscale-2) !important;
+	color: var(--color-greyscale-1) !important;
 }
 .task-form-main-column input[type="text"] {
 	width: unset;
