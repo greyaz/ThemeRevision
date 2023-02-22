@@ -230,7 +230,7 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 	text-align: left;
     line-height: 0;
     margin-top: calc(1rem - 9px);
-    opacity: 0.8;
+    opacity: 0.08;
 	display: inline-block;
 	width: 100%;
 }
@@ -242,8 +242,8 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 .task-board-icons .task-board-icons-row br {
 	display: none;
 }
-.task-board-icons:hover, .task-list-icons:hover {
-    opacity: 1;
+.task-board:hover .task-board-icons, .table-list-row:hover > .task-list-icons { 
+	opacity: 1; 
 }
 .task-board-icons .task-board-icons-row *, .task-list-icons *{
 	margin: 0 .1rem 0 0 !important;
