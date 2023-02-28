@@ -94,7 +94,8 @@
 	margin-bottom: 0;
 }
 .task-board-expanded .task-board-header>a i.fa{
-    color: var(--color-greyscale-2);
+    color: var(--color-greyscale-1);
+    opacity: 0.08;
 }
 /*.task-board-header > a {
 	font-weight: bold;
@@ -242,7 +243,7 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 .task-board-icons .task-board-icons-row br {
 	display: none;
 }
-.task-board:hover .task-board-icons, .table-list-row:hover > .task-list-icons { 
+.task-board:hover .task-board-icons, .task-board:hover .task-board-header>a i.fa, .table-list-row:hover > .task-list-icons { 
 	opacity: 1; 
 }
 .task-board-icons .task-board-icons-row *, .task-list-icons *{
