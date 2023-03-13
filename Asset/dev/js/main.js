@@ -1,23 +1,12 @@
 (function(window, document, KB, $, hljs){
-    // Add Class
-    document.querySelector("body").classList.add("TR");
-
-    // Get Favicon
-    var favicon = "/assets/img/favicon.png";
-    if (document.querySelector("head link[rel='icon']")){
-        favicon = document.querySelector("head link[rel='icon']").getAttribute("href");
+    // Adding logo through js if php templates have been overridden by other plugins
+    if (!document.body.classList.contains("TR")){
+        // Add Class
+        document.body.classList.add("TR");
     }
-
-    // Login
-    if (document.querySelector("body > .form-login")){
-        var html = document.querySelector("body > .form-login").innerHTML;
-        html = '<div class="page-header"></div><img class="logo" src="' + favicon + '">' + html;
-        document.querySelector("body > .form-login").innerHTML = html;
-    }
-
-    // Replace Logo
-    if (document.querySelector("header .logo > a")){
-        document.querySelector("header .logo > a").innerHTML = '<img src="' + favicon + '" />';
+    if (document.querySelector("header .logo > a") && !document.querySelector("header .logo > a > img")){
+        // Replace Logo
+        document.querySelector("header .logo > a").innerHTML = '<img src="' + getFavicon() + '" />';
     }
 
     // Init page Menu
@@ -74,6 +63,8 @@
         });
     }
 
+    /* ---------- functions ---------- */
+
     // check list size
     function checkListSize($dropList){
         if ($dropList && $dropList.children(":not(.no-hover)").length > 25){
@@ -88,7 +79,6 @@
         keyword = $(this).val();
         search($searchList, keyword, $(this));
     }
-
     // search function
     function search($searchList, keyword, $input){
         $searchList.each(function(){
@@ -108,7 +98,6 @@
             search($searchList, curentInputVal, $input);
         }
     }
-
     // Menu Init Function
     function initMenu(menuQS){
         var menu = document.querySelector(menuQS);
@@ -137,5 +126,12 @@
                 }
             }
         }
-    }    
+    }
+    //Get Favicon
+    function getFavicon(){
+        if (document.querySelector("head link[rel='icon']")){
+            return document.querySelector("head link[rel='icon']").getAttribute("href");
+        }
+        return "/assets/img/favicon.png";
+    }
 })(window, document, typeof KB == "undefined" ? null : KB, typeof jQuery == "undefined" ? null: jQuery, typeof hljs == "undefined" ? null: hljs); // compatible with public visit page

@@ -2,7 +2,7 @@
 .TR .fc-toolbar.fc-header-toolbar, .TR .page > #main > .menu-inline {
 	background: var(--color-greyscale-6);
     border: none;
-    border-radius: var(--size-radius-def);
+    border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
     border-bottom: var(--style-border);
     padding: 1.5rem;
     margin: 0;
@@ -37,6 +37,7 @@
 	line-height: 1rem;
 	padding: .5rem 1rem;
 	height: auto;
+	border-radius: 0;
 }
 .TR .fc-button-group .fc-button:not(.fc-state-active){
 	font-weight: normal !important;
@@ -134,9 +135,11 @@
 .TR .page > #main > #gantt-chart{
 	margin: 0 0 1rem;
 	box-shadow: var(--style-shadow-heavy);
+	border-radius: 0 0 var(--size-radius-def) var(--size-radius-def);
 }
 .TR .page > #main > section > #gantt-chart{
 	padding-top: 1.5rem;
+	border-radius: var(--size-radius-def);
 }
 .TR div.ganttview{
 	border: none;
@@ -218,10 +221,6 @@
 	color: var(--color-greyscale-6) !important;
 	font-size: var(--size-font-min);
 	vertical-align: middle;
-	/*max-width: 1.6rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;*/
 }
 .TR #task-summary .assigned-group{
 	margin-right: 0;
@@ -263,4 +262,13 @@
     text-overflow: initial;
     white-space: initial;
     overflow: initial;
+}
+
+/* embed anything*/
+.TR #main #embed-anything{
+    border-radius: var(--size-radius-def);
+}
+.TR #main #embed-anything > iframe {
+    border-radius: var(--size-radius-def);
+    box-shadow: inset 0 0 1px 0 var(--color-greyscale-1);
 }

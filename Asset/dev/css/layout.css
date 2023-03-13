@@ -54,6 +54,17 @@ header {
 #main .sidebar-content, #main > .accordion-section, .page > .table-list{
 	box-shadow: var(--style-shadow-heavy);
 }
+#main>.accordion-section{
+    border-radius: 0;
+}
+#main>.accordion-section:first-of-type{
+    border-top-left-radius: var(--size-radius-def);
+    border-top-right-radius: var(--size-radius-def); 
+}
+#main>.accordion-section:last-of-type{
+    border-bottom-left-radius: var(--size-radius-def);
+    border-bottom-right-radius: var(--size-radius-def);
+}
 #main .sidebar-content{
 	padding: 2rem;
 }

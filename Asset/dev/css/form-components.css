@@ -78,6 +78,10 @@ input::placeholder, textarea::placeholder{
 }
 .text-editor .text-editor-toolbar{
 	border-color: var(--color-greyscale-5);
+	border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
+}
+.text-editor textarea{
+    border-radius: 0 0 var(--size-radius-def) var(--size-radius-def);
 }
 .text-editor-write-mode{
 	line-height: 0;

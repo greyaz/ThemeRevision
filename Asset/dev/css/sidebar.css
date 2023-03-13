@@ -6,7 +6,7 @@
 }
 .sidebar .sidebar-title{
 	padding: 1rem 1.25rem;
-	border-radius: var(--size-radius-def) var(--size-radius-def) 0 0;
+	border-radius: 0;
 	border-bottom: var(--style-border);
 }
 .sidebar .sidebar-title h2{

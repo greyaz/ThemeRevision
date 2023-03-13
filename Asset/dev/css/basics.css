@@ -3,7 +3,7 @@
 	--size-font-min: max(12px, 0.875rem);
 	--size-width-def: unset;
 	--size-width-comp: 220px;
-	--size-radius-def: 2px;
+	--size-radius-def: 4px;
 
 	--style-fontfamily: "SF Pro Display", Calibri, Helvetica, Verdana, Arial, sans-serif;
 	--style-fontfamily-code: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;

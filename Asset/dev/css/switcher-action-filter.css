@@ -35,10 +35,12 @@
 .views-switcher-component .views{
 	margin: 0 1rem 0 0;
 	font-size: 1rem;
+	border-radius: 0 var(--size-radius-def) var(--size-radius-def) 0;
 }
 .project-header > .dropdown-component {
     padding: 0 0 0 1rem;
     margin-right: 0;
+	border-radius: var(--size-radius-def) 0 0 var(--size-radius-def);
 }
 
 .views-switcher-component .views li, .page-header li, .menu-inline li, .filter-box .input-addon .input-addon-item, .filter-box .input-addon input[type=text] {
@@ -72,17 +74,11 @@
     text-align: center;
 	box-sizing: border-box;
 }
-.filter-box .input-addon input[type=text] {
-    font-size: 1rem;
-    height: 1rem;
-	box-shadow: none;
-	border-radius: var(--size-radius-def), 0, 0, var(--size-radius-def);
-	box-sizing: content-box;
-}
 .views-switcher-component .views li:first-child {
 	border-top-left-radius: var(--size-radius-def);
 	border-bottom-left-radius: var(--size-radius-def);
 	border-left: 1px solid var(--color-greyscale-6);
+	border-radius: 0;
 }
 .views-switcher-component .views li:last-child {
 	border-top-right-radius: var(--size-radius-def);
@@ -93,7 +89,6 @@
 .views-switcher-component .views li.active {
 	background: linear-gradient(to top, var(--color-greyscale-1) 2px, var(--color-greyscale-6) 2px);
 }
-
 
 .page-header ul a, .menu-inline ul a{
 	padding: .75rem 1.5rem;
@@ -107,6 +102,17 @@
     display: block;
 	color: var(--color-greyscale-1);
 	font-weight: normal;
+}
+.project-header .filter-box-component .input-addon {
+    border-radius: var(--size-radius-def);
+}
+.filter-box .input-addon input[type=text] {
+    font-size: 1rem;
+    height: 1rem;
+	box-shadow: none;
+	border-radius: var(--size-radius-def), 0, 0, var(--size-radius-def);
+	box-sizing: content-box;
+	background: none;
 }
 .filter-box .input-addon .input-addon-item:last-child {
 	border-radius: 0 var(--size-radius-def) var(--size-radius-def) 0;

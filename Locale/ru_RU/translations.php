@@ -53,4 +53,8 @@ return array(
     'Comments Number' => 'Количество комментариев',
     'Task Age' => 'Возраст задачи',
     'MetaMagik Metadata' => 'Метаданные MetaMagik',
+    //'Default Opacity' => '',
+    //'The default opacity of the above information before hovering. You can hide the footer space by setting the opacity to 0%%.' => '',
+    //'Corner Radius' => '',
+    //'The corner radius for elements on the page. Any unit allowed by CSS is acceptable: px, em, rem, %%, ...' => '',
 );

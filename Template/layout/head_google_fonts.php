@@ -1,10 +1,10 @@
 <?php
     $styles = "";
-    $links = "";
+    $fonts = "@import url('https://fonts.googleapis.com/css2?";
 
     foreach($configs as $key => $value){
         if (!empty(trim($value))){
-            $links .= "family=".str_replace(" ", "+", trim($value)).":wght@400;700&";
+            $fonts .= "family=".str_replace(" ", "+", trim($value)).":wght@400;700&";
             switch ($key){
                 case "ui":
                     $styles.= "--style-fontfamily:'".trim($value)."',sans-serif !important;";
@@ -16,9 +16,9 @@
         }
     }
     if (!empty($styles)){
-        $styles = ":root{".$styles."}";
+        $styles = $fonts."display=swap');".":root{".$styles."}";
     }
 ?>
-<?php if($styles && $links): ?>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?<?= $links ?>display=swap" rel="stylesheet"><style><?= $styles ?></style>
+<?php if($styles): ?>
+    <style><?= $styles ?></style>
 <?php endif ?>

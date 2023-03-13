@@ -5,7 +5,7 @@ namespace Kanboard\Plugin\ThemeRevision\Model;
 class DefaultConfigsModel
 {
     private $default_Configs_Schema = array(
-        'version'                           => array('default' => '20230210v1'),
+        'version'                           => array('default' => '20230306v1'),
 
         // Development mode will introduce raw CSS files for easier customization and minify automatically after switching back. 
         // Make sure the "Asset" folder in plugin's root directory is WRITABLE and EXECUTABLE before switching !
@@ -65,6 +65,12 @@ class DefaultConfigsModel
             'metaMagik'                     => array('default' => true,         'candidates' => array(true, false)),
             'metaMagik_metadata'            => array('default' => true,         'candidates' => array(true, false)),
         ),
+
+        // The opacity of the above information.
+        'task_footer_opacity' => array('default' => 0.08),
+
+        // The corner radius for all elements.
+        'corner_radius' => array('default' => '4px'),
         
         // Color Palettes
         // *-prim (primary):      button background, link, selected, alert foreground, helps or hints ...
@@ -179,7 +185,7 @@ class DefaultConfigsModel
             'success-cont'                  => array('default' => '#82c483'),
 
             // Greyscales
-            'greyscale-1'                   => array('default' => '#b7b7b7'),
+            'greyscale-1'                   => array('default' => '#ccc'),
             'greyscale-2'                   => array('default' => 'rgba(255, 255, 255, .15)'),
             'greyscale-3'                   => array('default' => 'rgba(255, 255, 255, .043)'),
             'greyscale-4'                   => array('default' => '#27262c'),

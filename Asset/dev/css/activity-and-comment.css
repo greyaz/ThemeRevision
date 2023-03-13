@@ -20,6 +20,15 @@
 }
 #modal-content > .activity-event, #task-view .activity-event{
     background: var(--color-greyscale-4);
+    border-radius: 0;
+}
+#modal-content>.page-header + .activity-event, #task-view .page-header + .activity-event {
+    border-top-left-radius: var(--size-radius-def);
+    border-top-right-radius: var(--size-radius-def);
+}
+#modal-content>.page-header ~ .activity-event:last-child, #task-view .page-header ~ .activity-event:last-child {
+    border-bottom-left-radius: var(--size-radius-def);
+    border-bottom-right-radius: var(--size-radius-def);
 }
 .comments .comment:hover, .activity-event:hover,
 .comments .comment:nth-child(even):not(.comment-highlighted):hover,

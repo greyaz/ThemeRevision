@@ -2,7 +2,7 @@
   font-family: "Material Symbols Sharp";
   font-style: normal;
   font-weight: 600 900;
-  font-display: block;
+  font-display: swap;
   src: url("./material-symbols-sharp.woff2") format("woff2");
 }
 

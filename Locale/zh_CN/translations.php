@@ -53,4 +53,8 @@ return array(
     'Comments Number' => '评论数',
     'Task Age' => '任务时长',
     'MetaMagik Metadata' => 'MetaMagik元数据',
+    'Default Opacity' => '默认透明度',
+    'The default opacity of the above information before hovering. You can hide the footer space by setting the opacity to 0%%.' => '以上信息在鼠标悬停前的默认透明度。如希望隐藏任务的尾部空间，可以将透明度设置为0%%。',
+    'Corner Radius' => '圆角半径',
+    'The corner radius for elements on the page. Any unit allowed by CSS is acceptable: px, em, rem, %%, ...' => '页面上所有元素的圆角半径。任意在CSS中合法的单位都可以使用：px、em、rem、%% ……',
 );

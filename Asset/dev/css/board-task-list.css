@@ -95,12 +95,8 @@
 }
 .task-board-expanded .task-board-header>a i.fa{
     color: var(--color-greyscale-1);
-    opacity: 0.08;
+    opacity: .08;
 }
-/*.task-board-header > a {
-	font-weight: bold;
-	line-height: 1.667rem;
-}*/
 .task-board-header > .dropdown {
 	margin-bottom: 1rem;
 	min-width: 3.3rem;
@@ -231,9 +227,10 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 	text-align: left;
     line-height: 0;
     margin-top: calc(1rem - 9px);
-    opacity: 0.08;
 	display: inline-block;
 	width: 100%;
+	transition: opacity .15s;
+	transition-timing-function: ease-in-out;
 }
 .task-board-icons .task-board-icons-row {
 	line-height: 0;
@@ -243,8 +240,8 @@ body.TR .task-board-category span.tooltip i.fa, body.TR .table-list-category spa
 .task-board-icons .task-board-icons-row br {
 	display: none;
 }
-.task-board:hover .task-board-icons, .task-board:hover .task-board-header>a i.fa, .table-list-row:hover > .task-list-icons { 
-	opacity: 1; 
+.task-board:hover .task-board-icons, .task-board:hover .task-board-header>a i.fa, .table-list-row:hover .task-list-icons {
+    opacity: 1;
 }
 .task-board-icons .task-board-icons-row *, .task-list-icons *{
 	margin: 0 .1rem 0 0 !important;
