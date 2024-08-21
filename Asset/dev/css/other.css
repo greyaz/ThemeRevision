@@ -1,0 +1,7 @@
+.TR #user-section form label[for="form-theme"]{
+    display: none;
+}
+.TR #user-section form select#form-theme{
+    display: none;
+}
+

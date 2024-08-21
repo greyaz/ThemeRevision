@@ -80,11 +80,11 @@ class Plugin extends Base
 	}
 
 	public function getPluginAuthor() { 	 
-		return 'greyaz'; 
+		return 'Greyaz'; 
 	}
 
 	public function getPluginVersion() { 	 
-		return '1.1.11'; 
+		return '1.1.12'; 
 	}
 
 	public function getPluginDescription() { 

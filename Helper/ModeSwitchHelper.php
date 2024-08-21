@@ -2,101 +2,75 @@
 
 namespace Kanboard\Plugin\ThemeRevision\Helper;
 use Kanboard\Plugin\ThemeRevision\Helper\BaseHelper;
+use MatthiasMullie\Minify;
 
 class ModeSwitchHelper extends BaseHelper
 {
-    private $prdCSSFile = 'plugins/ThemeRevision/Asset/main.min.css';
+    private $prdCSSFile = '/Asset/main.min.css';
     private $devCSSFiles = array(
-        'plugins/ThemeRevision/Asset/dev/css/basics.css',
-		'plugins/ThemeRevision/Asset/dev/css/form-components.css',
-		'plugins/ThemeRevision/Asset/dev/css/table.css',
-		'plugins/ThemeRevision/Asset/dev/css/layout.css',
-        'plugins/ThemeRevision/Asset/dev/css/login.css',
-		'plugins/ThemeRevision/Asset/dev/css/header.css',
-		'plugins/ThemeRevision/Asset/dev/css/plugins.css',
-		'plugins/ThemeRevision/Asset/dev/css/switcher-action-filter.css',
-		'plugins/ThemeRevision/Asset/dev/css/board.css',
-		'plugins/ThemeRevision/Asset/dev/css/task-detail.css',
-		'plugins/ThemeRevision/Asset/dev/css/project-overview.css',
-		'plugins/ThemeRevision/Asset/dev/css/sidebar.css',
-		'plugins/ThemeRevision/Asset/dev/css/table-list.css',
-		'plugins/ThemeRevision/Asset/dev/css/board-task-list.css',
-		'plugins/ThemeRevision/Asset/dev/css/activity-and-comment.css',
-		'plugins/ThemeRevision/Asset/dev/css/modal.css',
-        'plugins/ThemeRevision/Asset/dev/css/markdown.css',
-		'plugins/ThemeRevision/Asset/dev/css/break-points.css'
+        '/Asset/dev/css/basics.css',
+        '/Asset/dev/css/form-components.css',
+        '/Asset/dev/css/table.css',
+        '/Asset/dev/css/layout.css',
+        '/Asset/dev/css/login.css',
+        '/Asset/dev/css/header.css',
+        '/Asset/dev/css/plugins.css',
+        '/Asset/dev/css/switcher-action-filter.css',
+        '/Asset/dev/css/board.css',
+        '/Asset/dev/css/task-detail.css',
+        '/Asset/dev/css/project-overview.css',
+        '/Asset/dev/css/sidebar.css',
+        '/Asset/dev/css/table-list.css',
+        '/Asset/dev/css/board-task-list.css',
+        '/Asset/dev/css/activity-and-comment.css',
+        '/Asset/dev/css/modal.css',
+        '/Asset/dev/css/markdown.css',
+        '/Asset/dev/css/other.css',
+        '/Asset/dev/css/break-points.css'
     );
 
     public function productionMode(){
-        if(!file_exists($this->prdCSSFile)){
-            $file = fopen($this->prdCSSFile, "w");
+        $prdCSSFile = $this->getPluginPath().$this->prdCSSFile;
+		
+        if(!file_exists($prdCSSFile)){
+            $file = fopen($prdCSSFile, "w");
             fwrite($file, $this->minifyCSS());
             fclose($file);
         }
-        $this->getPlugin()->hook->on('template:layout:css', array('template' => $this->prdCSSFile));
+        $this->getPlugin()->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision'.$this->prdCSSFile));
     }
 
     public function developmentMode(){
-        if(file_exists($this->prdCSSFile)){
-            unlink($this->prdCSSFile);
+        $prdCSSFile = $this->getPluginPath().$this->prdCSSFile;
+
+        if(file_exists($prdCSSFile)){
+            unlink($prdCSSFile);
         }
         foreach ($this->devCSSFiles as $value)
         {
-            $this->getPlugin()->hook->on('template:layout:css', array('template' => $value));
+            $this->getPlugin()->hook->on('template:layout:css', array('template' => 'plugins/ThemeRevision'.$value));
         }
+    }
+
+    private function getPluginPath(){
+    	$arr = explode("/", __DIR__);
+    	$arr = array_slice($arr, 0, -1);
+    	return implode("/", $arr);
     }
 
     private function getAllCSSContents(){
         $str = '';
         foreach ($this->devCSSFiles as $value)
         {
-            $str = $str.file_get_contents($value);
+            $str = $str.file_get_contents($this->getPluginPath().$value);
         }
         return $str;
     }
 
-    // Code comes from Rodrigo54. https://gist.github.com/Rodrigo54/93169db48194d470188f
     private function minifyCSS(){
-        $input = $this->getAllCSSContents();
-        if(trim($input) === "") return $input;
-
-        return preg_replace(
-            array(
-                // Remove comment(s)
-                '#("(?:[^"\\\]++|\\\.)*+"|\'(?:[^\'\\\\]++|\\\.)*+\')|\/\*(?!\!)(?>.*?\*\/)|^\s*|\s*$#s',
-                // Remove unused white-space(s)
-                '#("(?:[^"\\\]++|\\\.)*+"|\'(?:[^\'\\\\]++|\\\.)*+\'|\/\*(?>.*?\*\/))|\s*+;\s*+(})\s*+|\s*+([*$~^|]?+=|[{};,>~]|\s(?![0-9\.])|!important\b)\s*+|([[(:])\s++|\s++([])])|\s++(:)\s*+(?!(?>[^{}"\']++|"(?:[^"\\\]++|\\\.)*+"|\'(?:[^\'\\\\]++|\\\.)*+\')*+{)|^\s++|\s++\z|(\s)\s+#si',
-                // Replace `0(cm|em|ex|in|mm|pc|pt|px|vh|vw|%)` with `0`
-                '#(?<=[\s:])(0)(cm|em|ex|in|mm|pc|pt|px|vh|vw|%)#si',
-                // Replace `:0 0 0 0` with `:0`
-                '#:(0\s+0|0\s+0\s+0\s+0)(?=[;\}]|\!important)#i',
-                // Replace `background-position:0` with `background-position:0 0`
-                '#(background-position):0(?=[;\}])#si',
-                // Replace `0.6` with `.6`, but only when preceded by `:`, `,`, `-` or a white-space
-                '#(?<=[\s:,\-])0+\.(\d+)#s',
-                // Minify string value
-                '#(\/\*(?>.*?\*\/))|(?<!content\:)([\'"])([a-z_][a-z0-9\-_]*?)\2(?=[\s\{\}\];,])#si',
-                '#(\/\*(?>.*?\*\/))|(\burl\()([\'"])([^\s]+?)\3(\))#si',
-                // Minify HEX color code
-                '#(?<=[\s:,\-]\#)([a-f0-6]+)\1([a-f0-6]+)\2([a-f0-6]+)\3#i',
-                // Replace `(border|outline):none` with `(border|outline):0`
-                '#(?<=[\{;])(border|outline):none(?=[;\}\!])#',
-                // Remove empty selector(s)
-                '#(\/\*(?>.*?\*\/))|(^|[\{\}])(?:[^\s\{\}]+)\{\}#s'
-            ),
-            array(
-                '$1',
-                '$1$2$3$4$5$6$7',
-                '$1',
-                ':0',
-                '$1:0 0',
-                '.$1',
-                '$1$3',
-                '$1$2$4$5',
-                '$1$2$3',
-                '$1:0',
-                '$1$2'
-            ),
-        $input);
+        $css = $this->getAllCSSContents();
+        $minifier = new Minify\CSS();
+        $minifier->add($css);
+        return $minifier->minify();
     }
 }
