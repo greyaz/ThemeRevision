@@ -53,9 +53,9 @@ class ModeSwitchHelper extends BaseHelper
     }
 
     private function getPluginPath(){
-    	$arr = explode("/", __DIR__);
+    	$arr = explode(DIRECTORY_SEPARATOR, __DIR__);
     	$arr = array_slice($arr, 0, -1);
-    	return implode("/", $arr);
+    	return implode(DIRECTORY_SEPARATOR, $arr);
     }
 
     private function getAllCSSContents(){
